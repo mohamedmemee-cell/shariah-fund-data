@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T09:05:13Z",
+  "generated_at": "2026-09-15T09:41:58Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -53,18 +53,18 @@
       "category": "Balanced",
       "bucket": "Non-TFSA",
       "suggested_split": 45,
-      "oneYear": 20.8,
-      "threeYear": 12.7,
-      "fiveYear": 10.1,
-      "tenYear": 9.5,
+      "oneYear": 19.0,
+      "threeYear": 13.2,
+      "fiveYear": 9.9,
+      "tenYear": 9.3,
       "sinceInception": null,
       "ter": 1.49,
       "risk_level": "Medium High",
       "source_url": "https://www.camissa-am.com/funds/islamic-balanced-fund",
-      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90db7be660b7ffe317b91_Camissa%20Islamic%20Balanced%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T09:05:13Z"
+      "updated": "2026-09-15T09:41:58Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -84,7 +84,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-15T09:05:13Z"
+      "updated": "2026-09-15T09:41:58Z"
     },
     {
       "id": "27four-shariah-income",
@@ -114,18 +114,18 @@
       "category": "Income",
       "bucket": "Watchlist",
       "suggested_split": 0,
-      "oneYear": 12.6,
+      "oneYear": 11.8,
       "threeYear": 11.8,
-      "fiveYear": 9.6,
+      "fiveYear": 9.4,
       "tenYear": null,
       "sinceInception": null,
       "ter": 0.58,
       "risk_level": "Low-Medium",
       "source_url": "https://www.camissa-am.com/funds/islamic-high-yield-fund",
-      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90e036aadbc0cefcb383c_Camissa%20Islamic%20High%20Yield%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T09:05:13Z"
+      "updated": "2026-09-15T09:41:58Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -145,7 +145,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-15T09:05:13Z"
+      "updated": "2026-09-15T09:41:58Z"
     },
     {
       "id": "27four-shariah-balanced",
