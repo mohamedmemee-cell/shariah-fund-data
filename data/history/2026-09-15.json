@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T08:27:55Z",
+  "generated_at": "2026-09-15T09:05:13Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -23,7 +23,7 @@
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Could not identify Satrix annualised performance table"
+      "update_error": "Could not identify Satrix performance table"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -44,7 +44,7 @@
       "shariah_note": "South African Shariah equity exposure.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Could not identify Satrix annualised performance table"
+      "update_error": "Could not identify Satrix performance table"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -64,7 +64,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T08:27:55Z"
+      "updated": "2026-09-15T09:05:13Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -84,7 +84,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-15T08:27:55Z"
+      "updated": "2026-09-15T09:05:13Z"
     },
     {
       "id": "27four-shariah-income",
@@ -125,7 +125,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T08:27:55Z"
+      "updated": "2026-09-15T09:05:13Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -145,7 +145,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-15T08:27:55Z"
+      "updated": "2026-09-15T09:05:13Z"
     },
     {
       "id": "27four-shariah-balanced",
