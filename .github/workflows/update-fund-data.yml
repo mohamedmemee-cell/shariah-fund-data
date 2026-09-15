@@ -20,17 +20,18 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: shariah-fund-data-main
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Set up Python
@@ -56,9 +57,26 @@ jobs:
             echo "No fund data changes to commit."
           else
             git commit -m "Update Shariah fund data"
-            git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts."
+                exit 1
+              fi
+              echo "main changed during this run; rebuilding from latest main (attempt $attempt)."
+              git fetch origin main
+              git reset --hard origin/main
+              python scripts/update_funds.py
+              python scripts/validate_feed.py
+              git add data docs/shariah-funds.json
+              if git diff --cached --quiet; then
+                echo "Latest main already contains equivalent generated data."
+                break
+              fi
+              git commit -m "Update Shariah fund data"
+            done
           fi
 
       - name: Configure GitHub Pages
