@@ -74,6 +74,9 @@ jobs:
       - name: Apply major V2 guided flow
         run: python scripts/major_v2_flow.py
 
+      - name: Smooth projection slider
+        run: python scripts/smooth_slider.py
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -104,6 +107,7 @@ jobs:
               python scripts/update_funds.py
               python scripts/validate_feed.py
               python scripts/major_v2_flow.py
+              python scripts/smooth_slider.py
               git add data docs/shariah-funds.json docs/index.html
               if git diff --cached --quiet; then
                 echo "Latest main already contains equivalent generated data."
