@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:56:18Z",
+  "generated_at": "2026-09-15T07:57:18Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -16,13 +16,13 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": 0.55,
-      "risk_level": null,
+      "risk_level": "Aggressive",
       "source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "No PDF link found on fund page"
+      "update_error": "Could not identify performance figures"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -36,12 +36,13 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
-      "risk_level": null,
-      "source_url": "https://www.satrix.co.za/",
-      "data_source_url": "https://www.satrix.co.za/",
+      "risk_level": "Aggressive",
+      "source_url": "https://satrix.co.za/fund/mdd/STXSHA",
+      "data_source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "shariah_note": "South African Shariah equity exposure.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "Could not identify performance figures"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -60,7 +61,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:56:18Z"
+      "updated": "2026-09-15T07:57:18Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -119,7 +120,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:56:18Z"
+      "updated": "2026-09-15T07:57:18Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
