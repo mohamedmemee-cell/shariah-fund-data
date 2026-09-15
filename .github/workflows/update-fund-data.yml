@@ -9,6 +9,7 @@ on:
       - ".github/workflows/update-fund-data.yml"
       - "scripts/**"
       - "sources/**"
+      - "data/manual_values.json"
       - "docs/index.html"
       - "requirements.txt"
   schedule:
@@ -43,6 +44,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run calculator QA
+        run: python scripts/qa_calculator.py
+
       - name: Update fund data
         run: python scripts/update_funds.py
 
@@ -69,6 +73,7 @@ jobs:
               echo "main changed during this run; rebuilding from latest main (attempt $attempt)."
               git fetch origin main
               git reset --hard origin/main
+              python scripts/qa_calculator.py
               python scripts/update_funds.py
               python scripts/validate_feed.py
               git add data docs/shariah-funds.json
