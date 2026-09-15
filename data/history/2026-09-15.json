@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:22:48Z",
+  "generated_at": "2026-09-15T07:47:44Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -16,7 +16,9 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": 0.55,
+      "risk_level": null,
       "source_url": "https://satrix.co.za/fund/mdd/STXWIS",
+      "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "manual",
       "updated": "2026-09-15"
@@ -33,7 +35,9 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": null,
       "source_url": "https://www.satrix.co.za/",
+      "data_source_url": "https://www.satrix.co.za/",
       "shariah_note": "South African Shariah equity exposure.",
       "update_status": "manual",
       "updated": "2026-09-15"
@@ -45,16 +49,17 @@
       "category": "Balanced",
       "bucket": "Non-TFSA",
       "suggested_split": 45,
-      "oneYear": 17.8,
-      "threeYear": 9.8,
-      "fiveYear": 12.9,
-      "tenYear": 8.9,
+      "oneYear": 20.8,
+      "threeYear": 12.7,
+      "fiveYear": 10.1,
+      "tenYear": 9.5,
       "ter": 1.49,
-      "source_url": "https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf",
+      "risk_level": "Medium High",
+      "source_url": "https://www.camissa-am.com/funds/islamic-balanced-fund",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
-      "update_status": "fallback_manual",
-      "updated": "2026-09-15",
-      "update_error": "404 Client Error: Not Found for url: https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf"
+      "update_status": "auto",
+      "updated": "2026-09-15T07:47:44Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -68,14 +73,16 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": 1.46,
+      "risk_level": null,
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
+      "data_source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "manual",
       "updated": "2026-09-15"
     },
     {
       "id": "27four-shariah-income",
-      "name": "27four Shariah Income Fund",
+      "name": "27four Shari'ah Income Fund",
       "manager": "27four",
       "category": "Income",
       "bucket": "Non-TFSA",
@@ -85,10 +92,13 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": "Low",
       "source_url": "https://27four.com/fund-centre/",
+      "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf",
       "shariah_note": "Shariah-compliant income allocation.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "Stream has ended unexpectedly"
     },
     {
       "id": "camissa-islamic-high-yield",
@@ -97,16 +107,17 @@
       "category": "Income",
       "bucket": "Watchlist",
       "suggested_split": 0,
-      "oneYear": 13.4,
-      "threeYear": 10.4,
-      "fiveYear": 10.0,
+      "oneYear": 12.6,
+      "threeYear": 11.8,
+      "fiveYear": 9.6,
       "tenYear": null,
       "ter": 0.58,
-      "source_url": "https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf",
+      "risk_level": "Low-Medium",
+      "source_url": "https://www.camissa-am.com/funds/islamic-high-yield-fund",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
-      "update_status": "fallback_manual",
-      "updated": "2026-09-15",
-      "update_error": "404 Client Error: Not Found for url: https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf"
+      "update_status": "auto",
+      "updated": "2026-09-15T07:47:44Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -120,14 +131,16 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": null,
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+      "data_source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "manual",
       "updated": "2026-09-15"
     },
     {
       "id": "27four-shariah-balanced",
-      "name": "27four Shariah Balanced Fund of Funds",
+      "name": "27four Shari'ah Balanced Fund of Funds",
       "manager": "27four",
       "category": "Balanced",
       "bucket": "Watchlist",
@@ -137,10 +150,13 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": "Moderate-High",
       "source_url": "https://27four.com/fund-centre/",
+      "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "shariah_note": "Shariah-compliant balanced allocation.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "Stream has ended unexpectedly"
     },
     {
       "id": "oasis-crescent-balanced-progressive",
@@ -154,7 +170,9 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": null,
       "source_url": "https://www.oasiscrescent.com/",
+      "data_source_url": "https://www.oasiscrescent.com/",
       "shariah_note": "Islamic balanced investment option.",
       "update_status": "manual",
       "updated": "2026-09-15"
@@ -171,7 +189,9 @@
       "fiveYear": null,
       "tenYear": null,
       "ter": null,
+      "risk_level": null,
       "source_url": "https://www.stanlib.com/",
+      "data_source_url": "https://www.stanlib.com/",
       "shariah_note": "Shariah-compliant multi-manager balanced fund.",
       "update_status": "manual",
       "updated": "2026-09-15"
