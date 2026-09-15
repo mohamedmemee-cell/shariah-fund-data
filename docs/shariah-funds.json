@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:50:28Z",
+  "generated_at": "2026-09-15T07:53:42Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -20,8 +20,9 @@
       "source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "No PDF link found on fund page"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -59,7 +60,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:50:28Z"
+      "updated": "2026-09-15T07:53:42Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -75,10 +76,11 @@
       "ter": 1.46,
       "risk_level": null,
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
-      "data_source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
+      "data_source_url": "https://cdn.shopify.com/s/files/1/0549/3669/9098/files/Albaraka_Bank_Graduate_Programm_PDF.pdf?v=1636647486",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "Could not identify performance figures"
     },
     {
       "id": "27four-shariah-income",
@@ -87,9 +89,9 @@
       "category": "Income",
       "bucket": "Non-TFSA",
       "suggested_split": 20,
-      "oneYear": null,
-      "threeYear": null,
-      "fiveYear": null,
+      "oneYear": 8.58,
+      "threeYear": 7.68,
+      "fiveYear": 7.21,
       "tenYear": null,
       "ter": null,
       "risk_level": "Low",
@@ -117,7 +119,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:50:28Z"
+      "updated": "2026-09-15T07:53:42Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -133,10 +135,11 @@
       "ter": null,
       "risk_level": null,
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-      "data_source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+      "data_source_url": "https://cdn.shopify.com/s/files/1/0549/3669/9098/files/Albaraka_Bank_Graduate_Programm_PDF.pdf?v=1636647486",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
-      "update_status": "manual",
-      "updated": "2026-09-15"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-15",
+      "update_error": "Could not identify performance figures"
     },
     {
       "id": "27four-shariah-balanced",
@@ -145,9 +148,9 @@
       "category": "Balanced",
       "bucket": "Watchlist",
       "suggested_split": 0,
-      "oneYear": null,
-      "threeYear": null,
-      "fiveYear": null,
+      "oneYear": 22.12,
+      "threeYear": 11.33,
+      "fiveYear": 9.82,
       "tenYear": null,
       "ter": null,
       "risk_level": "Moderate-High",
