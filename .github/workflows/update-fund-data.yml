@@ -1,0 +1,62 @@
+name: Update and publish Shariah fund data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Sundays at 06:15 UTC = 08:15 South Africa time
+    - cron: "15 6 * * 0"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Update fund data
+        run: python scripts/update_funds.py
+
+      - name: Validate feed
+        run: python scripts/validate_feed.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs/shariah-funds.json
+          if git diff --cached --quiet; then
+            echo "No fund data changes to commit."
+          else
+            git commit -m "Update Shariah fund data"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
