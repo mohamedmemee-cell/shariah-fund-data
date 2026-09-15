@@ -3,7 +3,7 @@
   "note": "Fallback values retained when automated adapters cannot verify a current source. Each fallback can carry its own dataAsOf date; 27four figures were seeded from the official Fund Centre as at 2026-05-31.",
   "values": {
     "satrix-msci-world-islamic-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 0.55, "dataAsOf": null},
-    "satrix-shariah-top-40-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null, "dataAsOf": null},
+    "satrix-shariah-top-40-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 0.40, "dataAsOf": null},
     "camissa-islamic-balanced": {"oneYear": 17.8, "threeYear": 9.8, "fiveYear": 12.9, "tenYear": 8.9, "ter": 1.49, "dataAsOf": null},
     "old-mutual-albaraka-balanced": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 1.46, "dataAsOf": null},
     "27four-shariah-income": {"oneYear": 8.58, "threeYear": 7.68, "fiveYear": 7.21, "tenYear": null, "ter": null, "dataAsOf": "2026-05-31"},
