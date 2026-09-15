@@ -10,14 +10,18 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 SOURCES=ROOT/'sources'/'funds.json'; MANUAL=ROOT/'data'/'manual_values.json'
 OUTPUT=ROOT/'docs'/'shariah-funds.json'; HISTORY=ROOT/'data'/'history'
-HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.0; +GitHub Actions)'}
+HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.1; +GitHub Actions)','Accept':'text/html,application/pdf;q=0.9,*/*;q=0.8'}
 
 def load_json(p): return json.loads(p.read_text(encoding='utf-8'))
 def get(url):
-    r=requests.get(url,headers=HEADERS,timeout=45); r.raise_for_status(); return r
+    r=requests.get(url,headers=HEADERS,timeout=45,allow_redirects=True); r.raise_for_status(); return r
 
 def pdf_text(url):
-    r=get(url); reader=PdfReader(io.BytesIO(r.content)); return '\n'.join((p.extract_text() or '') for p in reader.pages)
+    r=get(url)
+    if not r.content.startswith(b'%PDF'):
+        ctype=r.headers.get('content-type','unknown')
+        raise ValueError(f'Expected PDF but received {ctype} from {r.url}')
+    reader=PdfReader(io.BytesIO(r.content)); return '\n'.join((p.extract_text() or '') for p in reader.pages)
 
 def discover_pdf(page_url):
     soup=BeautifulSoup(get(page_url).text,'html.parser')
@@ -26,26 +30,24 @@ def discover_pdf(page_url):
         href=urljoin(page_url,a['href']); label=' '.join(a.stripped_strings).lower()
         if '.pdf' in href.lower(): links.append((label,href))
     if not links: raise ValueError('No PDF link found on fund page')
-    preferred=[x for x in links if any(k in x[0] for k in ('fact','monthly','mdd'))]
+    preferred=[x for x in links if any(k in x[0] for k in ('fact','monthly','mdd','minimum disclosure'))]
     return (preferred or links)[0][1]
 
 def percentages(text): return [float(x) for x in re.findall(r'(-?\d+(?:\.\d+)?)\s*%',text)]
-
 def labelled_percent(text,label):
-    m=re.search(label+r'[^\d-]{0,80}(-?\d+(?:\.\d+)?)\s*%',text,re.I|re.S)
+    m=re.search(label+r'[^\d-]{0,100}(-?\d+(?:\.\d+)?)\s*%',text,re.I|re.S)
     return float(m.group(1)) if m else None
 
 def performance_values(text):
     flat=re.sub(r'\s+',' ',text)
     vals={
-      'oneYear':labelled_percent(flat,r'(?:1\s*year|1\s*yr|one\s*year)'),
-      'threeYear':labelled_percent(flat,r'(?:3\s*year|3\s*yr|three\s*year)'),
-      'fiveYear':labelled_percent(flat,r'(?:5\s*year|5\s*yr|five\s*year)'),
-      'tenYear':labelled_percent(flat,r'(?:10\s*year|10\s*yr|ten\s*year)'),
+      'oneYear':labelled_percent(flat,r'(?:1\s*year|1[-\s]*yr|one\s*year)'),
+      'threeYear':labelled_percent(flat,r'(?:3\s*year|3[-\s]*yr|three\s*year)'),
+      'fiveYear':labelled_percent(flat,r'(?:5\s*year|5[-\s]*yr|five\s*year)'),
+      'tenYear':labelled_percent(flat,r'(?:10\s*year|10[-\s]*yr|ten\s*year)'),
       'ter':labelled_percent(flat,r'(?:total\s+expense\s+ratio|\bTER\b)')}
     if not any(vals[k] is not None for k in ('oneYear','threeYear','fiveYear')):
-        # Common factsheet table: locate a performance heading and conservatively use nearby percentages.
-        for heading in ('Fund Performance','Performance','Annualised Performance'):
+        for heading in ('Fund Performance','Performance (Annualised)','Performance','Annualised Performance'):
             p=flat.lower().find(heading.lower())
             if p>=0:
                 nums=percentages(flat[p:p+1800])
@@ -67,8 +69,10 @@ def main():
         base=dict(stored.get(f['id'],{})); status='manual'; error=None; resolved=f.get('factsheet_url') or f.get('source_url')
         try:
             typ=f.get('auto_type','manual')
-            if typ=='camissa_page_pdf': resolved=discover_pdf(f['source_url']); auto=performance_values(pdf_text(resolved)); status='auto'
-            elif typ=='pdf_performance': auto=performance_values(pdf_text(f['factsheet_url'])); status='auto'
+            if typ in ('camissa_page_pdf','page_pdf'):
+                resolved=discover_pdf(f['source_url']); auto=performance_values(pdf_text(resolved)); status='auto'
+            elif typ=='pdf_performance':
+                auto=performance_values(pdf_text(f['factsheet_url'])); status='auto'
             else: auto={}
             for k,v in auto.items():
                 if v is not None: base[k]=v
