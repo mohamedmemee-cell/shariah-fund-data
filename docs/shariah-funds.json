@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:47:44Z",
+  "generated_at": "2026-09-15T07:50:28Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -59,7 +59,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:47:44Z"
+      "updated": "2026-09-15T07:50:28Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -98,7 +98,7 @@
       "shariah_note": "Shariah-compliant income allocation.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Stream has ended unexpectedly"
+      "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf"
     },
     {
       "id": "camissa-islamic-high-yield",
@@ -117,7 +117,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:47:44Z"
+      "updated": "2026-09-15T07:50:28Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -156,7 +156,7 @@
       "shariah_note": "Shariah-compliant balanced allocation.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Stream has ended unexpectedly"
+      "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf"
     },
     {
       "id": "oasis-crescent-balanced-progressive",
