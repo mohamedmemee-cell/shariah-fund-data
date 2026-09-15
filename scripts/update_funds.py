@@ -10,7 +10,7 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 SOURCES=ROOT/'sources'/'funds.json'; MANUAL=ROOT/'data'/'manual_values.json'
 OUTPUT=ROOT/'docs'/'shariah-funds.json'; HISTORY=ROOT/'data'/'history'
-HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.4; +GitHub Actions)','Accept':'text/html,application/pdf;q=0.9,*/*;q=0.8'}
+HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.5; +GitHub Actions)','Accept':'text/html,application/pdf;q=0.9,*/*;q=0.8'}
 
 def load_json(p): return json.loads(p.read_text(encoding='utf-8'))
 def get(url):
@@ -73,13 +73,18 @@ def token_value(token):
     except ValueError:
         return None
 
+def satrix_debug(text, reason):
+    flat=re.sub(r'\s+',' ',text)
+    lower=flat.lower()
+    anchors=['performance','annualised','annualized','retail class','since inception','1 year','1 yr']
+    positions=[lower.find(a) for a in anchors if lower.find(a)>=0]
+    start=max(0,(min(positions)-300) if positions else 0)
+    print(f'SATRIX DEBUG [{reason}] >>> {flat[start:start+4200]} <<< END SATRIX DEBUG')
+
 def satrix_values(text):
     flat=re.sub(r'\s+',' ',text)
     vals={'oneYear':None,'threeYear':None,'fiveYear':None,'tenYear':None,'sinceInception':None,'ter':None}
 
-    # Satrix ETF MDDs place the fund return as the first value after each period
-    # label in the Retail Class/A1-Class performance table. Values are often
-    # printed without a percent sign and negative values may use parentheses.
     starts=[p for p in (flat.lower().find('retail class'), flat.lower().find('a1-class'), flat.lower().find('a1 class')) if p>=0]
     start=min(starts) if starts else -1
     if start>=0:
@@ -87,17 +92,18 @@ def satrix_values(text):
         end=min(end_candidates) if end_candidates else start+2200
         perf=flat[start:end]
     else:
-        # Fall back to a broad window around the annualised-performance heading.
         m=re.search(r'performance\s*\(\s*annuali[sz]ed\s*\)',flat,re.I)
-        if not m: raise ValueError('Could not identify Satrix performance table')
+        if not m:
+            satrix_debug(text,'no performance heading')
+            raise ValueError('Could not identify Satrix performance table')
         perf=flat[m.start():m.start()+2200]
 
     value_token=r'(N/?A|NA|--|-|\(?-?\d+(?:\.\d+)?\)?%?)'
     rows={
-        'oneYear':r'\b1\s*year\b\s+'+value_token,
-        'threeYear':r'\b3\s*year\b\s+'+value_token,
-        'fiveYear':r'\b5\s*year\b\s+'+value_token,
-        'tenYear':r'\b10\s*year\b\s+'+value_token,
+        'oneYear':r'\b1\s*(?:year|yr)\b\s+'+value_token,
+        'threeYear':r'\b3\s*(?:year|yr)\b\s+'+value_token,
+        'fiveYear':r'\b5\s*(?:year|yr)\b\s+'+value_token,
+        'tenYear':r'\b10\s*(?:year|yr)\b\s+'+value_token,
         'sinceInception':r'\bsince\s+inception\b\s+'+value_token,
     }
     found=False
@@ -105,7 +111,9 @@ def satrix_values(text):
         m=re.search(pat,perf,re.I)
         if m:
             vals[key]=token_value(m.group(1)); found=True
-    if not found: raise ValueError('Could not identify Satrix performance rows')
+    if not found:
+        satrix_debug(text,'no period rows')
+        raise ValueError('Could not identify Satrix performance rows')
 
     ter=labelled_percent(flat,r'(?:total\s+expense\s+ratio\s*\(TER\)|total\s+expense\s+ratio|\bTER\b)')
     if ter is not None and 0<=ter<=5: vals['ter']=ter
