@@ -9,6 +9,7 @@ on:
       - ".github/workflows/update-fund-data.yml"
       - "scripts/**"
       - "sources/**"
+      - "docs/index.html"
       - "requirements.txt"
   schedule:
     # Sundays at 06:15 UTC = 08:15 South Africa time
