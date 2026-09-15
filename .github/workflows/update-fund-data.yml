@@ -10,7 +10,7 @@ on:
       - "scripts/**"
       - "sources/**"
       - "data/manual_values.json"
-      - "docs/index.html"
+      - "docs/**"
       - "requirements.txt"
   schedule:
     # Sundays at 06:15 UTC = 08:15 South Africa time
