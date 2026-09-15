@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:53:42Z",
+  "generated_at": "2026-09-15T07:56:18Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -60,7 +60,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82bb3fe33c51d36b4b218b_Camissa%20Islamic%20Balanced%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:53:42Z"
+      "updated": "2026-09-15T07:56:18Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -80,7 +80,7 @@
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Could not identify performance figures"
+      "update_error": "Could not identify Old Mutual Albaraka Class A performance row"
     },
     {
       "id": "27four-shariah-income",
@@ -119,7 +119,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6a82baf6319c6e4eda4eedfa_Camissa%20Islamic%20High%20Yield%20Fund_2607.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-15T07:53:42Z"
+      "updated": "2026-09-15T07:56:18Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -139,7 +139,7 @@
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "fallback_manual",
       "updated": "2026-09-15",
-      "update_error": "Could not identify performance figures"
+      "update_error": "Could not identify Old Mutual Albaraka Class A performance row"
     },
     {
       "id": "27four-shariah-balanced",
