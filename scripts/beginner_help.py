@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+from pathlib import Path
+
+p = Path(__file__).resolve().parents[1] / 'docs' / 'index.html'
+s = p.read_text(encoding='utf-8')
+
+# Idempotent beginner-friendly UI pass.
+if 'Quick guide — no investment knowledge needed' in s:
+    print('Beginner help already present; no changes needed.')
+    raise SystemExit(0)
+
+css_anchor = '.recommend-note{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.45}'
+css_extra = ".term{position:relative;display:inline-flex;align-items:center;gap:3px;border-bottom:1px dotted currentColor;cursor:help}.term::after{content:'?';display:inline-grid;place-items:center;width:15px;height:15px;border:1px solid var(--line);border-radius:50%;font-size:10px;font-weight:800;color:var(--muted)}.term::before{content:attr(data-tip);position:absolute;z-index:20;left:0;bottom:calc(100% + 8px);width:min(320px,80vw);padding:9px 10px;border-radius:9px;background:var(--text);color:var(--card);font-size:12px;line-height:1.4;font-weight:500;white-space:normal;box-shadow:0 6px 18px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translateY(3px);transition:.12s}.term:hover::before,.term:focus::before{opacity:1;transform:none}.term:focus{outline:2px solid var(--accent);outline-offset:2px}.beginner{border:1px solid var(--line);background:var(--soft);border-radius:13px;padding:14px;margin-bottom:16px}.beginner h3{margin:0 0 7px;font-size:16px}.beginnergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.beginneritem{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px}.beginneritem b{display:block;margin-bottom:4px}.beginneritem span{font-size:12px;color:var(--muted);line-height:1.4}.plainlabel{font-size:12px;color:var(--muted);margin-top:4px}@media(max-width:700px){.beginnergrid{grid-template-columns:1fr}}"
+s = s.replace(css_anchor, css_anchor + css_extra)
+
+s = s.replace('<div class="grid">', '<div class="beginner"><h3>Quick guide — no investment knowledge needed</h3><div class="beginnergrid"><div class="beginneritem"><b>1. Contribution</b><span>How much money you put in each month.</span></div><div class="beginneritem"><b>2. Risk</b><span>How much the value may move up and down. Higher risk can mean bigger gains, but also bigger losses.</span></div><div class="beginneritem"><b>3. Return</b><span>The growth you hope the investment earns. Historical returns are useful clues, not promises.</span></div></div></div>\n<div class="grid">', 1)
+
+repls = {
+'TFSA annual contribution cap (R)': '<span class="term" tabindex="0" data-tip="TFSA means Tax-Free Savings Account. Growth and withdrawals are generally tax-free, subject to South African rules. This is the maximum you may contribute in one tax year.">TFSA annual contribution cap (R)</span>',
+'TFSA lifetime contribution cap (R)': '<span class="term" tabindex="0" data-tip="This is the total amount you may contribute to TFSAs over your lifetime. Investment growth does not count toward this limit; only contributions do.">TFSA lifetime contribution cap (R)</span>',
+'<h3>Comparative annual return assumptions</h3>': '<h3>Future return scenarios</h3><div class="plainlabel">These are examples for planning, not guaranteed returns.</div>',
+'Three ways to build a portfolio from the live fund universe': 'Choose the approach that makes most sense to you',
+'Enter the annual return you would like. The calculator searches risk mixes in 5% steps and shows the closest historical-planning portfolio it can construct.': 'Enter the annual return you would like to aim for. The calculator looks for the closest portfolio based on historical fund data. It does not guarantee that return.',
+'A medium-risk planning starting point: 20% low risk, 60% medium risk and 20% high risk, diversified across the stronger tracked funds in each band.': 'A balanced starting point for someone who wants mostly medium risk, with some lower-risk protection and some higher-risk growth.',
+'<h2>Weighted fund snapshot</h2><span class="muted">Historical metrics from the selected allocations</span>': '<h2>How the selected funds have performed historically</h2><span class="muted">A simple summary of the current mix</span>',
+'<small>TFSA weighted TER</small>': '<small><span class="term" tabindex="0" data-tip="TER means Total Expense Ratio. It is the ongoing annual cost of running a fund, shown as a percentage. Example: a 1.00% TER is roughly R100 per year for every R10,000 invested. Lower is generally better, but fees are only one part of choosing a fund.">TFSA weighted TER</span></small>',
+'<small>Mixed weighted TER</small>': '<small><span class="term" tabindex="0" data-tip="TER means Total Expense Ratio. It is the ongoing annual cost of running a fund, shown as a percentage. Example: a 1.00% TER is roughly R100 per year for every R10,000 invested. Lower is generally better, but fees are only one part of choosing a fund.">Mixed weighted TER</span></small>',
+'<small>TFSA contribution</small>': '<small><span class="term" tabindex="0" data-tip="The part of your monthly contribution going into a Tax-Free Savings Account first.">TFSA contribution</span></small>',
+'<small>Non-TFSA contribution</small>': '<small><span class="term" tabindex="0" data-tip="The part of your monthly contribution left after the TFSA amount, invested outside the tax-free account.">Non-TFSA contribution</span></small>',
+'<label>Low risk %</label>': '<label><span class="term" tabindex="0" data-tip="Lower-risk funds usually aim for steadier returns and smaller price swings. They can still lose value, but typically less than equity-heavy funds.">Low risk %</span></label>',
+'<label>Medium risk %</label>': '<label><span class="term" tabindex="0" data-tip="Medium-risk funds balance growth and stability, usually by mixing different asset types.">Medium risk %</span></label>',
+'<label>High risk %</label>': '<label><span class="term" tabindex="0" data-tip="Higher-risk funds can move up and down much more. They may offer stronger long-term growth potential, but losses can also be larger.">High risk %</span></label>',
+}
+for a,b in repls.items():
+    s = s.replace(a,b)
+
+s = s.replace('<div class="riskinputs">', '<div class="plainlabel">Low = steadier, Medium = balanced, High = more ups and downs but more growth potential.</div><div class="riskinputs">', 1)
+
+s = s.replace('<th>Risk</th><th>1Y</th><th>3Y</th><th>5Y</th><th>10Y</th><th>TER</th><th>Data as at</th><th>Status</th>', '<th><span class="term" tabindex="0" data-tip="A simple indication of how much the investment value may move up and down.">Risk</span></th><th><span class="term" tabindex="0" data-tip="Return over the most recent 1 year. Short-term performance can move around a lot.">1Y</span></th><th><span class="term" tabindex="0" data-tip="Average annual return over the last 3 years.">3Y</span></th><th><span class="term" tabindex="0" data-tip="Average annual return over the last 5 years. We generally give longer periods more weight than 1-year performance.">5Y</span></th><th><span class="term" tabindex="0" data-tip="Average annual return over the last 10 years, where available.">10Y</span></th><th><span class="term" tabindex="0" data-tip="TER means Total Expense Ratio: the approximate annual cost of running the fund, expressed as a percentage of your investment.">TER</span></th><th><span class="term" tabindex="0" data-tip="The date the fund manager says these performance figures relate to.">Data as at</span></th><th><span class="term" tabindex="0" data-tip="Auto means the figure was pulled from the latest source automatically. Fallback/manual means the latest reliable stored figure is being used because the live source could not be verified.">Status</span></th>')
+
+s = s.replace('<small>Planning return</small>', '<small><span class="term" tabindex="0" data-tip="A blended historical return estimate used only to compare portfolios. It is not a forecast and not a guaranteed future return.">Planning return</span></small>')
+s = s.replace('<small>Weighted TER</small>', '<small><span class="term" tabindex="0" data-tip="The average Total Expense Ratio across the recommended funds, weighted by how much of the portfolio is allocated to each fund.">Weighted TER</span></small>')
+s = s.replace('<small>Data confidence</small>', '<small><span class="term" tabindex="0" data-tip="A simple quality score based on how complete and current the fund data is. Higher means the recommendation is based on better-covered data.">Data confidence</span></small>')
+s = s.replace('<th>Planning return</th><th>TER</th><th>Source status</th>', '<th><span class="term" tabindex="0" data-tip="Historical blended return used for comparison only.">Planning return</span></th><th><span class="term" tabindex="0" data-tip="TER = Total Expense Ratio, the approximate annual running cost of the fund.">TER</span></th><th><span class="term" tabindex="0" data-tip="Shows whether the figures came from an automatic live source or a stored fallback.">Source status</span></th>')
+
+s = s.replace('The planning return is a weighted blend of available 10Y/5Y/3Y/1Y or since-inception history. It is a comparison tool, not a forecast or guaranteed return. The target-return option finds the closest historical profile; it cannot promise the requested return. Confirm TFSA product eligibility and current Shariah certification before investing.', 'The planning return is built from available historical fund returns, giving more weight to longer periods. It helps compare options; it does not predict or guarantee future returns. The target-return option finds the closest historical profile it can. Always confirm the fund is still Shariah-compliant and suitable for the account you plan to use.')
+
+p.write_text(s, encoding='utf-8')
+print('Added beginner-friendly explanations and TER tooltips to docs/index.html')
