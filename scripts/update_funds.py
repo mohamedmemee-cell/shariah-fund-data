@@ -10,7 +10,7 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 SOURCES=ROOT/'sources'/'funds.json'; MANUAL=ROOT/'data'/'manual_values.json'
 OUTPUT=ROOT/'docs'/'shariah-funds.json'; HISTORY=ROOT/'data'/'history'
-HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.1; +GitHub Actions)','Accept':'text/html,application/pdf;q=0.9,*/*;q=0.8'}
+HEADERS={'User-Agent':'Mozilla/5.0 (compatible; ShariahFundDataBot/2.2; +GitHub Actions)','Accept':'text/html,application/pdf;q=0.9,*/*;q=0.8'}
 
 def load_json(p): return json.loads(p.read_text(encoding='utf-8'))
 def get(url):
@@ -28,7 +28,8 @@ def discover_pdf(page_url):
     links=[]
     for a in soup.find_all('a',href=True):
         href=urljoin(page_url,a['href']); label=' '.join(a.stripped_strings).lower()
-        if '.pdf' in href.lower(): links.append((label,href))
+        context=' '.join(a.parent.stripped_strings).lower() if a.parent else label
+        if '.pdf' in href.lower(): links.append((label+' '+context,href))
     if not links: raise ValueError('No PDF link found on fund page')
     preferred=[x for x in links if any(k in x[0] for k in ('fact','monthly','mdd','minimum disclosure'))]
     return (preferred or links)[0][1]
@@ -37,6 +38,24 @@ def percentages(text): return [float(x) for x in re.findall(r'(-?\d+(?:\.\d+)?)\
 def labelled_percent(text,label):
     m=re.search(label+r'[^\d-]{0,100}(-?\d+(?:\.\d+)?)\s*%',text,re.I|re.S)
     return float(m.group(1)) if m else None
+
+def old_mutual_albaraka_values(text):
+    flat=re.sub(r'\s+',' ',text)
+    # Old Mutual Albaraka factsheets publish the retail Class A row in the order
+    # 1Y, 3Y, 5Y, 7Y, 10Y, since inception. Use that explicit row instead of
+    # generic heading/value proximity so benchmark figures cannot be mistaken for fund returns.
+    m=re.search(r'Fund\s*\(Class\s*A\)[^\d-]{0,60}((-?\d+(?:\.\d+)?%\s*){3,6})',flat,re.I)
+    if not m:
+        # Some PDF text extractors omit the 'Fund (Class A)' label but keep the first
+        # performance row immediately after the repeated 1-Yr/3-Yr/5-Yr headings.
+        m=re.search(r'1[-\s]*Yr\s+3[-\s]*Yr\s+5[-\s]*Yr\s+7[-\s]*Yr\s+10[-\s]*Yr[^%]{0,120}((?:-?\d+(?:\.\d+)?%\s*){5,6})',flat,re.I)
+    if not m: raise ValueError('Could not identify Old Mutual Albaraka Class A performance row')
+    nums=percentages(m.group(1))
+    if len(nums)<3: raise ValueError('Incomplete Old Mutual Albaraka performance row')
+    vals={'oneYear':nums[0],'threeYear':nums[1],'fiveYear':nums[2],'tenYear':nums[4] if len(nums)>=5 else None,'ter':None}
+    ter=labelled_percent(flat,r'(?:total\s+expense\s+ratio|\bTER\b)')
+    if ter is not None and 0<=ter<=5: vals['ter']=ter
+    return vals
 
 def performance_values(text):
     flat=re.sub(r'\s+',' ',text)
@@ -71,6 +90,8 @@ def main():
             typ=f.get('auto_type','manual')
             if typ in ('camissa_page_pdf','page_pdf'):
                 resolved=discover_pdf(f['source_url']); auto=performance_values(pdf_text(resolved)); status='auto'
+            elif typ=='albaraka_page_pdf':
+                resolved=discover_pdf(f['source_url']); auto=old_mutual_albaraka_values(pdf_text(resolved)); status='auto'
             elif typ=='pdf_performance':
                 auto=performance_values(pdf_text(f['factsheet_url'])); status='auto'
             else: auto={}
