@@ -50,6 +50,12 @@ jobs:
       - name: Link projection scenarios to portfolio builder
         run: python scripts/link_projection_scenarios.py
 
+      - name: Link fund names to detail pages
+        run: python scripts/link_fund_details.py
+
+      - name: Make selected portfolio drive monthly plan
+        run: python scripts/apply_selected_portfolio.py
+
       - name: Run calculator QA
         run: python scripts/qa_calculator.py
 
@@ -67,7 +73,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No fund data or calculator changes to commit."
           else
-            git commit -m "Update Shariah fund data and calculator scenarios"
+            git commit -m "Update Shariah fund data and calculator flow"
             for attempt in 1 2 3; do
               if git push origin HEAD:main; then
                 break
@@ -81,6 +87,8 @@ jobs:
               git reset --hard origin/main
               python scripts/beginner_help.py
               python scripts/link_projection_scenarios.py
+              python scripts/link_fund_details.py
+              python scripts/apply_selected_portfolio.py
               python scripts/qa_calculator.py
               python scripts/update_funds.py
               python scripts/validate_feed.py
@@ -89,7 +97,7 @@ jobs:
                 echo "Latest main already contains equivalent generated data."
                 break
               fi
-              git commit -m "Update Shariah fund data and calculator scenarios"
+              git commit -m "Update Shariah fund data and calculator flow"
             done
           fi
 
