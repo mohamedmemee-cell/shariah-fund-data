@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "funds": [
+    {
+      "id": "satrix-msci-world-islamic-etf",
+      "name": "Satrix MSCI World Islamic ETF",
+      "manager": "Satrix",
+      "category": "Global Equity",
+      "bucket": "TFSA",
+      "suggested_split": 75,
+      "auto_type": "manual",
+      "source_url": "https://satrix.co.za/fund/mdd/STXWIS",
+      "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF."
+    },
+    {
+      "id": "satrix-shariah-top-40-etf",
+      "name": "Satrix Shari'ah Top 40 ETF",
+      "manager": "Satrix",
+      "category": "South Africa Equity",
+      "bucket": "TFSA",
+      "suggested_split": 25,
+      "auto_type": "manual",
+      "source_url": "https://www.satrix.co.za/",
+      "shariah_note": "South African Shariah equity exposure."
+    },
+    {
+      "id": "camissa-islamic-balanced",
+      "name": "Camissa Islamic Balanced Fund",
+      "manager": "Camissa",
+      "category": "Balanced",
+      "bucket": "Non-TFSA",
+      "suggested_split": 45,
+      "auto_type": "camissa_performance_pdf",
+      "source_url": "https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf",
+      "match_name": "Islamic Balanced Fund",
+      "shariah_note": "Shariah-compliant multi-asset fund."
+    },
+    {
+      "id": "old-mutual-albaraka-balanced",
+      "name": "Old Mutual Albaraka Balanced Fund",
+      "manager": "Old Mutual / Al Baraka",
+      "category": "Balanced",
+      "bucket": "Non-TFSA",
+      "suggested_split": 35,
+      "auto_type": "manual",
+      "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
+      "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board."
+    },
+    {
+      "id": "27four-shariah-income",
+      "name": "27four Shariah Income Fund",
+      "manager": "27four",
+      "category": "Income",
+      "bucket": "Non-TFSA",
+      "suggested_split": 20,
+      "auto_type": "manual",
+      "source_url": "https://27four.com/fund-centre/",
+      "shariah_note": "Shariah-compliant income allocation."
+    },
+    {
+      "id": "camissa-islamic-high-yield",
+      "name": "Camissa Islamic High Yield Fund",
+      "manager": "Camissa",
+      "category": "Income",
+      "bucket": "Watchlist",
+      "suggested_split": 0,
+      "auto_type": "camissa_performance_pdf",
+      "source_url": "https://camissa-am.com/wp-content/uploads/performance/fundperformance.pdf",
+      "match_name": "Islamic High Yield Fund",
+      "shariah_note": "Shariah-compliant high-yield/income fund."
+    },
+    {
+      "id": "old-mutual-albaraka-equity",
+      "name": "Old Mutual Albaraka Equity Fund",
+      "manager": "Old Mutual / Al Baraka",
+      "category": "Equity",
+      "bucket": "Watchlist",
+      "suggested_split": 0,
+      "auto_type": "manual",
+      "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+      "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board."
+    },
+    {
+      "id": "27four-shariah-balanced",
+      "name": "27four Shariah Balanced Fund of Funds",
+      "manager": "27four",
+      "category": "Balanced",
+      "bucket": "Watchlist",
+      "suggested_split": 0,
+      "auto_type": "manual",
+      "source_url": "https://27four.com/fund-centre/",
+      "shariah_note": "Shariah-compliant balanced allocation."
+    },
+    {
+      "id": "oasis-crescent-balanced-progressive",
+      "name": "Oasis Crescent Balanced Progressive Fund",
+      "manager": "Oasis",
+      "category": "Balanced",
+      "bucket": "Watchlist",
+      "suggested_split": 0,
+      "auto_type": "manual",
+      "source_url": "https://www.oasiscrescent.com/",
+      "shariah_note": "Islamic balanced investment option."
+    },
+    {
+      "id": "stanlib-shariah-balanced-fof",
+      "name": "STANLIB Multi-Manager Shari'ah Balanced Fund of Funds",
+      "manager": "STANLIB",
+      "category": "Balanced",
+      "bucket": "Watchlist",
+      "suggested_split": 0,
+      "auto_type": "manual",
+      "source_url": "https://www.stanlib.com/",
+      "shariah_note": "Shariah-compliant multi-manager balanced fund."
+    }
+  ]
+}

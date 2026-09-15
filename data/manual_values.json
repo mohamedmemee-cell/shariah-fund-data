@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-09-15",
+  "note": "Starter values can be edited manually. Automated adapters overwrite only fields they can verify successfully.",
+  "values": {
+    "satrix-msci-world-islamic-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 0.55},
+    "satrix-shariah-top-40-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "camissa-islamic-balanced": {"oneYear": 17.8, "threeYear": 9.8, "fiveYear": 12.9, "tenYear": 8.9, "ter": 1.49},
+    "old-mutual-albaraka-balanced": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 1.46},
+    "27four-shariah-income": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "camissa-islamic-high-yield": {"oneYear": 13.4, "threeYear": 10.4, "fiveYear": 10.0, "tenYear": null, "ter": 0.58},
+    "old-mutual-albaraka-equity": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "27four-shariah-balanced": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "oasis-crescent-balanced-progressive": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "stanlib-shariah-balanced-fof": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null}
+  }
+}
