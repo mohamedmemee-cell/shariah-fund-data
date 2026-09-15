@@ -1,15 +1,15 @@
 {
   "as_of": "2026-09-15",
-  "note": "Starter values can be edited manually. Automated adapters overwrite only fields they can verify successfully.",
+  "note": "Fallback values retained when automated adapters cannot verify a current source. 27four performance values were seeded from the official Fund Centre figures published as at 2026-05-31.",
   "values": {
     "satrix-msci-world-islamic-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 0.55},
     "satrix-shariah-top-40-etf": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
     "camissa-islamic-balanced": {"oneYear": 17.8, "threeYear": 9.8, "fiveYear": 12.9, "tenYear": 8.9, "ter": 1.49},
     "old-mutual-albaraka-balanced": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": 1.46},
-    "27four-shariah-income": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "27four-shariah-income": {"oneYear": 8.58, "threeYear": 7.68, "fiveYear": 7.21, "tenYear": null, "ter": null},
     "camissa-islamic-high-yield": {"oneYear": 13.4, "threeYear": 10.4, "fiveYear": 10.0, "tenYear": null, "ter": 0.58},
     "old-mutual-albaraka-equity": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
-    "27four-shariah-balanced": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
+    "27four-shariah-balanced": {"oneYear": 22.12, "threeYear": 11.33, "fiveYear": 9.82, "tenYear": null, "ter": null},
     "oasis-crescent-balanced-progressive": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null},
     "stanlib-shariah-balanced-fof": {"oneYear": null, "threeYear": null, "fiveYear": null, "tenYear": null, "ter": null}
   }
