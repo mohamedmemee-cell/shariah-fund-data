@@ -67,6 +67,7 @@ def main():
         print("Fund is already active in sources/funds.json")
     else:
         findings = candidate.get("findings") or {}
+        factsheet = candidate.get("factsheet_url") or None
         registry.setdefault("funds", []).append({
             "id": cid,
             "name": candidate.get("name"),
@@ -74,9 +75,9 @@ def main():
             "category": infer_category(candidate.get("name")),
             "bucket": "Watchlist",
             "suggested_split": 0,
-            "auto_type": "generic_candidate",
+            "auto_type": "pdf_performance" if factsheet else "page_pdf",
             "source_url": candidate.get("source_url"),
-            "factsheet_url": candidate.get("factsheet_url") or None,
+            "factsheet_url": factsheet,
             "risk_level": findings.get("risk_level") or "Unknown",
             "shariah_note": findings.get("shariah_evidence") or "Shariah evidence captured during candidate onboarding; review the official source before investing."
         })
