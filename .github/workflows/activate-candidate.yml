@@ -1,0 +1,36 @@
+name: Activate candidate Shariah fund
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  activate:
+    if: startsWith(github.event.issue.title, 'Activate fund:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Activate verified candidate
+        run: python scripts/activate_candidate.py
+
+      - name: Commit activation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/funds.json data/manual_values.json data/candidates docs/candidates
+          git commit -m "Activate reviewed candidate Shariah fund"
+          git push origin HEAD:main
