@@ -70,7 +70,7 @@
       "oneYear": 15.84,
       "threeYear": 11.18,
       "fiveYear": 9.11,
-      "tenYear": 2026.0,
+      "tenYear": null,
       "ter": null,
       "dataAsOf": "2026-07-31"
     },

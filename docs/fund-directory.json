@@ -209,15 +209,6 @@
           "verified_at": "2026-09-16",
           "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
           "value": 9.11
-        },
-        "tenYear": {
-          "status": "verified",
-          "method": "manual",
-          "verification_method": "Official document supplied directly",
-          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
-          "value": 2026.0
         }
       },
       "minimum_investment": "500.00",
