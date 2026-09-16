@@ -83,6 +83,9 @@ jobs:
       - name: Apply beginner-friendly UI polish
         run: python scripts/ui_polish_v1.py
 
+      - name: Fix portfolio scenario sync
+        run: python scripts/fix_scenario_sync.py
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -116,6 +119,7 @@ jobs:
               python scripts/smooth_slider.py
               python scripts/performance_v3.py
               python scripts/ui_polish_v1.py
+              python scripts/fix_scenario_sync.py
               git add data docs/shariah-funds.json docs/index.html
               if git diff --cached --quiet; then
                 echo "Latest main already contains equivalent generated data."
