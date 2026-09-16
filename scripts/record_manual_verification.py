@@ -9,7 +9,13 @@ issue=EVENT.get('issue') or {}
 body=issue.get('body') or ''
 
 def field(name):
-    m=re.search(r'^'+re.escape(name)+r':\s*(.*)$',body,re.I|re.M)
+    # Only read the current line. Using \s here could consume the following line
+    # when a field is intentionally left blank.
+    m=re.search(r'^'+re.escape(name)+r':[ \t]*([^\r\n]*)$',body,re.I|re.M)
+    return (m.group(1).strip() if m else '')
+
+def notes_field():
+    m=re.search(r'^Notes:[ \t]*(.*)$',body,re.I|re.M|re.S)
     return (m.group(1).strip() if m else '')
 
 def num(v):
@@ -22,7 +28,7 @@ if not fund_id: raise SystemExit('Missing Fund id')
 method=field('Verification method') or 'Manual confirmation'
 source=field('Source/contact') or 'User supplied verification'
 verified_date=field('Verified date') or date.today().isoformat()
-note=field('Notes')
+note=notes_field()
 
 sources_path=ROOT/'sources'/'funds.json'
 dir_path=ROOT/'docs'/'fund-directory.json'
@@ -64,6 +70,11 @@ if risk:
     src['risk_level']=risk
     provenance('risk_level',risk)
 
+inception=field('Inception date')
+if inception:
+    d['inception_date']=inception
+    provenance('inception_date',inception)
+
 ter=num(field('TER'))
 if ter is not None:
     mv=manual.setdefault('values',{}).setdefault(fund_id,{})
@@ -77,14 +88,15 @@ if shariah:
     d['shariah_manually_verified']=yes
     provenance('shariah_governance','verified' if yes else 'not verified')
 
-# Optional manually verified performance values.
 perf_map={'1Y return':'oneYear','3Y return':'threeYear','5Y return':'fiveYear','10Y return':'tenYear','Since inception return':'sinceInception'}
+perf_date=field('Performance data as at') or verified_date
 for label,key in perf_map.items():
-    v=num(field(label))
+    raw=field(label)
+    v=num(raw)
     if v is not None:
         mv=manual.setdefault('values',{}).setdefault(fund_id,{})
         mv[key]=v
-        mv['dataAsOf']=field('Performance data as at') or verified_date
+        mv['dataAsOf']=perf_date
         provenance(key,v)
 
 manual['as_of']=date.today().isoformat()
