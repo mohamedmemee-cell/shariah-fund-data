@@ -13,7 +13,6 @@ on:
       - "docs/**"
       - "requirements.txt"
   schedule:
-    # Sundays at 06:15 UTC = 08:15 South Africa time
     - cron: "15 6 * * 0"
 
 permissions:
@@ -28,67 +27,50 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Add beginner-friendly calculator help
         run: python scripts/beginner_help.py
-
       - name: Add TER to beginner quick guide
         run: python scripts/add_ter_quick_guide.py
-
       - name: Link projection scenarios to portfolio builder
         run: python scripts/link_projection_scenarios.py
-
       - name: Link fund names to detail pages
         run: python scripts/link_fund_details.py
-
       - name: Make selected portfolio drive monthly plan
         run: python scripts/apply_selected_portfolio.py
-
       - name: Make Portfolio Builder first and align buttons
         run: python scripts/builder_first_layout.py
-
       - name: Run calculator QA
         run: python scripts/qa_calculator.py
-
       - name: Update fund data
         run: python scripts/update_funds.py
-
       - name: Validate feed
         run: python scripts/validate_feed.py
-
       - name: Apply major V2 guided flow
         run: python scripts/major_v2_flow.py
-
       - name: Smooth projection slider
         run: python scripts/smooth_slider.py
-
       - name: Apply performance V3
         run: python scripts/performance_v3.py
-
       - name: Apply beginner-friendly UI polish
         run: python scripts/ui_polish_v1.py
-
       - name: Fix portfolio scenario sync
         run: python scripts/fix_scenario_sync.py
-
       - name: Simplify Add Fund confirmation flow
         run: python scripts/add_fund_beginner_flow.py
-
+      - name: Apply plan summary, sharing and beginner controls
+        run: python scripts/pending_batch_v1.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -99,14 +81,8 @@ jobs:
           else
             git commit -m "Update Shariah fund data, performance and UI"
             for attempt in 1 2 3; do
-              if git push origin HEAD:main; then
-                break
-              fi
-              if [ "$attempt" -eq 3 ]; then
-                echo "Push failed after 3 attempts."
-                exit 1
-              fi
-              echo "main changed during this run; rebuilding from latest main (attempt $attempt)."
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" -eq 3 ]; then echo "Push failed after 3 attempts."; exit 1; fi
               git fetch origin main
               git reset --hard origin/main
               python scripts/beginner_help.py
@@ -124,23 +100,18 @@ jobs:
               python scripts/ui_polish_v1.py
               python scripts/fix_scenario_sync.py
               python scripts/add_fund_beginner_flow.py
+              python scripts/pending_batch_v1.py
               git add data docs/shariah-funds.json docs/index.html docs/add-fund.html
-              if git diff --cached --quiet; then
-                echo "Latest main already contains equivalent generated data."
-                break
-              fi
+              if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
             done
           fi
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
-
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
