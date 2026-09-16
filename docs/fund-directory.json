@@ -1,10 +1,14 @@
 {
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "funds": {
     "satrix-msci-world-islamic-etf": {
       "website": "https://satrix.co.za/fund/mdd/STXWIS",
       "manager_website": "https://www.satrix.co.za/",
-      "contact": {"phone": "0860 111 401", "email": "unittrusts@satrix.co.za", "alternate_email": "info@satrixnow.co.za"},
+      "contact": {
+        "phone": "0860 111 401",
+        "email": "unittrusts@satrix.co.za",
+        "alternate_email": "info@satrixnow.co.za"
+      },
       "shariah_board": [],
       "shariah_note": "No current Satrix-specific Shariah board member list was found on the fund fact sheet. The ETF tracks a Shariah-screened index. Board details should be verified with Satrix before relying on them.",
       "shariah_source": "https://satrix.co.za/fund/mdd/STXWIS",
@@ -13,7 +17,11 @@
     "satrix-shariah-top-40-etf": {
       "website": "https://satrix.co.za/fund/mdd/STXSHA",
       "manager_website": "https://www.satrix.co.za/",
-      "contact": {"phone": "0860 111 401", "email": "unittrusts@satrix.co.za", "alternate_email": "info@satrixnow.co.za"},
+      "contact": {
+        "phone": "0860 111 401",
+        "email": "unittrusts@satrix.co.za",
+        "alternate_email": "info@satrixnow.co.za"
+      },
       "shariah_board": [],
       "shariah_note": "No current Satrix-specific Shariah board member list was found on the public fund materials reviewed. The fund follows a Shariah-screened index methodology. Verify the current Shariah governance directly with Satrix.",
       "shariah_source": "https://www.satrix.co.za/",
@@ -22,8 +30,15 @@
     "camissa-islamic-balanced": {
       "website": "https://www.camissa-am.com/funds/islamic-balanced-fund",
       "manager_website": "https://www.camissa-am.com/",
-      "contact": {"phone": "0800 864 418", "email": "clientservice@camissa-am.com"},
-      "shariah_board": ["Mufti Z Bayat (Chair)", "Moulana M Carr", "Mufti A Suliman"],
+      "contact": {
+        "phone": "0800 864 418",
+        "email": "clientservice@camissa-am.com"
+      },
+      "shariah_board": [
+        "Mufti Z Bayat (Chair)",
+        "Moulana M Carr",
+        "Mufti A Suliman"
+      ],
       "shariah_note": "Camissa's Shariah certificate dated 24 June 2025 names these members of the Shariah Supervisory Committee.",
       "shariah_source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
       "board_status": "verified from 24 June 2025 certificate"
@@ -31,8 +46,15 @@
     "camissa-islamic-high-yield": {
       "website": "https://www.camissa-am.com/funds/islamic-high-yield-fund",
       "manager_website": "https://www.camissa-am.com/",
-      "contact": {"phone": "0800 864 418", "email": "clientservice@camissa-am.com"},
-      "shariah_board": ["Mufti Z Bayat (Chair)", "Moulana M Carr", "Mufti A Suliman"],
+      "contact": {
+        "phone": "0800 864 418",
+        "email": "clientservice@camissa-am.com"
+      },
+      "shariah_board": [
+        "Mufti Z Bayat (Chair)",
+        "Moulana M Carr",
+        "Mufti A Suliman"
+      ],
       "shariah_note": "Camissa's Shariah certificate dated 24 June 2025 covers Camissa Islamic Funds and names these members of the Shariah Supervisory Committee.",
       "shariah_source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
       "board_status": "verified from 24 June 2025 certificate"
@@ -40,8 +62,17 @@
     "old-mutual-albaraka-balanced": {
       "website": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",
       "manager_website": "https://www.albaraka.co.za/collections/fund-range",
-      "contact": {"phone": "0860 234 234", "email": "unittrusts@oldmutual.com", "whatsapp": "0860 933 333"},
-      "shariah_board": ["Shaykh Mahomed Shoaib Omar (Chairman)", "Shaykh Yousef Hasan Khalawi (Deputy Chairman)", "Mufti Zubair Bayat", "Mufti Shafique Ahmed Jakhura"],
+      "contact": {
+        "phone": "0860 234 234",
+        "email": "unittrusts@oldmutual.com",
+        "whatsapp": "0860 933 333"
+      },
+      "shariah_board": [
+        "Shaykh Mahomed Shoaib Omar (Chairman)",
+        "Shaykh Yousef Hasan Khalawi (Deputy Chairman)",
+        "Mufti Zubair Bayat",
+        "Mufti Shafique Ahmed Jakhura"
+      ],
       "shariah_note": "Al Baraka's current Shari'ah Supervisory Board page lists these scholars. The fund's 2024 compliance certificate is signed by Shaykh Mahomed Shoaib Omar, Mufti Shafique Jakhura and Mufti Zubair Bayat.",
       "shariah_source": "https://www.albaraka.co.za/pages/shariah-supervisory-board",
       "board_status": "current Al Baraka Shari'ah Board"
@@ -49,8 +80,17 @@
     "old-mutual-albaraka-income": {
       "website": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
       "manager_website": "https://www.albaraka.co.za/collections/fund-range",
-      "contact": {"phone": "0860 234 234", "email": "unittrusts@oldmutual.com", "whatsapp": "0860 933 333"},
-      "shariah_board": ["Shaykh Mahomed Shoaib Omar (Chairman)", "Shaykh Yousef Hasan Khalawi (Deputy Chairman)", "Mufti Zubair Bayat", "Mufti Shafique Ahmed Jakhura"],
+      "contact": {
+        "phone": "0860 234 234",
+        "email": "unittrusts@oldmutual.com",
+        "whatsapp": "0860 933 333"
+      },
+      "shariah_board": [
+        "Shaykh Mahomed Shoaib Omar (Chairman)",
+        "Shaykh Yousef Hasan Khalawi (Deputy Chairman)",
+        "Mufti Zubair Bayat",
+        "Mufti Shafique Ahmed Jakhura"
+      ],
       "shariah_note": "These are the current scholars listed on Al Baraka Bank's Shari'ah Supervisory Board page. Confirm fund-specific composition if required before investing.",
       "shariah_source": "https://www.albaraka.co.za/pages/shariah-supervisory-board",
       "board_status": "current Al Baraka Shari'ah Board"
@@ -58,8 +98,17 @@
     "old-mutual-albaraka-equity": {
       "website": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
       "manager_website": "https://www.albaraka.co.za/collections/fund-range",
-      "contact": {"phone": "0860 234 234", "email": "unittrusts@oldmutual.com", "whatsapp": "0860 933 333"},
-      "shariah_board": ["Shaykh Mahomed Shoaib Omar (Chairman)", "Shaykh Yousef Hasan Khalawi (Deputy Chairman)", "Mufti Zubair Bayat", "Mufti Shafique Ahmed Jakhura"],
+      "contact": {
+        "phone": "0860 234 234",
+        "email": "unittrusts@oldmutual.com",
+        "whatsapp": "0860 933 333"
+      },
+      "shariah_board": [
+        "Shaykh Mahomed Shoaib Omar (Chairman)",
+        "Shaykh Yousef Hasan Khalawi (Deputy Chairman)",
+        "Mufti Zubair Bayat",
+        "Mufti Shafique Ahmed Jakhura"
+      ],
       "shariah_note": "These are the current scholars listed on Al Baraka Bank's Shari'ah Supervisory Board page. Confirm the latest fund-specific certificate before investing.",
       "shariah_source": "https://www.albaraka.co.za/pages/shariah-supervisory-board",
       "board_status": "current Al Baraka Shari'ah Board"
@@ -67,8 +116,16 @@
     "27four-shariah-income": {
       "website": "https://27four.com/fund-centre/",
       "manager_website": "https://27four.com/",
-      "contact": {"phone": "0800 000 274", "email": "info@27four.com", "whatsapp": "011 442 2467"},
-      "shariah_board": ["Mufti Ahmed Suliman (Chairman)", "Mufti Mohammed Ashraf", "Mufti Zaid Haspatel"],
+      "contact": {
+        "phone": "0800 000 274",
+        "email": "info@27four.com",
+        "whatsapp": "011 442 2467"
+      },
+      "shariah_board": [
+        "Mufti Ahmed Suliman (Chairman)",
+        "Mufti Mohammed Ashraf",
+        "Mufti Zaid Haspatel"
+      ],
       "shariah_note": "A 27four Shari'ah fund factsheet reviewed lists this Shariah Advisory Committee. Because factsheet publication dates vary by product, verify the latest committee with 27four before investing.",
       "shariah_source": "https://www.27four.com/factsheets/27four%20Shariah%20Stable%20Fund.pdf",
       "board_status": "committee names verified from 27four factsheet; current fund-specific verification recommended"
@@ -76,11 +133,96 @@
     "27four-shariah-balanced": {
       "website": "https://27four.com/fund-centre/",
       "manager_website": "https://27four.com/",
-      "contact": {"phone": "0800 000 274", "email": "info@27four.com", "whatsapp": "011 442 2467"},
-      "shariah_board": ["Mufti Ahmed Suliman (Chairman)", "Mufti Mohammed Ashraf", "Mufti Zaid Haspatel"],
+      "contact": {
+        "phone": "0800 000 274",
+        "email": "info@27four.com",
+        "whatsapp": "011 442 2467"
+      },
+      "shariah_board": [
+        "Mufti Ahmed Suliman (Chairman)",
+        "Mufti Mohammed Ashraf",
+        "Mufti Zaid Haspatel"
+      ],
       "shariah_note": "A 27four Shari'ah fund factsheet reviewed lists this Shariah Advisory Committee. Verify the latest committee for this specific fund with 27four before investing.",
       "shariah_source": "https://www.27four.com/factsheets/27four%20Shariah%20Stable%20Fund.pdf",
-      "board_status": "committee names verified from 27four factsheet; current fund-specific verification recommended"
+      "board_status": "committee names verified from 27four factsheet; current fund-specific verification recommended",
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": "500.00"
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": "Non-TFSA"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": "Moderate-High"
+        },
+        "shariah_governance": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": "verified"
+        },
+        "oneYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": 15.84
+        },
+        "threeYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": 11.18
+        },
+        "fiveYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": 9.11
+        },
+        "tenYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Official document supplied directly",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-16",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "value": 2026.0
+        }
+      },
+      "minimum_investment": "500.00",
+      "account_suitability": "Non-TFSA",
+      "shariah_manually_verified": true
     },
     "oasis-crescent-balanced-progressive": {
       "website": "https://www.oasiscrescent.com/",
@@ -94,8 +236,15 @@
     "stanlib-shariah-balanced-fof": {
       "website": "https://www.stanlib.com/",
       "manager_website": "https://www.stanlib.com/",
-      "contact": {"phone": "0860 123 003", "email": "contact@stanlib.com"},
-      "shariah_board": ["Sheikh Faizal Ahmad Manjoo", "Mufti Ahmed Suliman", "Suhail Mohamed"],
+      "contact": {
+        "phone": "0860 123 003",
+        "email": "contact@stanlib.com"
+      },
+      "shariah_board": [
+        "Sheikh Faizal Ahmad Manjoo",
+        "Mufti Ahmed Suliman",
+        "Suhail Mohamed"
+      ],
       "shariah_note": "These names appear on a STANLIB Shari'ah compliance report from 2018. A current public board list was not found in the sources reviewed, so the calculator marks this as historical and recommends verification with STANLIB.",
       "shariah_source": "https://staging.stanlib.com/secure/src/assets/files/investorReports/Collective%20Investments%20Abridged%20Annual%20Report%20-%202017.pdf",
       "board_status": "historical public source; current verification required"
