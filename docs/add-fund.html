@@ -44,4 +44,44 @@ showTracked();
 </script></main><script id="siteThemeScriptV2">(function(){const saved=localStorage.getItem('shariahTheme')||'system';document.documentElement.dataset.theme=saved==='system'?'':saved;const nav=document.querySelector('.nav,.top');if(nav&&!document.getElementById('themeMode')){const w=document.createElement('span');w.className='themeControl';w.innerHTML='<label for="themeMode">Theme</label><select id="themeMode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>';nav.appendChild(w);const s=w.querySelector('select');s.value=saved;s.onchange=()=>{localStorage.setItem('shariahTheme',s.value);document.documentElement.dataset.theme=s.value==='system'?'':s.value}}})();</script>
 
 <script id="siteFinishV4SharedScript">(function(){if(document.getElementById('backTopV4'))return;const b=document.createElement('button');b.id='backTopV4';b.className='backTopV4';b.type='button';b.innerHTML='↑&nbsp; Back to Top';b.onclick=()=>scrollTo({top:0,behavior:'smooth'});document.body.appendChild(b);const show=()=>b.classList.toggle('show',scrollY>420);addEventListener('scroll',show,{passive:true});show()})();</script>
+
+<script>
+/* ADD_FUND_CLICK_FIX_V2 */
+(function(){
+  const byId=id=>document.getElementById(id);
+  const slug=s=>(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,100);
+  function value(id){return (byId(id)?.value||'').trim()}
+  function buildIssueUrl(){
+    const name=value('name');
+    if(!name){alert('Please enter the fund name.');return null}
+    const manager=value('manager')||'Unknown';
+    const website=value('website')||'Not supplied';
+    const factsheet=value('factsheet')||'Not supplied';
+    const body=[
+      'Candidate fund onboarding request','',
+      'Fund name: '+name,
+      'Fund manager: '+manager,
+      'Official fund page: '+website,
+      'Factsheet: '+factsheet
+    ].join('\n');
+    const id=slug(name);
+    localStorage.setItem('candidateFundTracking',JSON.stringify({id,name,manager,createdAt:new Date().toISOString()}));
+    return 'https://github.com/mohamedmemee-cell/shariah-fund-data/issues/new?title='+encodeURIComponent('Candidate fund: '+name)+'&body='+encodeURIComponent(body);
+  }
+  function start(){
+    const url=buildIssueUrl();if(!url)return;
+    const card=byId('confirmCard'),cont=byId('continueConfirm'),status=byId('statusCard');
+    if(card){card.classList.remove('hidden');card.scrollIntoView({behavior:'smooth',block:'center'})}
+    if(cont){cont.href=url;cont.target='_blank';cont.rel='noopener';cont.onclick=()=>{setTimeout(()=>{card?.classList.add('hidden');status?.classList.remove('hidden');status?.scrollIntoView({behavior:'smooth',block:'start'});location.reload()},600)}}
+    byId('cancelConfirm')?.addEventListener('click',()=>card?.classList.add('hidden'),{once:true});
+  }
+  const btn=byId('submit');
+  if(btn){
+    const clone=btn.cloneNode(true);
+    btn.replaceWith(clone);
+    clone.addEventListener('click',start);
+  }
+})();
+</script>
+
 </body></html>
