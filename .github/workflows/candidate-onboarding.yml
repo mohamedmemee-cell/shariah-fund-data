@@ -1,0 +1,54 @@
+name: Research candidate Shariah fund
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/candidates/**"
+      - "scripts/research_candidate.py"
+      - ".github/workflows/candidate-onboarding.yml"
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: candidate-fund-onboarding
+  cancel-in-progress: false
+
+jobs:
+  research:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'Candidate fund:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Research candidate fund
+        run: python scripts/research_candidate.py
+
+      - name: Commit candidate research
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/candidates docs/candidates sources/candidates
+          if git diff --cached --quiet; then
+            echo "No candidate changes to commit."
+          else
+            git commit -m "Research candidate Shariah fund"
+            git push origin HEAD:main
+          fi
