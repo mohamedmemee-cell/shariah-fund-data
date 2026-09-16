@@ -222,13 +222,13 @@ $('resetWeights').addEventListener('click',()=>{selectedPortfolio=null;selectedP
   document.querySelectorAll('.goalMode').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.goalMode').forEach(x=>x.classList.toggle('active',x===b));updateGoalMode()}));
   ['targetValue','targetIncrease','years','r1','r2','r3'].forEach(id=>byId(id)?.addEventListener('input',()=>{if(document.querySelector('.goalMode.active')?.dataset.mode==='target')updateTargetAmounts()}));
 
-  function planReturn(f){const vals=[[f.tenYear,.35],[f.fiveYear,.35],[f.threeYear,.2],[f.oneYear,.1],[f.sinceInception,.15]].filter(x=>Number.isFinite(Number(x[0])));if(!vals.length)return 0;const tw=vals.reduce((a,x)=>a+x[1],0);return vals.reduce((a,x)=>a+Number(x[0])*x[1],0)/tw}
+  function planReturn(f){const vals=[[f.tenYear,.35],[f.fiveYear,.30],[f.threeYear,.20],[f.oneYear,.10],[f.sinceInception,.05]].filter(x=>x[0]!=null&&x[0]!==''&&Number.isFinite(Number(x[0])));if(!vals.length)return 0;const tw=vals.reduce((a,x)=>a+x[1],0);return vals.reduce((a,x)=>a+Number(x[0])*x[1],0)/tw}
   function practicalize(p,total){if(!p||!Array.isArray(p.rows)||!total)return p;let rows=p.rows.map(r=>({...r,amount:Math.max(0,total*Number(r.weight||0))})).filter(r=>r.amount>.01);let changed=false;for(let guard=0;guard<20;guard++){const bad=rows.filter(r=>{const min=MIN_MONTHLY[r.fund.id]||0;return min>0&&r.amount>0&&r.amount<min-.01}).sort((a,b)=>a.amount-b.amount)[0];if(!bad)break;changed=true;const removed=bad.amount;rows=rows.filter(r=>r!==bad);if(!rows.length)break;let recipients=rows.filter(r=>r.band===bad.band);if(!recipients.length)recipients=rows;const base=recipients.reduce((a,r)=>a+r.amount,0)||recipients.length;recipients.forEach(r=>r.amount+=removed*(base? r.amount/base : 1/recipients.length))}
     const sum=rows.reduce((a,r)=>a+r.amount,0)||1;rows.forEach(r=>r.weight=r.amount/sum);const mix={Low:0,Medium:0,High:0};rows.forEach(r=>mix[r.band]=(mix[r.band]||0)+r.weight*100);const estimate=rows.reduce((a,r)=>a+r.weight*planReturn(r.fund),0);return {...p,rows,mix,estimate,practicalAdjusted:changed}}
 
   if(typeof window.displayRecommendation==='function'){
     const oldDisplay=window.displayRecommendation;
-    window.displayRecommendation=function(title,p,detail){const total=Math.max(0,+byId('monthly')?.value||0),q=practicalize(p,total);const extra=q?.practicalAdjusted?' The monthly plan was rebalanced to respect known R500 recurring minimums for applicable unit-trust funds.':'';return oldDisplay(title,q,(detail||'')+extra)};
+    window.displayRecommendation=function(title,p,detail){const total=Math.max(0,+byId('monthly')?.value||0),q=practicalize(p,total);const extra=q?.practicalAdjusted?' The monthly plan was rebalanced to respect known R500 recurring minimums for applicable unit-trust funds.':'';const result=oldDisplay(title,q,(detail||'')+extra);if(title==='Target-return search'){const target=Math.max(0,Math.min(30,+byId('targetReturn')?.value||0)),distance=Math.abs(Number(q?.estimate||0)-target),v=byId('targetValidation');if(v){const exact=distance<=.35;v.innerHTML=exact?`<span class="ok">Final practical portfolio is within ${distance.toFixed(2)} percentage points of your target.</span>`:`<span class="warn">Closest practical portfolio is ${Number(q?.estimate||0).toFixed(2)}%, ${distance.toFixed(2)} points from your target.</span>`}}return result};
   }
   if(typeof window.renderSelectedMonthlyPlan==='function'){
     const oldRender=window.renderSelectedMonthlyPlan;
@@ -418,6 +418,25 @@ $('resetWeights').addEventListener('click',()=>{selectedPortfolio=null;selectedP
       if(!a.rel)a.rel='noopener noreferrer';
     });
   });
+})();
+</script>
+
+
+<script>
+/* scenario-sync-v1 */
+(function(){
+  const byId=id=>document.getElementById(id);
+  function syncFromSelected(){
+    try{
+      if(!window.selectedPortfolio || !Number.isFinite(Number(window.selectedPortfolio.estimate))) return;
+      const expected=Number(window.selectedPortfolio.estimate);
+      const vals=[Math.max(0,expected-2),expected,expected+2];
+      ['r1','r2','r3'].forEach((id,i)=>{const el=byId(id);if(el)el.value=vals[i].toFixed(1)});
+      const src=byId('scenarioSource');
+      if(src){const title=window.selectedPortfolioTitle||'Current portfolio model';src.innerHTML=`Linked to <b>${title}</b>: Cautious ${vals[0].toFixed(1)}% • Expected ${vals[1].toFixed(1)}% • Optimistic ${vals[2].toFixed(1)}%. You can edit these assumptions manually.`}
+    }catch(e){}
+  }
+  ['buildRisk','buildTarget','buildAdvisable'].forEach(id=>byId(id)?.addEventListener('click',()=>queueMicrotask(syncFromSelected)));
 })();
 </script>
 
