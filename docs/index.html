@@ -173,6 +173,40 @@ html[data-theme="dark"] select,html[data-theme="dark"] option{background:#182123
 .accessGateHead{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}.accessGateTitle{font-size:17px;font-weight:850;color:var(--brand-strong);margin:0 0 4px}.accessGateText{margin:0;color:var(--muted);font-size:13px;line-height:1.5;max-width:760px}.accessGateForm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.accessGateForm input{min-width:220px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--text);font:inherit;text-transform:uppercase;letter-spacing:.08em}.accessGateError{min-height:18px;margin-top:6px;color:var(--danger);font-size:12px;font-weight:700}.accessGateStatus{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:var(--soft);font-size:12px;font-weight:800}.lockedFieldV1{cursor:not-allowed!important}.accessLockedNoteV1{font-size:12px;color:var(--muted);margin-top:7px}.accessLockBtnV1{display:none}.accessGateV1.unlocked .accessLockBtnV1{display:inline-flex}
 @media(max-width:600px){.accessGateForm{align-items:stretch}.accessGateForm input,.accessGateForm .btn{width:100%;min-width:0}}
 
+
+/* pdf-projection-and-contacts-v7 */
+@media print{
+  #printPlanReport .pdfScenarioGrid{
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    gap:3mm!important;
+    align-items:stretch!important;
+  }
+  #printPlanReport .pdfScenario{
+    min-height:24mm!important;
+    padding:3.2mm!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    gap:1.2mm!important;
+    overflow:hidden!important;
+  }
+  #printPlanReport .pdfScenario small,
+  #printPlanReport .pdfScenario b,
+  #printPlanReport .pdfScenario span{
+    display:block!important;
+    width:100%!important;
+    white-space:normal!important;
+    line-height:1.25!important;
+  }
+  #printPlanReport .pdfScenario small{font-size:8.5pt!important;color:#445!important;margin:0!important}
+  #printPlanReport .pdfScenario b{font-size:12.5pt!important;margin:1mm 0 .3mm!important;color:#111!important}
+  #printPlanReport .pdfScenario span{font-size:8.5pt!important;color:#596267!important;margin:0!important}
+  #printPlanReport .pdfFundContact{display:block!important;font-size:8pt!important;color:#596267!important;margin-top:.8mm!important;line-height:1.3!important}
+  #printPlanReport .pdfFundContact a{color:#0f5b4b!important;text-decoration:none!important}
+}
+
 </style>
 </head>
 <body><main>
@@ -666,6 +700,42 @@ $('resetWeights').addEventListener('click',()=>{selectedPortfolio=null;selectedP
  document.addEventListener('DOMContentLoaded',()=>setTimeout(apply,650));
  if(document.readyState!=='loading')setTimeout(apply,650);
  new MutationObserver(()=>{if(document.documentElement.dataset.calculatorLocked==='true')protectedControls().forEach(el=>{if(!el.disabled){el.dataset.wasDisabledV1='0';el.disabled=true;el.classList.add('lockedFieldV1')}})}).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
+
+<script>
+/* pdf-projection-and-contacts-v7 */
+(function(){
+ let directoryCache=null;
+ fetch('./fund-directory.json?ts='+Date.now(),{cache:'no-store'})
+   .then(r=>r.ok?r.json():null).then(x=>directoryCache=x).catch(()=>{});
+ function selected(){try{return typeof selectedPortfolio!=='undefined'?selectedPortfolio:null}catch(e){return null}}
+ function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function patchPdfFundContacts(){
+   const report=document.getElementById('printPlanReport');
+   if(!report||!directoryCache)return;
+   const heading=[...report.querySelectorAll('h2')].find(h=>/Selected funds/i.test(h.textContent||''));
+   const table=heading?.nextElementSibling;
+   if(!table||table.tagName!=='TABLE'||table.dataset.contactsV7==='1')return;
+   const rows=selected()?.rows||[];
+   const trs=[...table.querySelectorAll('tbody tr')];
+   trs.forEach((tr,i)=>{
+     const r=rows[i]; if(!r?.fund)return;
+     const d=(directoryCache.funds||{})[r.fund.id]||{};
+     const c=d.contact||{};
+     const phone=c.phone||c.whatsapp||'';
+     const email=c.email||c.alternate_email||'';
+     if(!phone&&!email)return;
+     const first=tr.querySelector('td'); if(!first)return;
+     const pieces=[];
+     if(phone) pieces.push('Tel: '+esc(phone));
+     if(email) pieces.push('Email: '+esc(email));
+     first.insertAdjacentHTML('beforeend','<span class="pdfFundContact">'+pieces.join(' &nbsp; • &nbsp; ')+'</span>');
+   });
+   table.dataset.contactsV7='1';
+ }
+ window.addEventListener('beforeprint',patchPdfFundContacts);
 })();
 </script>
 
