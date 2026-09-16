@@ -80,6 +80,9 @@ jobs:
       - name: Apply performance V3
         run: python scripts/performance_v3.py
 
+      - name: Apply beginner-friendly UI polish
+        run: python scripts/ui_polish_v1.py
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -88,7 +91,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No fund data or calculator changes to commit."
           else
-            git commit -m "Update Shariah fund data and calculator performance"
+            git commit -m "Update Shariah fund data, performance and UI"
             for attempt in 1 2 3; do
               if git push origin HEAD:main; then
                 break
@@ -112,12 +115,13 @@ jobs:
               python scripts/major_v2_flow.py
               python scripts/smooth_slider.py
               python scripts/performance_v3.py
+              python scripts/ui_polish_v1.py
               git add data docs/shariah-funds.json docs/index.html
               if git diff --cached --quiet; then
                 echo "Latest main already contains equivalent generated data."
                 break
               fi
-              git commit -m "Update Shariah fund data and calculator performance"
+              git commit -m "Update Shariah fund data, performance and UI"
             done
           fi
 
