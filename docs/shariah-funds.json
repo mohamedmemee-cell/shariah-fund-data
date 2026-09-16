@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T07:38:28Z",
+  "generated_at": "2026-09-16T08:02:33Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -23,7 +23,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -44,7 +44,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "shariah_note": "South African Shariah equity exposure.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -65,7 +65,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90db7be660b7ffe317b91_Camissa%20Islamic%20Balanced%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -86,7 +86,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "27four-shariah-income",
@@ -107,7 +107,7 @@
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf",
       "shariah_note": "Shariah-compliant income allocation.",
       "update_status": "fallback_manual",
-      "updated": "2026-09-15",
+      "updated": "2026-09-16",
       "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf"
     },
     {
@@ -129,7 +129,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90e036aadbc0cefcb383c_Camissa%20Islamic%20High%20Yield%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -150,7 +150,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -171,7 +171,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-16T07:38:28Z"
+      "updated": "2026-09-16T08:02:33Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -180,19 +180,19 @@
       "category": "Balanced",
       "bucket": "Watchlist",
       "suggested_split": 0,
-      "oneYear": 22.12,
-      "threeYear": 11.33,
-      "fiveYear": 9.82,
-      "tenYear": null,
+      "oneYear": 15.84,
+      "threeYear": 11.18,
+      "fiveYear": 9.11,
+      "tenYear": 2026.0,
       "sinceInception": null,
       "ter": null,
-      "data_as_of": "2026-05-31",
+      "data_as_of": "2026-07-31",
       "risk_level": "Moderate-High",
       "source_url": "https://27four.com/fund-centre/",
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "shariah_note": "Shariah-compliant balanced allocation.",
       "update_status": "fallback_manual",
-      "updated": "2026-09-15",
+      "updated": "2026-09-16",
       "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf"
     },
     {
@@ -214,7 +214,7 @@
       "data_source_url": "https://www.oasiscrescent.com/",
       "shariah_note": "Islamic balanced investment option.",
       "update_status": "manual",
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "id": "stanlib-shariah-balanced-fof",
@@ -235,7 +235,7 @@
       "data_source_url": "https://www.stanlib.com/",
       "shariah_note": "Shariah-compliant multi-manager balanced fund.",
       "update_status": "manual",
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     }
   ]
 }
