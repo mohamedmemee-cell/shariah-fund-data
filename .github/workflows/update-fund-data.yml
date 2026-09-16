@@ -71,6 +71,8 @@ jobs:
         run: python scripts/fix_scenario_sync.py
       - name: Simplify Add Fund confirmation flow
         run: python scripts/add_fund_beginner_flow.py
+      - name: Fix Add Fund start button
+        run: python scripts/add_fund_click_fix_v2.py
       - name: Apply plan summary, sharing and beginner controls
         run: python scripts/pending_batch_v1.py
       - name: Apply site-wide theme and guided-flow fixes
@@ -121,6 +123,7 @@ jobs:
               python scripts/ui_polish_v1.py
               python scripts/fix_scenario_sync.py
               python scripts/add_fund_beginner_flow.py
+              python scripts/add_fund_click_fix_v2.py
               python scripts/pending_batch_v1.py
               python scripts/site_ui_v2.py
               python scripts/watchlist_activation_ui.py
