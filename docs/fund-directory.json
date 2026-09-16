@@ -150,28 +150,28 @@
         "minimum_investment": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
           "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "note": "Website",
           "value": "500.00"
         },
         "account_suitability": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
           "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
-          "value": "Non-TFSA"
+          "note": "Website",
+          "value": "Both"
         },
         "risk_level": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
           "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "note": "Website",
           "value": "Moderate-High"
         },
         "shariah_governance": {
@@ -212,7 +212,7 @@
         }
       },
       "minimum_investment": "500.00",
-      "account_suitability": "Non-TFSA",
+      "account_suitability": "Both",
       "shariah_manually_verified": true
     },
     "oasis-crescent-balanced-progressive": {
