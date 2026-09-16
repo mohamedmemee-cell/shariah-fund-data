@@ -89,6 +89,8 @@ jobs:
         run: python scripts/access_gate_v1.py
       - name: Set calculator master access code
         run: python scripts/access_gate_code_v2.py
+      - name: Fix PDF projection cards and add fund contact details
+        run: python scripts/pdf_projection_and_contacts_v7.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -128,6 +130,7 @@ jobs:
               python scripts/summary_projection_polish_v6.py
               python scripts/access_gate_v1.py
               python scripts/access_gate_code_v2.py
+              python scripts/pdf_projection_and_contacts_v7.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
