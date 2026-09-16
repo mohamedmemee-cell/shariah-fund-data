@@ -105,13 +105,14 @@
       "name": "27four Shari'ah Balanced Fund of Funds",
       "manager": "27four",
       "category": "Balanced",
-      "bucket": "Watchlist",
+      "bucket": "Non-TFSA",
       "suggested_split": 0,
       "auto_type": "pdf_performance",
       "source_url": "https://27four.com/fund-centre/",
       "factsheet_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "risk_level": "Moderate-High",
-      "shariah_note": "Shariah-compliant balanced allocation."
+      "shariah_note": "Shariah-compliant balanced allocation.",
+      "account_suitability": "Non-TFSA"
     },
     {
       "id": "oasis-crescent-balanced-progressive",
