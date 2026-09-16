@@ -71,11 +71,15 @@ jobs:
         run: python scripts/add_fund_beginner_flow.py
       - name: Apply plan summary, sharing and beginner controls
         run: python scripts/pending_batch_v1.py
+      - name: Apply site-wide theme and guided-flow fixes
+        run: python scripts/site_ui_v2.py
+      - name: Apply Watchlist activation review UI
+        run: python scripts/watchlist_activation_ui.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data docs/shariah-funds.json docs/index.html docs/add-fund.html
+          git add data docs sources/funds.json
           if git diff --cached --quiet; then
             echo "No fund data or calculator changes to commit."
           else
@@ -101,7 +105,9 @@ jobs:
               python scripts/fix_scenario_sync.py
               python scripts/add_fund_beginner_flow.py
               python scripts/pending_batch_v1.py
-              git add data docs/shariah-funds.json docs/index.html docs/add-fund.html
+              python scripts/site_ui_v2.py
+              python scripts/watchlist_activation_ui.py
+              git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
             done
