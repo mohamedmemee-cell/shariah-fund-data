@@ -86,11 +86,14 @@ jobs:
       - name: Fix portfolio scenario sync
         run: python scripts/fix_scenario_sync.py
 
+      - name: Simplify Add Fund confirmation flow
+        run: python scripts/add_fund_beginner_flow.py
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data docs/shariah-funds.json docs/index.html
+          git add data docs/shariah-funds.json docs/index.html docs/add-fund.html
           if git diff --cached --quiet; then
             echo "No fund data or calculator changes to commit."
           else
@@ -120,7 +123,8 @@ jobs:
               python scripts/performance_v3.py
               python scripts/ui_polish_v1.py
               python scripts/fix_scenario_sync.py
-              git add data docs/shariah-funds.json docs/index.html
+              python scripts/add_fund_beginner_flow.py
+              git add data docs/shariah-funds.json docs/index.html docs/add-fund.html
               if git diff --cached --quiet; then
                 echo "Latest main already contains equivalent generated data."
                 break
