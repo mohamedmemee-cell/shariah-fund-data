@@ -95,6 +95,8 @@ jobs:
         run: python scripts/risk_mix_consistency_v8.py
       - name: Explain Step 6 risk mix differences
         run: python scripts/step6_risk_explanation_v9.py
+      - name: Add name or reference to shared plans
+        run: python scripts/plan_name_reference_v10.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -137,6 +139,7 @@ jobs:
               python scripts/pdf_projection_and_contacts_v7.py
               python scripts/risk_mix_consistency_v8.py
               python scripts/step6_risk_explanation_v9.py
+              python scripts/plan_name_reference_v10.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
