@@ -10,12 +10,11 @@
         "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
         "shariah": true
       },
       "missing": [
-        "minimum",
         "account"
       ]
     },
@@ -28,12 +27,11 @@
         "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
         "shariah": true
       },
       "missing": [
-        "minimum",
         "account"
       ]
     },
@@ -66,14 +64,13 @@
       "checks": {
         "risk": true,
         "performance": false,
-        "source_and_date": false,
+        "source_and_date": true,
         "minimum": false,
         "account": false,
         "shariah": false
       },
       "missing": [
         "performance",
-        "source_and_date",
         "minimum",
         "account",
         "shariah"
@@ -226,7 +223,7 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
@@ -234,7 +231,6 @@
         "shariah": false
       },
       "missing": [
-        "risk",
         "minimum",
         "account",
         "shariah"
@@ -366,7 +362,7 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
@@ -374,7 +370,6 @@
         "shariah": false
       },
       "missing": [
-        "risk",
         "minimum",
         "account",
         "shariah"
@@ -429,14 +424,13 @@
         "risk": false,
         "performance": false,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
         "shariah": false
       },
       "missing": [
         "risk",
         "performance",
-        "minimum",
         "account",
         "shariah"
       ]
@@ -527,18 +521,15 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
-        "shariah": false
+        "shariah": true
       },
       "missing": [
-        "risk",
-        "minimum",
-        "account",
-        "shariah"
+        "account"
       ]
     },
     {
@@ -587,18 +578,16 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
         "account": false,
-        "shariah": false
+        "shariah": true
       },
       "missing": [
-        "risk",
         "minimum",
-        "account",
-        "shariah"
+        "account"
       ]
     },
     {
@@ -610,14 +599,13 @@
         "risk": false,
         "performance": false,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
         "shariah": false
       },
       "missing": [
         "risk",
         "performance",
-        "minimum",
         "account",
         "shariah"
       ]

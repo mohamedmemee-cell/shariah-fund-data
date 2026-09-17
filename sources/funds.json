@@ -90,7 +90,7 @@
       "suggested_split": 0,
       "auto_type": "albaraka_page_pdf",
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
-      "risk_level": "Low to Moderate",
+      "risk_level": "Low",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board."
     },
     {
@@ -102,7 +102,7 @@
       "suggested_split": 0,
       "auto_type": "albaraka_page_pdf",
       "source_url": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-      "risk_level": "Moderate to High",
+      "risk_level": "Low",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board."
     },
     {
@@ -139,8 +139,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://www.stanlib.com/",
-      "risk_level": "Moderate",
+      "source_url": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
+      "risk_level": "Conservative",
       "shariah_note": "Shariah-compliant multi-manager balanced fund."
     },
     {
@@ -193,7 +193,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://invest.alexforbes.com/za/en/one/fund",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -207,7 +207,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://invest.alexforbes.com/za/en/one/fund",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -249,8 +249,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
-      "risk_level": null,
+      "source_url": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
+      "risk_level": "Low",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"
@@ -263,7 +263,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.oasiscrescent.com",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -277,7 +277,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.oasiscrescent.com",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -291,7 +291,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.oasiscrescent.com",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -347,8 +347,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
-      "risk_level": null,
+      "source_url": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
+      "risk_level": "Conservative",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"
@@ -389,7 +389,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.mianzo.co.za/equity-funds/",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -459,8 +459,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
-      "risk_level": null,
+      "source_url": "https://camissa-am.com/funds/islamic-equity-fund",
+      "risk_level": "Low",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"
@@ -473,7 +473,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.oasiscrescent.com",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -501,8 +501,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
-      "risk_level": null,
+      "source_url": "https://visiofund.co.za/who-we-are/",
+      "risk_level": "Moderate",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"
@@ -515,7 +515,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://wealthvest.co.za/factsheets/",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -529,7 +529,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://www.oasiscrescent.com",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -549,5 +549,6 @@
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"
     }
-  ]
+  ],
+  "bulk_research_last_run": "2026-09-17"
 }

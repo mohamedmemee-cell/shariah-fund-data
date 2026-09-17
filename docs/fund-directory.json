@@ -182,7 +182,47 @@
       ],
       "shariah_note": "These are the current scholars listed on Al Baraka Bank's Shari'ah Supervisory Board page. Confirm fund-specific composition if required before investing.",
       "shariah_source": "https://www.albaraka.co.za/pages/shariah-supervisory-board",
-      "board_status": "current Al Baraka Shari'ah Board"
+      "board_status": "current Al Baraka Shari'ah Board",
+      "verification": {
+        "ter": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": 0.71
+        },
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "500"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Low"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "31/03/2020"
+        }
+      },
+      "minimum_investment": "500",
+      "inception_date": "31/03/2020"
     },
     "old-mutual-albaraka-equity": {
       "website": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
@@ -200,7 +240,47 @@
       ],
       "shariah_note": "These are the current scholars listed on Al Baraka Bank's Shari'ah Supervisory Board page. Confirm the latest fund-specific certificate before investing.",
       "shariah_source": "https://www.albaraka.co.za/pages/shariah-supervisory-board",
-      "board_status": "current Al Baraka Shari'ah Board"
+      "board_status": "current Al Baraka Shari'ah Board",
+      "verification": {
+        "ter": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": 1.76
+        },
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "500"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Low"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "01/06/1992"
+        }
+      },
+      "minimum_investment": "500",
+      "inception_date": "01/06/1992"
     },
     "27four-shariah-income": {
       "website": "https://27four.com/fund-centre/",
@@ -324,7 +404,7 @@
       "board_status": "verification pending"
     },
     "stanlib-shariah-balanced-fof": {
-      "website": "https://www.stanlib.com/",
+      "website": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
       "manager_website": "https://www.stanlib.com/",
       "contact": {
         "phone": "0860 123 003",
@@ -337,7 +417,231 @@
       ],
       "shariah_note": "These names appear on a STANLIB Shari'ah compliance report from 2018. A current public board list was not found in the sources reviewed, so the calculator marks this as historical and recommends verification with STANLIB.",
       "shariah_source": "https://staging.stanlib.com/secure/src/assets/files/investorReports/Collective%20Investments%20Abridged%20Annual%20Report%20-%202017.pdf",
-      "board_status": "historical public source; current verification required"
-    }
+      "board_status": "historical public source; current verification required",
+      "verification": {
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Conservative"
+        }
+      }
+    },
+    "alexforbes-27four-shariah-balanced-prescient-fof": {},
+    "alexforbes-27four-shariah-multi-managed-balanced-fund": {},
+    "alexforbes-27four-shariah-wealth-builder-fund": {},
+    "alexforbes-alexander-forbes-investments-shariah-medium-growth": {
+      "website": "https://invest.alexforbes.com/za/en/one/fund"
+    },
+    "alexforbes-alexander-forbes-investments-shariah-high-growth": {
+      "website": "https://invest.alexforbes.com/za/en/one/fund"
+    },
+    "alexforbes-element-islamic-balanced": {},
+    "alexforbes-foord-shariah-balanced-fund": {},
+    "alexforbes-momentum-investments-shariah": {
+      "website": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
+      "verification": {
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Low"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "01 October 2013"
+        }
+      },
+      "inception_date": "01 October 2013"
+    },
+    "alexforbes-oasis-crescent-balanced-high-equity": {
+      "website": "https://www.oasiscrescent.com"
+    },
+    "alexforbes-oasis-crescent-balanced-progressive": {
+      "website": "https://www.oasiscrescent.com"
+    },
+    "alexforbes-oasis-crescent-balanced-stable": {
+      "website": "https://www.oasiscrescent.com"
+    },
+    "alexforbes-old-mutual-shariah-balanced": {},
+    "alexforbes-sentio-sci-hikma-shariah-balanced": {},
+    "alexforbes-smm-nur-balanced-portfolio": {},
+    "alexforbes-stanlib-multi-manager-shariah-balanced": {
+      "website": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
+      "verification": {
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Conservative"
+        }
+      }
+    },
+    "alexforbes-element-islamic-equity": {},
+    "alexforbes-mazi-shariah-equity-fund": {},
+    "alexforbes-mianzo-islamic-domestic-equity-27four-fund": {
+      "website": "https://www.mianzo.co.za/equity-funds/",
+      "minimum_investment": "50",
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://www.mianzo.co.za/equity-funds/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "50"
+        }
+      }
+    },
+    "alexforbes-old-mutual-shariah-equity": {},
+    "alexforbes-element-islamic-global-equity": {},
+    "alexforbes-old-mutual-global-islamic-equity": {},
+    "alexforbes-27four-shariah-active-equity": {},
+    "alexforbes-camissa-islamic-equity-fund": {
+      "website": "https://camissa-am.com/funds/islamic-equity-fund",
+      "minimum_investment": "500",
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://camissa-am.com/funds/islamic-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "500"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://camissa-am.com/funds/islamic-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Low"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://camissa-am.com/funds/islamic-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "13 July 2009"
+        },
+        "shariah_governance": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://camissa-am.com/funds/islamic-equity-fund",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": true
+        }
+      },
+      "inception_date": "13 July 2009",
+      "shariah_source": "https://camissa-am.com/funds/islamic-equity-fund",
+      "board_status": "automatically verified from official manager material"
+    },
+    "alexforbes-oasis-crescent-equity-fund": {
+      "website": "https://www.oasiscrescent.com"
+    },
+    "alexforbes-sentio-sci-hikma-shariah-general-equity": {},
+    "alexforbes-visio-bci-shariah-equity-fund": {
+      "website": "https://visiofund.co.za/who-we-are/",
+      "verification": {
+        "ter": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://visiofund.co.za/who-we-are/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": 3.73
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://visiofund.co.za/who-we-are/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Moderate"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://visiofund.co.za/who-we-are/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "01 Apr 2004"
+        },
+        "shariah_governance": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://visiofund.co.za/who-we-are/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": true
+        }
+      },
+      "inception_date": "01 Apr 2004",
+      "shariah_source": "https://visiofund.co.za/who-we-are/",
+      "board_status": "automatically verified from official manager material"
+    },
+    "alexforbes-wealthvest-shariah-equity-27four-fund": {
+      "website": "https://wealthvest.co.za/factsheets/",
+      "verification": {
+        "ter": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://wealthvest.co.za/factsheets/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": 1.41
+        },
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://wealthvest.co.za/factsheets/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "10000"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://wealthvest.co.za/factsheets/",
+          "verified_at": "2026-09-17",
+          "note": "Automatically extracted from official manager material.",
+          "value": "03 March 2025"
+        }
+      },
+      "minimum_investment": "10000",
+      "inception_date": "03 March 2025"
+    },
+    "alexforbes-oasis-crescent-income-fund": {
+      "website": "https://www.oasiscrescent.com"
+    },
+    "alexforbes-sentio-sci-hikma-shariah-income-fund": {}
   }
 }

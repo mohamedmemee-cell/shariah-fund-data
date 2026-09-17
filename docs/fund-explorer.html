@@ -38,6 +38,12 @@ body main{max-width:1680px!important;padding-left:24px!important;padding-right:2
 </style>
 
 <style id="siteFinishV4Shared">html[data-theme="dark"] select,html[data-theme="dark"] option{background:#182123!important;color:#edf3f1!important}.backTopV4{position:fixed;right:22px;bottom:22px;z-index:80;border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.14);font-weight:800;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.16s}.backTopV4.show{opacity:1;pointer-events:auto;transform:none}@media(max-width:700px){.backTopV4{right:12px;bottom:12px}}</style>
+
+<style>
+/* ui-bulk-research-v30 */
+.bulkResearchV30{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}.bulkStatV30{padding:11px 12px;border:1px solid var(--line);border-radius:11px;background:var(--soft)}.bulkStatV30 small{display:block;color:var(--muted);margin-bottom:4px}.bulkStatV30 b{font-size:18px}.bulkNoteV30{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.45}@media(max-width:760px){.bulkResearchV30{grid-template-columns:1fr 1fr}}
+</style>
+
 </head><body><main><nav class="nav"><a href="./">Calculator</a><a class="active" href="./fund-explorer.html">Fund Explorer</a><a href="./discovery.html">Discovery Inbox</a><a href="./add-fund.html">Add Fund</a></nav><section class="card"><h1 style="margin-top:0">Fund Explorer</h1><p class="muted">Research the Shariah funds tracked by the calculator. Click any fund for its website, contact details and Shariah information.</p><div class="filters"><input id="q" placeholder="Search fund or manager"><select id="risk"><option value="">All risk levels</option></select><select id="bucket"><option value="">All account groups</option></select><select id="sort"><option value="name">Sort: Fund name</option><option value="fiveYear">Sort: 5Y return</option><option value="threeYear">Sort: 3Y return</option><option value="oneYear">Sort: 1Y return</option><option value="ter">Sort: TER</option></select></div></section><section class="card"><div class="fundCountV25"><strong id="fundCountV25">Loading funds…</strong><span id="fundTotalV25"></span></div><div class="tableWrap"><table id="fundExplorerTableV25"><thead><tr><th>#</th><th>Fund</th><th>Manager</th><th>Account</th><th>Fund status</th><th>Risk</th><th>1Y</th><th>3Y</th><th>5Y</th><th>10Y</th><th>TER</th><th>Data as at</th><th>Status</th></tr></thead><tbody id="rows"><tr><td colspan="13">Loading…</td></tr></tbody></table></div><p class="muted" id="generated"></p></section><script>
 const $=id=>document.getElementById(id),pct=n=>n==null?'—':Number(n).toFixed(2)+'%';let feed={funds:[]},directory={funds:{}};function accountLabel(f){const d=(directory.funds||{})[f.id]||{},a=d.account_suitability;if(a==='Both')return'TFSA & Non-TFSA';if(a)return a;return f.bucket==='Watchlist'?'Not confirmed':(f.bucket||'—')}function render(){const q=$('q').value.toLowerCase().trim(),risk=$('risk').value,bucket=$('bucket').value,sort=$('sort').value;let arr=feed.funds.filter(f=>(!q||(f.name+' '+(f.manager||'')).toLowerCase().includes(q))&&(!risk||f.risk_level===risk)&&(!bucket||f.bucket===bucket));arr.sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):(Number(b[sort]??-Infinity)-Number(a[sort]??-Infinity)));$('fundCountV25').textContent=`Showing ${arr.length} of ${feed.funds.length} funds`;$('fundTotalV25').textContent=arr.length===feed.funds.length?'Full list':'Filtered list';$('rows').innerHTML=arr.length?arr.map((f,i)=>`<tr><td>${i+1}</td><td><a class="fund" href="./fund-details.html?id=${encodeURIComponent(f.id)}">${f.name}</a></td><td>${f.manager||'—'}</td><td>${accountLabel(f)}</td><td>${f.bucket==='Watchlist'?'Watchlist':'Active'}</td><td>${f.risk_level||'—'}</td><td>${pct(f.oneYear)}</td><td>${pct(f.threeYear)}</td><td>${pct(f.fiveYear)}</td><td>${pct(f.tenYear)}</td><td>${pct(f.ter)}</td><td>${f.data_as_of||'—'}</td><td class="${f.update_status||''}">${f.update_status||'—'}</td></tr>`).join(''):'<tr><td colspan="13">No funds match these filters.</td></tr>'}
 async function load(){const [r,d]=await Promise.all([fetch('./shariah-funds.json?ts='+Date.now(),{cache:'no-store'}),fetch('./fund-directory.json?ts='+Date.now(),{cache:'no-store'})]);feed=await r.json();directory=await d.json();const risks=[...new Set(feed.funds.map(f=>f.risk_level).filter(Boolean))].sort(),buckets=[...new Set(feed.funds.map(f=>f.bucket).filter(Boolean))].sort();$('risk').innerHTML+=[...risks].map(x=>`<option>${x}</option>`).join('');$('bucket').innerHTML+=[...buckets].map(x=>`<option>${x}</option>`).join('');$('generated').textContent='Feed generated: '+(feed.generated_at||'—');render()}['q','risk','bucket','sort'].forEach(id=>$(id).addEventListener('input',render));load();
@@ -64,4 +70,19 @@ async function load(){const [r,d]=await Promise.all([fetch('./shariah-funds.json
 </script>
 
 <!-- fund-explorer-layout-v25 -->
+
+<script>
+/* ui-bulk-research-v30 */
+(async function(){
+ try{
+   const [rr,vr]=await Promise.all([fetch('./bulk-research.json?ts='+Date.now(),{cache:'no-store'}),fetch('./bulk-verification.json?ts='+Date.now(),{cache:'no-store'})]);
+   const r=rr.ok?await rr.json():{},v=vr.ok?await vr.json():{};
+   const set=(id,x)=>{const e=document.getElementById(id);if(e)e.textContent=x??'—'};
+   set('bulkResearchedV30',r.researched);set('bulkSourcesV30',r.official_source_found);set('bulkFieldsV30',r.fields_verified);set('bulkStillV30',v.still_watchlist);
+   set('bulkResearchDateV30',r.generated_at?'Last run: '+r.generated_at:'Not run yet');
+ }catch(e){const x=document.getElementById('bulkResearchDateV30');if(x)x.textContent='Status unavailable'}
+})();
+</script>
+
+<!-- ui-bulk-research-v30 -->
 </body></html>
