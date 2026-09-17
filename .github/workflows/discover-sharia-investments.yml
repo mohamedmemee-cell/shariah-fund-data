@@ -11,6 +11,7 @@ on:
       - "scripts/discover_sharia_investments_v2.py"
       - "scripts/discovery_nav_v17.py"
       - "scripts/discovery_review_add_v18.py"
+      - "scripts/discovery_manual_search_ui_v19.py"
   schedule:
     - cron: "30 5 * * 3"
 
@@ -44,6 +45,8 @@ jobs:
         run: python scripts/discovery_nav_v17.py
       - name: Add review and Add Fund handoff
         run: python scripts/discovery_review_add_v18.py
+      - name: Add manual Search For controls
+        run: python scripts/discovery_manual_search_ui_v19.py
       - name: Commit discovery results
         run: |
           git config user.name "github-actions[bot]"
@@ -61,6 +64,7 @@ jobs:
               python scripts/discover_sharia_investments_v2.py
               python scripts/discovery_nav_v17.py
               python scripts/discovery_review_add_v18.py
+              python scripts/discovery_manual_search_ui_v19.py
               git add data/discovery_candidates.json docs/discovery.json docs/discovery.html docs/index.html docs/fund-explorer.html docs/add-fund.html docs/fund-details.html
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah investment discovery inbox"
