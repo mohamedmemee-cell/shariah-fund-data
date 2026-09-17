@@ -78,7 +78,75 @@
       ],
       "shariah_note": "Camissa's Shariah certificate dated 24 June 2025 covers Camissa Islamic Funds and names these members of the Shariah Supervisory Committee.",
       "shariah_source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
-      "board_status": "verified from 24 June 2025 certificate"
+      "board_status": "verified from 24 June 2025 certificate",
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": "500"
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": "Both"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": "Low"
+        },
+        "ter": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": 0.58
+        },
+        "oneYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": 13.4
+        },
+        "threeYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": 12.2
+        },
+        "fiveYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://camissa-am.com/wp-content/uploads/sharia/Sharia-certificate.pdf",
+          "verified_at": "2026-09-17",
+          "note": "This fund aims to provide a high income yield and will typically have a strong bias towards yield assets such as sukuks and",
+          "value": 9.7
+        }
+      },
+      "minimum_investment": "500",
+      "account_suitability": "Both",
+      "shariah_source_verified_at": "2026-09-17"
     },
     "old-mutual-albaraka-balanced": {
       "website": "https://www.albaraka.co.za/products/old-mutual-albaraka-balanced-fund",

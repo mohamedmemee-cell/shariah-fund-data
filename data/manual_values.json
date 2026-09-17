@@ -44,11 +44,11 @@
     },
     "camissa-islamic-high-yield": {
       "oneYear": 13.4,
-      "threeYear": 10.4,
-      "fiveYear": 10.0,
+      "threeYear": 12.2,
+      "fiveYear": 9.7,
       "tenYear": null,
       "ter": 0.58,
-      "dataAsOf": null
+      "dataAsOf": "2026-08-03"
     },
     "old-mutual-albaraka-income": {
       "oneYear": null,
