@@ -51,7 +51,10 @@ jobs:
       - name: Run focused investment search
         run: python scripts/manual_discovery_search_v19.py
       - name: Keep Discovery Inbox UI current
-        run: python scripts/discovery_manual_search_ui_v19.py
+        run: |
+          python scripts/discovery_manual_search_ui_v19.py
+          python scripts/shared_theme_v20.py
+          python scripts/github_return_status_v21.py
       - name: Commit search results
         shell: bash
         run: |
