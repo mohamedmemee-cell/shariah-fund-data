@@ -1,10 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": null,
+  "generated_at": "2026-09-17T12:00:04Z",
   "search_engine": "Bing RSS (no API key)",
   "scope": "Publicly discoverable South African Shariah/Islamic retail investment products",
   "disclaimer": "Discovery candidates are not verified or approved for the Portfolio Builder until reliable official evidence is reviewed.",
-  "queries": [],
+  "queries": [
+    "Shariah fund South Africa investment",
+    "Shariah compliant unit trust South Africa",
+    "Islamic unit trust South Africa fund",
+    "Shariah ETF South Africa",
+    "Islamic ETF South Africa investment",
+    "Shariah balanced fund South Africa",
+    "Shariah income fund South Africa",
+    "Shariah equity fund South Africa",
+    "Islamic balanced fund South Africa",
+    "Islamic income fund South Africa",
+    "Shariah fund factsheet South Africa pdf",
+    "site:za Shariah investment fund South Africa"
+  ],
   "errors": [],
   "candidates": []
 }
