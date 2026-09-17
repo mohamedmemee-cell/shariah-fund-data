@@ -111,6 +111,8 @@ jobs:
         run: python scripts/pdf_name_reference_v16.py
       - name: Ensure Discovery Inbox navigation
         run: python scripts/discovery_nav_v17.py
+      - name: Add Discovery Inbox review and Add Fund handoff
+        run: python scripts/discovery_review_add_v18.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -161,6 +163,7 @@ jobs:
               python scripts/live_sync_fixes_v15.py
               python scripts/pdf_name_reference_v16.py
               python scripts/discovery_nav_v17.py
+              python scripts/discovery_review_add_v18.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
