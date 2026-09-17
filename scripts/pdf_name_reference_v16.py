@@ -1,12 +1,35 @@
 #!/usr/bin/env python3
+import json, re
 from pathlib import Path
+from datetime import date
 
 ROOT=Path(__file__).resolve().parents[1]
 INDEX=ROOT/'docs'/'index.html'
+SCRIPTS=ROOT/'scripts'
+APP_VERSION=ROOT/'docs'/'app-version.json'
 s=INDEX.read_text(encoding='utf-8')
 marker='pdf-name-reference-v16'
+
+# Keep the visible calculator version synchronized automatically with the highest
+# numbered release script in the repository. This prevents the badge getting
+# stuck at v16 when later V17+ changes are deployed.
+versions=[]
+for p in SCRIPTS.glob('*.py'):
+    m=re.search(r'_v(\d+)\.py$',p.name,re.I)
+    if m:
+        versions.append(int(m.group(1)))
+latest=max(versions) if versions else 16
+version_label=f'v{latest}'
+
+# Update any existing calculator version element regardless of its previous text.
+s=re.sub(r'(<div\s+id="calcVersionV15"\s+class="calcVersionV14">)v\d+(</div>)',rf'\g<1>{version_label}\2',s,count=1)
+# Fallback if the historical id/class changed but a calc-version badge remains.
+s=re.sub(r'(<[^>]+class="[^"]*calcVersionV14[^"]*"[^>]*>)v\d+(</[^>]+>)',rf'\g<1>{version_label}\2',s,count=1)
+APP_VERSION.write_text(json.dumps({'version':version_label,'build_date':date.today().isoformat()},indent=2)+'\n',encoding='utf-8')
+
 if marker in s:
-    print('PDF name/reference V16 already present')
+    INDEX.write_text(s,encoding='utf-8')
+    print(f'PDF name/reference already present; synced visible app version to {version_label}')
     raise SystemExit(0)
 
 # Add a dedicated print-only identity line inside Step 6. This is separate from
@@ -16,7 +39,6 @@ if anchor in s:
     repl='<div class="planIdentitySummary" id="planIdentitySummary" aria-live="polite"></div><div id="pdfPlanIdentityV16" class="pdfPlanIdentityV16"></div><div class="planSummaryGrid" id="planSummaryGrid"></div>'
     s=s.replace(anchor,repl,1)
 else:
-    # Fallback in case later patches changed the exact identity markup.
     anchor2='<div class="planSummaryGrid" id="planSummaryGrid"></div>'
     if anchor2 not in s:
         raise SystemExit('Could not find Step 6 summary grid; refusing partial patch')
@@ -45,7 +67,6 @@ js=r'''
    const label=document.createElement('span');label.textContent='Investment plan for ';
    const strong=document.createElement('strong');strong.textContent=name;
    box.append(label,strong);
-   // Inline style is only a screen fallback; @media print forces display when printing.
    box.style.display='none';
  }
  byId('planName')?.addEventListener('input',syncPdfName);
@@ -56,9 +77,5 @@ js=r'''
 </script>
 '''
 s=s.replace('</body>',js+'\n</body>',1)
-
-# Bump the visible build label so it is easy to confirm this fix is deployed.
-s=s.replace('id="calcVersionV15" class="calcVersionV14">v15</div>','id="calcVersionV15" class="calcVersionV14">v16</div>',1)
-
 INDEX.write_text(s,encoding='utf-8')
-print('Applied PDF name/reference V16')
+print(f'Applied PDF name/reference V16 and synced visible app version to {version_label}')
