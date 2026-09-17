@@ -1,6 +1,6 @@
 {
   "as_of": "2026-09-17",
-  "note": "Fallback values retained when automated adapters cannot verify a current source. Each fallback can carry its own dataAsOf date; 27four figures were seeded from the official Fund Centre as at 2026-05-31.",
+  "note": "Fallback values retained when automated adapters cannot verify a current source. Each fallback can carry its own dataAsOf date; 27four figures were seeded from the official Fund Centre as at 2026-05-31. Alexforbes July 2026 Shari'ah Manager Watch values seed missing fallbacks only; manager/manual verified figures remain authoritative.",
   "values": {
     "satrix-msci-world-islamic-etf": {
       "oneYear": null,
@@ -24,7 +24,7 @@
       "fiveYear": 12.9,
       "tenYear": 8.9,
       "ter": 1.49,
-      "dataAsOf": null
+      "dataAsOf": "2026-07-31"
     },
     "old-mutual-albaraka-balanced": {
       "oneYear": null,
@@ -89,6 +89,193 @@
       "tenYear": null,
       "ter": null,
       "dataAsOf": null
+    },
+    "alexforbes-27four-shariah-balanced-prescient-fof": {
+      "oneYear": 17.41,
+      "threeYear": 12.8,
+      "fiveYear": 10.71,
+      "tenYear": 8.96,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-27four-shariah-multi-managed-balanced-fund": {
+      "oneYear": 17.78,
+      "threeYear": 13.4,
+      "fiveYear": 11.32,
+      "tenYear": 9.42,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-27four-shariah-wealth-builder-fund": {
+      "oneYear": 18.92,
+      "threeYear": 13.91,
+      "fiveYear": 11.62,
+      "tenYear": 9.69,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-alexander-forbes-investments-shariah-medium-growth": {
+      "oneYear": 17.41,
+      "threeYear": 12.46,
+      "fiveYear": 10.57,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-alexander-forbes-investments-shariah-high-growth": {
+      "oneYear": 21.5,
+      "threeYear": 15.03,
+      "fiveYear": 12.39,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-element-islamic-balanced": {
+      "oneYear": 6.2,
+      "threeYear": 7.49,
+      "fiveYear": 6.83,
+      "tenYear": 8.45,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-foord-shariah-balanced-fund": {
+      "oneYear": 12.49,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-momentum-investments-shariah": {
+      "oneYear": 17.84,
+      "threeYear": 13.31,
+      "fiveYear": 10.49,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-oasis-crescent-balanced-high-equity": {
+      "oneYear": 18.98,
+      "threeYear": 12.41,
+      "fiveYear": 11.63,
+      "tenYear": 9.02,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-oasis-crescent-balanced-progressive": {
+      "oneYear": 18.82,
+      "threeYear": 12.38,
+      "fiveYear": 11.36,
+      "tenYear": 8.73,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-oasis-crescent-balanced-stable": {
+      "oneYear": 14.82,
+      "threeYear": 10.65,
+      "fiveYear": 9.76,
+      "tenYear": 8.02,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-old-mutual-shariah-balanced": {
+      "oneYear": 19.15,
+      "threeYear": 13.6,
+      "fiveYear": 11.85,
+      "tenYear": 9.56,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-sentio-sci-hikma-shariah-balanced": {
+      "oneYear": 6.43,
+      "threeYear": 9.97,
+      "fiveYear": 8.28,
+      "tenYear": 7.43,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-smm-nur-balanced-portfolio": {
+      "oneYear": 18.0,
+      "threeYear": 13.06,
+      "fiveYear": 10.93,
+      "tenYear": 9.53,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-stanlib-multi-manager-shariah-balanced": {
+      "oneYear": 14.47,
+      "threeYear": 12.34,
+      "fiveYear": 10.61,
+      "tenYear": 9.75,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-element-islamic-equity": {
+      "oneYear": 11.93,
+      "threeYear": 9.88,
+      "fiveYear": 9.49,
+      "tenYear": 10.08,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-mazi-shariah-equity-fund": {
+      "oneYear": 30.8,
+      "threeYear": 17.96,
+      "fiveYear": 14.18,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-mianzo-islamic-domestic-equity-27four-fund": {
+      "oneYear": 27.99,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-old-mutual-shariah-equity": {
+      "oneYear": 27.07,
+      "threeYear": 16.85,
+      "fiveYear": 14.18,
+      "tenYear": 10.19,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-element-islamic-global-equity": {
+      "oneYear": 6.98,
+      "threeYear": 12.43,
+      "fiveYear": 11.91,
+      "tenYear": 10.15,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-old-mutual-global-islamic-equity": {
+      "oneYear": 21.01,
+      "threeYear": 18.43,
+      "fiveYear": 16.03,
+      "tenYear": 15.08,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-27four-shariah-active-equity": {
+      "oneYear": 20.52,
+      "threeYear": 14.53,
+      "fiveYear": 11.26,
+      "tenYear": 9.64,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-camissa-islamic-equity-fund": {
+      "oneYear": 30.36,
+      "threeYear": 17.71,
+      "fiveYear": 13.28,
+      "tenYear": 12.48,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-oasis-crescent-equity-fund": {
+      "oneYear": 19.08,
+      "threeYear": 12.7,
+      "fiveYear": 12.42,
+      "tenYear": 9.35,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-sentio-sci-hikma-shariah-general-equity": {
+      "oneYear": 10.13,
+      "threeYear": 12.43,
+      "fiveYear": 9.67,
+      "tenYear": 7.11,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-visio-bci-shariah-equity-fund": {
+      "oneYear": 9.2,
+      "threeYear": 10.2,
+      "fiveYear": 8.83,
+      "tenYear": 8.21,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-wealthvest-shariah-equity-27four-fund": {
+      "oneYear": 14.21,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-oasis-crescent-income-fund": {
+      "oneYear": 9.57,
+      "threeYear": 8.47,
+      "fiveYear": 7.68,
+      "tenYear": 7.37,
+      "dataAsOf": "2026-07-31"
+    },
+    "alexforbes-sentio-sci-hikma-shariah-income-fund": {
+      "oneYear": 8.33,
+      "dataAsOf": "2026-07-31"
     }
   }
 }
