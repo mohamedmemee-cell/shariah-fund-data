@@ -1,0 +1,87 @@
+name: Manual Shariah investment discovery search
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: manual-shariah-discovery-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  search:
+    if: startsWith(github.event.issue.title, 'Discovery search: ')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Read requested search
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, re
+          ev=json.load(open(os.environ['GITHUB_EVENT_PATH'],encoding='utf-8'))
+          body=ev.get('issue',{}).get('body') or ''
+          def grab(label):
+              m=re.search(r'^'+re.escape(label)+r'\s*(.+)$',body,re.M)
+              return (m.group(1).strip() if m else '')
+          token=grab('Search token:')
+          query=grab('Search for:')
+          if not token or not query:
+              raise SystemExit('Could not parse Search token / Search for from issue body')
+          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
+              f.write('SEARCH_TOKEN='+token.replace('\n',' ')+'\n')
+              f.write('SEARCH_FOR<<__SEARCH__\n'+query+'\n__SEARCH__\n')
+          PY
+      - name: Run focused investment search
+        run: python scripts/manual_discovery_search_v19.py
+      - name: Keep Discovery Inbox UI current
+        run: python scripts/discovery_manual_search_ui_v19.py
+      - name: Commit search results
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery_candidates.json docs/discovery.json docs/discovery.html docs/manual-search-results
+          if git diff --cached --quiet; then
+            echo "No manual discovery changes to commit."
+          else
+            git commit -m "Add manual Shariah investment discovery results"
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" -eq 3 ]; then echo "Push failed after 3 attempts."; exit 1; fi
+              git fetch origin main
+              git rebase origin/main
+            done
+          fi
+      - name: Comment on request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RESULT="docs/manual-search-results/${SEARCH_TOKEN}.json"
+          MESSAGE=$(python -c "import json; print(json.load(open('$RESULT',encoding='utf-8')).get('message','Search complete.'))")
+          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "$MESSAGE Results, if any, have been added to the Discovery Inbox and still require verification."
+          gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --reason completed
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy GitHub Pages
+        uses: actions/deploy-pages@v4
