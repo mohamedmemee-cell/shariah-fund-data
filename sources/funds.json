@@ -69,12 +69,13 @@
       "name": "Camissa Islamic High Yield Fund",
       "manager": "Camissa",
       "category": "Income",
-      "bucket": "Watchlist",
+      "bucket": "Non-TFSA",
       "suggested_split": 0,
       "auto_type": "camissa_page_pdf",
       "source_url": "https://www.camissa-am.com/funds/islamic-high-yield-fund",
       "risk_level": "Low-Medium",
-      "shariah_note": "Shariah-compliant high-yield/income fund."
+      "shariah_note": "Shariah-compliant high-yield/income fund.",
+      "account_suitability": "Both"
     },
     {
       "id": "old-mutual-albaraka-income",
