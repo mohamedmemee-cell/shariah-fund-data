@@ -99,6 +99,8 @@ jobs:
         run: python scripts/plan_name_reference_v10.py
       - name: Fix account suitability and inception display
         run: python scripts/account_suitability_inception_v11.py
+      - name: Standardise manager risk labels into calculator bands
+        run: python scripts/risk_normalisation_v12.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -143,6 +145,7 @@ jobs:
               python scripts/step6_risk_explanation_v9.py
               python scripts/plan_name_reference_v10.py
               python scripts/account_suitability_inception_v11.py
+              python scripts/risk_normalisation_v12.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
