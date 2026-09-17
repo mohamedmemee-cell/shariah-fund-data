@@ -1,0 +1,10 @@
+{
+  "id": "al-baraka-superfund-retirement-fund",
+  "name": "Al Baraka SuperFund Retirement Fund",
+  "manager": "Al Baraka",
+  "source_url": "https://www.albaraka.co.za/products/superfund-retirement-fund",
+  "factsheet_url": "",
+  "extractor": "generic_official_source_v1",
+  "status": "configured",
+  "configured_at": "2026-09-17T18:26:00Z"
+}
