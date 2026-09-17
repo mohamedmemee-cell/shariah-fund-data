@@ -12,7 +12,27 @@
       "shariah_board": [],
       "shariah_note": "No current Satrix-specific Shariah board member list was found on the fund fact sheet. The ETF tracks a Shariah-screened index. Board details should be verified with Satrix before relying on them.",
       "shariah_source": "https://satrix.co.za/fund/mdd/STXWIS",
-      "board_status": "not published on current fund fact sheet"
+      "board_status": "not published on current fund fact sheet",
+      "verification": {
+        "risk_level": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "User supplied verification",
+          "verified_at": "2026-09-17",
+          "note": "",
+          "value": "Aggressive"
+        },
+        "ter": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "User supplied verification",
+          "verified_at": "2026-09-17",
+          "note": "",
+          "value": 0.55
+        }
+      }
     },
     "satrix-shariah-top-40-etf": {
       "website": "https://satrix.co.za/fund/mdd/STXSHA",
