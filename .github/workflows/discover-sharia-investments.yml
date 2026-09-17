@@ -1,0 +1,61 @@
+name: Discover South African Shariah investments
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/discover-sharia-investments.yml"
+      - "scripts/discover_sharia_investments.py"
+      - "scripts/discovery_nav_v17.py"
+  schedule:
+    - cron: "30 5 * * 3"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: shariah-investment-discovery
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Search the web for Shariah investment candidates
+        run: python scripts/discover_sharia_investments.py
+      - name: Ensure Discovery Inbox navigation
+        run: python scripts/discovery_nav_v17.py
+      - name: Commit discovery results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery_candidates.json docs/discovery.json docs/discovery.html docs/index.html docs/fund-explorer.html docs/add-fund.html docs/fund-details.html
+          if git diff --cached --quiet; then
+            echo "No discovery changes to commit."
+          else
+            git commit -m "Update Shariah investment discovery inbox"
+            git push origin HEAD:main
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy GitHub Pages
+        uses: actions/deploy-pages@v4
