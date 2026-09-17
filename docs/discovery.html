@@ -20,6 +20,10 @@ html[data-theme="dark"]{
   --brand:#64d6bd;--brand-strong:#8ee8d3;--brand-soft:#1f3c37;
 }
 
+
+/* github-return-status-v21 */
+.returnStatusV21{margin-top:12px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:var(--soft);line-height:1.45}.returnStatusV21 strong{display:block;margin-bottom:3px}.returnStatusV21.ok{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.returnStatusV21.warn{border-color:color-mix(in srgb,var(--warn) 45%,var(--line));background:color-mix(in srgb,var(--warn) 8%,var(--card))}.returnStatusV21 a{font-weight:750}.returnStatusV21 .miniActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.returnStatusV21 .miniActions a,.returnStatusV21 .miniActions button{padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);text-decoration:none;font:inherit;font-weight:750;cursor:pointer}
+
 </style></head><body><main><nav class="nav"><a href="./">Calculator</a><a href="./fund-explorer.html">Fund Explorer</a><a class="active" href="./discovery.html">Discovery Inbox</a><a href="./add-fund.html">Add Fund</a></nav><section class="card"><h1 style="margin-top:0">Shariah Investment Discovery</h1><p class="muted">Automated web discovery for possible South African Shariah-compliant retail investments. <b>Discovery is not verification.</b> Nothing on this page enters the Portfolio Builder until its Shariah status and product details are verified from reliable official material.</p><div class="stats"><div class="stat"><small>Candidates</small><b id="count">—</b></div><div class="stat"><small>New / review</small><b id="review">—</b></div><div class="stat"><small>Already tracked</small><b id="tracked">—</b></div><div class="stat"><small>Last scan</small><b id="scan" style="font-size:14px">—</b></div></div></section><section class="card" id="manualSearchCardV19">
 <h2 style="margin-top:0">Search For</h2>
 <p class="muted">Enter specific words, a fund manager, product name, or a website. The system will run a focused web search and add any suitable findings to this Discovery Inbox. Discovery is still not Shariah verification.</p>
@@ -81,4 +85,29 @@ const $=id=>document.getElementById(id);let data={candidates:[]};function esc(s)
 })();
 </script>
 
+
+<script>
+/* github-return-status-v21-discovery */
+(function(){
+ const repo='mohamedmemee-cell/shariah-fund-data', api='https://api.github.com/repos/'+repo;
+ const input=document.getElementById('manualSearchForV19'), oldBtn=document.getElementById('manualSearchBtnV19'), box=document.getElementById('manualSearchResultV19');
+ if(!input||!oldBtn||!box)return;
+ const btn=oldBtn.cloneNode(true);oldBtn.replaceWith(btn);
+ function token(){return 'ms-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8)}
+ function state(){try{return JSON.parse(localStorage.getItem('manualDiscoveryStateV21')||'null')}catch(e){return null}}
+ function save(v){localStorage.setItem('manualDiscoveryStateV21',JSON.stringify(v));localStorage.setItem('manualDiscoveryTokenV19',v.token||'');localStorage.setItem('manualDiscoveryQueryV19',v.query||'')}
+ function show(title,text,kind='',issueUrl=''){
+   box.className='manualResultV19 show';box.innerHTML=`<div class="returnStatusV21 ${kind}"><strong>${title}</strong><span>${text}</span>${issueUrl?`<div class="miniActions"><a href="${issueUrl}" target="_blank" rel="noopener">Open GitHub request</a></div>`:''}</div>`;
+ }
+ async function issueFor(tok){
+   try{const r=await fetch(api+'/issues?state=all&per_page=100&ts='+Date.now(),{cache:'no-store'});if(!r.ok)return null;const rows=await r.json();return rows.find(x=>x.title==='Discovery search: '+tok)||null}catch(e){return null}
+ }
+ async function resultFor(tok){try{const r=await fetch('./manual-search-results/'+encodeURIComponent(tok)+'.json?ts='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}
+ async function check(){const s=state();if(!s?.token)return;const result=await resultFor(s.token);if(result){const n=Number(result.count||0);show('Search complete',result.message||`${n} possible investment${n===1?'':'s'} found.`,n?'ok':'');if(n){setTimeout(()=>location.reload(),900)}return}const issue=await issueFor(s.token);if(!issue){show('Waiting for GitHub confirmation',`Search for “${s.query}” has not been submitted yet. Complete the green Create button in GitHub, then return here.`);return}const issueUrl=issue.html_url||('https://github.com/'+repo+'/issues/'+issue.number);if(issue.state==='open'){show('Request received — searching',`GitHub issue #${issue.number} was accepted. The focused search for “${s.query}” is running now.`,'ok',issueUrl);return}show('Search request finished, but no result was published','GitHub completed the request, but the result file is missing. Use Try again below rather than submitting duplicate requests.','warn',issueUrl)}
+ btn.addEventListener('click',()=>{const q=(input.value||'').trim();if(!q){show('Enter something to search for','Type a fund name, manager or website first.','warn');return}const tok=token(),body=`Manual discovery search request\n\nSearch token: ${tok}\nSearch for: ${q}\n\nThis request only discovers possible investment products. Any result must still pass the normal Shariah and product verification process before activation.`;save({token:tok,query:q,startedAt:new Date().toISOString()});show('Confirm this search in GitHub',`A GitHub page is opening for “${q}”. Click the green Create button once, then close that tab and return here.`);window.open('https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Discovery search: '+tok)+'&body='+encodeURIComponent(body),'_blank','noopener');setTimeout(check,1200)});
+ window.addEventListener('focus',()=>setTimeout(check,250));document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(check,250)});if(state()?.token)setTimeout(check,200);
+})();
+</script>
+
+<!-- github-return-status-v21 -->
 </body></html>
