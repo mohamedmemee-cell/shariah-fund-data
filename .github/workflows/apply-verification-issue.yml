@@ -1,0 +1,36 @@
+name: Apply verified fund information
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: startsWith(github.event.issue.title, 'Verify fund data:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply verification issue
+        run: python scripts/apply_verification_issue.py
+      - name: Commit verified data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/fund-directory.json data/manual_values.json
+          if git diff --cached --quiet; then
+            echo "No verified data changes to commit."
+          else
+            git commit -m "Apply verified fund information from issue #${{ github.event.issue.number }}"
+            git push origin HEAD:main
+          fi
