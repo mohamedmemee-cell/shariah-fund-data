@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "funds": [
+    {
+      "id": "old-mutual-albaraka-income",
+      "name": "Old Mutual Al Baraka Income Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": false,
+      "checks": {
+        "risk": true,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": true
+      },
+      "missing": [
+        "minimum",
+        "account"
+      ]
+    },
+    {
+      "id": "old-mutual-albaraka-equity",
+      "name": "Old Mutual Albaraka Equity Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": false,
+      "checks": {
+        "risk": true,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": true
+      },
+      "missing": [
+        "minimum",
+        "account"
+      ]
+    },
+    {
+      "id": "oasis-crescent-balanced-progressive",
+      "name": "Oasis Crescent Balanced Progressive Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": false,
+      "checks": {
+        "risk": true,
+        "performance": false,
+        "source_and_date": false,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "performance",
+        "source_and_date",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "stanlib-shariah-balanced-fof",
+      "name": "STANLIB Multi-Manager Shari'ah Balanced Fund of Funds",
+      "status": "watchlist",
+      "alexforbes_corroborated": false,
+      "checks": {
+        "risk": true,
+        "performance": false,
+        "source_and_date": false,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "performance",
+        "source_and_date",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-27four-shariah-balanced-prescient-fof",
+      "name": "27four Shari'ah Balanced Prescient FoF",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-27four-shariah-multi-managed-balanced-fund",
+      "name": "27four Shari'ah Multi-Managed Balanced Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-27four-shariah-wealth-builder-fund",
+      "name": "27four Shari'ah Wealth Builder Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
+      "name": "Alexander Forbes Investments Shari’ah Medium Growth",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-alexander-forbes-investments-shariah-high-growth",
+      "name": "Alexander Forbes Investments Shari'ah High Growth",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-element-islamic-balanced",
+      "name": "Element Islamic Balanced",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-foord-shariah-balanced-fund",
+      "name": "Foord Shariah Balanced Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": false,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "performance",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-momentum-investments-shariah",
+      "name": "Momentum Investments Shari’ah",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-oasis-crescent-balanced-high-equity",
+      "name": "Oasis Crescent Balanced High Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-oasis-crescent-balanced-progressive",
+      "name": "Oasis Crescent Balanced Progressive",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-oasis-crescent-balanced-stable",
+      "name": "Oasis Crescent Balanced Stable",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-old-mutual-shariah-balanced",
+      "name": "Old Mutual Shari'ah Balanced",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-sentio-sci-hikma-shariah-balanced",
+      "name": "Sentio SCI Hikma Shari'ah Balanced",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-smm-nur-balanced-portfolio",
+      "name": "SMM Nur Balanced Portfolio",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-stanlib-multi-manager-shariah-balanced",
+      "name": "STANLIB Multi-Manager Shari'ah Balanced",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-element-islamic-equity",
+      "name": "Element Islamic Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-mazi-shariah-equity-fund",
+      "name": "Mazi Shari'ah Equity Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-mianzo-islamic-domestic-equity-27four-fund",
+      "name": "Mianzo Islamic Domestic Equity 27Four Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": false,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "performance",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-old-mutual-shariah-equity",
+      "name": "Old Mutual Shari'ah Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-element-islamic-global-equity",
+      "name": "Element Islamic Global Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-old-mutual-global-islamic-equity",
+      "name": "Old Mutual Global Islamic Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-27four-shariah-active-equity",
+      "name": "27four Shari'ah Active Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-camissa-islamic-equity-fund",
+      "name": "Camissa Islamic Equity Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-oasis-crescent-equity-fund",
+      "name": "Oasis Crescent Equity Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-sentio-sci-hikma-shariah-general-equity",
+      "name": "Sentio SCI Hikma Shari'ah General Equity",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-visio-bci-shariah-equity-fund",
+      "name": "Visio BCI Shari’ah Equity fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-wealthvest-shariah-equity-27four-fund",
+      "name": "Wealthvest Shariah Equity 27Four Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": false,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "performance",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-oasis-crescent-income-fund",
+      "name": "Oasis Crescent Income Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": true,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    },
+    {
+      "id": "alexforbes-sentio-sci-hikma-shariah-income-fund",
+      "name": "Sentio SCI Hikma Shari’ah Income Fund",
+      "status": "watchlist",
+      "alexforbes_corroborated": true,
+      "checks": {
+        "risk": false,
+        "performance": false,
+        "source_and_date": true,
+        "minimum": false,
+        "account": false,
+        "shariah": false
+      },
+      "missing": [
+        "risk",
+        "performance",
+        "minimum",
+        "account",
+        "shariah"
+      ]
+    }
+  ],
+  "activated": 0,
+  "still_watchlist": 33
+}
