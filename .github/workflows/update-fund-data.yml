@@ -129,6 +129,8 @@ jobs:
         run: python scripts/fund_explorer_layout_v25.py
       - name: Apply guided calculator flow and bulk Watchlist pass
         run: python scripts/pending_release_v28.py
+      - name: Put name/reference at top of Step 1
+        run: python scripts/step1_name_reference_v29.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -188,6 +190,7 @@ jobs:
               python scripts/activation_return_status_v22.py
               python scripts/fund_explorer_layout_v25.py
               python scripts/pending_release_v28.py
+              python scripts/step1_name_reference_v29.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
