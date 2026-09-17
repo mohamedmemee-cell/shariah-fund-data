@@ -1,0 +1,44 @@
+name: Apply V31 Step 6 risk column
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/apply-v31-summary-risk.yml"
+      - "scripts/summary_fund_risk_v31.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-v31-summary-risk
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply Step 6 fund risk column
+        run: python scripts/summary_fund_risk_v31.py
+      - name: Commit generated calculator page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          if git diff --cached --quiet; then
+            echo "No V31 changes to commit."
+          else
+            git commit -m "Show fund risk in Step 6 summary"
+            git push origin HEAD:main
+          fi
