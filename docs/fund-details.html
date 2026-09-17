@@ -13,7 +13,7 @@
 <style id="siteFinishV4Shared">html[data-theme="dark"] select,html[data-theme="dark"] option{background:#182123!important;color:#edf3f1!important}.backTopV4{position:fixed;right:22px;bottom:22px;z-index:80;border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.14);font-weight:800;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.16s}.backTopV4.show{opacity:1;pointer-events:auto;transform:none}@media(max-width:700px){.backTopV4{right:12px;bottom:12px}}</style>
 </head><body><main>
 <div class="top"><a class="back" href="./fund-explorer.html">← Back to Fund Explorer</a><span class="muted">Fund information</span></div>
-<section class="card hero"><div class="label" id="manager">Loading…</div><h1 id="name">Fund details</h1><div class="muted" id="category"></div><div class="stats"><div class="stat"><small>Status</small><b id="fundStatus">—</b></div><div class="stat"><small>Account</small><b id="accountStatus">—</b></div><div class="stat"><small>Risk</small><b id="risk">—</b></div><div class="stat"><small>1Y return</small><b id="one">—</b></div><div class="stat"><small>5Y return</small><b id="five">—</b></div><div class="stat"><small>TER</small><b id="ter">—</b></div><div class="stat"><small>Minimum investment</small><b id="minimum">Not yet verified</b></div></div><p class="note" id="fundUse"></p></section>
+<section class="card hero"><div class="label" id="manager">Loading…</div><h1 id="name">Fund details</h1><div class="muted" id="category"></div><div class="stats"><div class="stat"><small>Status</small><b id="fundStatus">—</b></div><div class="stat"><small>Account</small><b id="accountStatus">—</b></div><div class="stat"><small>Manager risk</small><b id="risk">—</b></div><div class="stat"><small>Calculator risk band</small><b id="calcRiskBandV12">—</b></div><div class="stat"><small>1Y return</small><b id="one">—</b></div><div class="stat"><small>5Y return</small><b id="five">—</b></div><div class="stat"><small>TER</small><b id="ter">—</b></div><div class="stat"><small>Minimum investment</small><b id="minimum">Not yet verified</b></div></div><p class="note" id="fundUse"></p></section>
 <section class="card" id="activationCard"><h2>Portfolio Builder status</h2><p class="note" id="activationIntro">Checking whether this fund is ready for use in the calculator…</p><div id="activationChecks"></div><div class="links" style="margin-top:12px"><button class="btn primary" id="activationBtn" type="button" style="display:none">Activate for Portfolio Builder</button></div><div id="activationConfirm" style="display:none;margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--soft)"><b>One quick confirmation</b><p class="note">This final confirmation approves the verified fund for use in portfolio calculations.</p><button class="btn primary" id="activationContinue" type="button">Continue</button></div></section>
 <section class="card" id="manualVerificationCard">
   <div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap">
@@ -67,4 +67,23 @@ setupActivation();
 <script id="siteFinishV4SharedScript">(function(){if(document.getElementById('backTopV4'))return;const b=document.createElement('button');b.id='backTopV4';b.className='backTopV4';b.type='button';b.innerHTML='↑&nbsp; Back to Top';b.onclick=()=>scrollTo({top:0,behavior:'smooth'});document.body.appendChild(b);const show=()=>b.classList.toggle('show',scrollY>420);addEventListener('scroll',show,{passive:true});show()})();</script>
 
 <script id="fundInceptionV4">(async function(){const id=new URLSearchParams(location.search).get('id');const stats=document.querySelector('.stats');if(stats&&!document.getElementById('inceptionStatV4')){const d=document.createElement('div');d.className='stat';d.id='inceptionStatV4';d.innerHTML='<small>Fund inception</small><b id="inceptionV4">Not yet verified</b><span id="fundAgeV4" style="display:block;color:var(--muted);font-size:11px;margin-top:3px"></span>';stats.appendChild(d)}try{const r=await fetch('./fund-directory.json?ts='+Date.now(),{cache:'no-store'}),j=await r.json(),x=(j.funds||{})[id]||{},v=x.inception_date||x.verification?.inception_date?.value;if(v){document.getElementById('inceptionV4').textContent=v;const dt=new Date(v+'T00:00:00');if(!isNaN(dt)){const now=new Date();let y=now.getFullYear()-dt.getFullYear();if(now.getMonth()<dt.getMonth()||(now.getMonth()===dt.getMonth()&&now.getDate()<dt.getDate()))y--;document.getElementById('fundAgeV4').textContent=y>=0?`${y} year${y===1?'':'s'} in existence`:''}}}catch(e){}})();</script>
+
+<script>
+/* risk-normalisation-v12 */
+(function(){
+ function riskBand(f){
+  const c=(f.category||'').toLowerCase();
+  const raw=(f.risk_level||'').toLowerCase().trim();
+  const r=raw.replace(/[–—_-]+/g,' ').replace(/\s+/g,' ');
+  if(/aggressive|very high|moderate\s*(to\s*)?high|medium\s*(to\s*)?high/.test(r) || r==='high') return 'High';
+  if(/very low|conservative|low\s*(to\s*)?(moderate|medium)/.test(r) || r==='low') return 'Low';
+  if(r==='moderate' || r==='medium' || /(^|\s)moderate risk($|\s)/.test(r)) return 'Medium';
+  if(c.includes('equity')) return 'High';
+  if(c.includes('income')) return 'Low';
+  return 'Medium';
+}
+ const id=new URLSearchParams(location.search).get('id');
+ fetch('./shariah-funds.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const f=(j.funds||[]).find(x=>x.id===id);const el=document.getElementById('calcRiskBandV12');if(f&&el)el.textContent=riskBand(f)}).catch(()=>{});
+})();
+</script>
 </body></html>
