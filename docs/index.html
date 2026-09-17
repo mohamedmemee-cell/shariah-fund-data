@@ -248,6 +248,15 @@ html[data-theme="dark"] select,html[data-theme="dark"] option{background:#182123
 #planSummaryProgressV28{margin-bottom:14px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:var(--soft)}#planSummaryProgressV28 b{display:block;margin-bottom:3px}.wizardReturnV28{margin-top:9px;border:1px solid var(--line);background:var(--card);color:var(--brand-strong);padding:7px 10px;border-radius:8px;font-weight:800;cursor:pointer}
 @media(max-width:760px){.wizardProgressV28{grid-template-columns:repeat(3,1fr)}.wizardHeaderV28 .wizardSummaryTextV28 span{white-space:normal}.wizardContinueV28 button{width:100%}.builderbox.selectedBuilderV28::after{position:static;display:inline-block;margin:0 0 8px}}
 
+
+/* step1-name-reference-v29 */
+#portfolioBuilderSection #planIdentitySection{margin:0 0 16px;padding:14px 16px;border:1px solid color-mix(in srgb,var(--brand) 22%,var(--line));border-radius:13px;background:color-mix(in srgb,var(--brand-soft) 45%,var(--card));box-shadow:none}
+#portfolioBuilderSection #planIdentitySection .sectiontitle{margin-bottom:9px}
+#portfolioBuilderSection #planIdentitySection .sectiontitle h2{font-size:17px}
+#portfolioBuilderSection #planIdentitySection .sectiontitle h2::before{content:none!important}
+#portfolioBuilderSection #planIdentitySection .planNameField{max-width:700px}
+#portfolioBuilderSection #planIdentitySection .note{margin-bottom:0}
+
 </style>
 </head>
 <body><main>
@@ -979,4 +988,23 @@ $('resetWeights').addEventListener('click',()=>{selectedPortfolio=null;selectedP
 </script>
 
 <!-- pending-release-v28 -->
+
+<script>
+/* step1-name-reference-v29 */
+(function(){
+ const identity=document.getElementById('planIdentitySection');
+ const step1=document.getElementById('portfolioBuilderSection');
+ if(!identity||!step1)return;
+ const header=step1.querySelector(':scope > .wizardHeaderV28');
+ const title=step1.querySelector(':scope > .sectiontitle');
+ // Keep the wizard header first. The name/reference block then becomes the first
+ // editable content inside Step 1, before the Portfolio Builder options.
+ const anchor=header?.nextSibling||title||step1.firstChild;
+ step1.insertBefore(identity,anchor);
+ identity.classList.remove('full');
+ identity.classList.add('step1IdentityV29');
+})();
+</script>
+<!-- step1-name-reference-v29 -->
+
 </body></html>
