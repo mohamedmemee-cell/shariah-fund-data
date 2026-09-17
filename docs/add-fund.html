@@ -10,7 +10,7 @@
 </head><body><main>
 <nav class="nav"><a href="./">Calculator</a><a href="./fund-explorer.html">Fund Explorer</a><a href="./discovery.html">Discovery Inbox</a><a class="active" href="./add-fund.html">Add Fund</a></nav>
 <div class="hero"><h1>Add a Shariah fund</h1><p>Give us the fund name and official source. The system will research the fund, configure an automatic data source where possible, validate the important fields and keep it out of the live portfolio model until it is ready for review.</p></div>
-<section class="card" id="entryCard"><div class="grid"><div class="field"><label>Fund name</label><input id="name" placeholder="e.g. Old Mutual Global Islamic Equity Fund"></div><div class="field"><label>Fund manager</label><input id="manager" placeholder="e.g. Old Mutual"></div><div class="field"><label>Official fund page</label><input id="website" placeholder="https://..."></div><div class="field"><label>Factsheet link <span class="muted">(optional)</span></label><input id="factsheet" placeholder="https://..."></div></div>
+<section class="card" id="entryCard"><div class="callout hidden" id="discoveryPrefill"><b>From Discovery Inbox</b><br><span id="discoveryPrefillText"></span> Review the official source before continuing. Discovery does not confirm Shariah compliance.</div><div class="grid"><div class="field"><label>Fund name</label><input id="name" placeholder="e.g. Old Mutual Global Islamic Equity Fund"></div><div class="field"><label>Fund manager</label><input id="manager" placeholder="e.g. Old Mutual"></div><div class="field"><label>Official fund page</label><input id="website" placeholder="https://..."></div><div class="field"><label>Factsheet link <span class="muted">(optional)</span></label><input id="factsheet" placeholder="https://..."></div></div>
 <div class="callout"><b>What happens next:</b> we will prepare the fund for research. One quick confirmation is needed before the automated checks can begin.</div>
 <button class="btn" id="submit" type="button">Start automated onboarding</button>
 <div class="callout hidden" id="confirmCard"><b>One quick confirmation</b><br>This one-time confirmation lets the research process begin. No investment account or payment is created.<div class="actions"><a class="btn" id="continueConfirm" href="#">Continue</a><button class="btn secondary" id="cancelConfirm" type="button">Cancel</button></div></div></section>
@@ -81,6 +81,19 @@ showTracked();
     btn.replaceWith(clone);
     clone.addEventListener('click',start);
   }
+})();
+</script>
+
+
+<script>
+/* discovery-prefill-v18 */
+(function(){
+ const p=new URLSearchParams(location.search), id=p.get('discovery');
+ if(!id)return;
+ const set=(field,key)=>{const el=document.getElementById(field),v=p.get(key);if(el&&v)el.value=v};
+ set('name','name');set('manager','manager');set('website','website');
+ const box=document.getElementById('discoveryPrefill'),txt=document.getElementById('discoveryPrefillText');
+ if(box){box.classList.remove('hidden');if(txt)txt.textContent='Candidate '+id+' has been prefilled from the automated discovery scan.'}
 })();
 </script>
 
