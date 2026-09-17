@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-16",
+  "as_of": "2026-09-17",
   "note": "Fallback values retained when automated adapters cannot verify a current source. Each fallback can carry its own dataAsOf date; 27four figures were seeded from the official Fund Centre as at 2026-05-31.",
   "values": {
     "satrix-msci-world-islamic-etf": {
@@ -72,7 +72,7 @@
       "fiveYear": 9.11,
       "tenYear": null,
       "ter": null,
-      "dataAsOf": "2026-07-31"
+      "dataAsOf": "2025-07-31"
     },
     "oasis-crescent-balanced-progressive": {
       "oneYear": null,

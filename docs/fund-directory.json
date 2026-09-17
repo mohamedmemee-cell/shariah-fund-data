@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-17",
   "funds": {
     "satrix-msci-world-islamic-etf": {
       "website": "https://satrix.co.za/fund/mdd/STXWIS",
@@ -152,8 +152,8 @@
           "method": "manual",
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "Website",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": "500.00"
         },
         "account_suitability": {
@@ -161,8 +161,8 @@
           "method": "manual",
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "Website",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": "Both"
         },
         "risk_level": {
@@ -170,50 +170,60 @@
           "method": "manual",
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "Website",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": "Moderate-High"
         },
         "shariah_governance": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": "verified"
         },
         "oneYear": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": 15.84
         },
         "threeYear": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": 11.18
         },
         "fiveYear": {
           "status": "verified",
           "method": "manual",
-          "verification_method": "Official document supplied directly",
+          "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
-          "verified_at": "2026-09-16",
-          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
           "value": 9.11
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
+          "verified_at": "2026-09-17",
+          "note": "The 27four Shari'ah Balanced Fund of Funds is a moderately high risk\nmultimanaged, multi-asset class portfolio providing asset class and fund\nmanager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, Islamic income and commodity products both locally and\ninternationally. Suitable for investors with a long-term investment horizon.\ny objectives are moderate to aggressive capital growth and income generation",
+          "value": "2011-05-06"
         }
       },
       "minimum_investment": "500.00",
       "account_suitability": "Both",
-      "shariah_manually_verified": true
+      "shariah_manually_verified": true,
+      "inception_date": "2011-05-06"
     },
     "oasis-crescent-balanced-progressive": {
       "website": "https://www.oasiscrescent.com/",
