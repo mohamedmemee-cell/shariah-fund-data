@@ -33,10 +33,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Reconcile Discovery candidates
         run: python scripts/reconcile_discovery_v34.py
       - name: Repair third-party candidate source records
         run: python scripts/repair_candidate_sources_v34.py
+      - name: Research repaired queued candidates
+        run: python scripts/research_candidate.py
       - name: Apply V34 UI
         run: python scripts/discovery_review_workspace_v34.py
       - name: Keep current status UI
