@@ -117,21 +117,6 @@
       ]
     },
     {
-      "id": "alexforbes-27four-shariah-wealth-builder-fund",
-      "name": "27four Shari'ah Wealth Builder Fund",
-      "status": "activated",
-      "alexforbes_corroborated": true,
-      "checks": {
-        "risk": true,
-        "performance": true,
-        "source_and_date": true,
-        "minimum": true,
-        "account": true,
-        "shariah": true
-      },
-      "missing": []
-    },
-    {
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
       "name": "Alexander Forbes Investments Shari’ah Medium Growth",
       "status": "watchlist",
@@ -625,6 +610,6 @@
       ]
     }
   ],
-  "activated": 1,
+  "activated": 0,
   "still_watchlist": 31
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-09-18",
-  "researched": 32,
+  "researched": 31,
   "official_source_found": 17,
   "fields_verified": 27,
   "funds": [
@@ -100,17 +100,6 @@
       ]
     },
     {
-      "id": "alexforbes-27four-shariah-wealth-builder-fund",
-      "name": "27four Shari'ah Wealth Builder Fund",
-      "manager": "27four",
-      "status": "no_official_match",
-      "sources_checked": [],
-      "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
-    },
-    {
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
       "name": "Alexander Forbes Investments Shari’ah Medium Growth",
       "manager": "Alexander Forbes Investments",
@@ -139,14 +128,14 @@
       "manager": "Alexander Forbes Investments",
       "status": "official_source_found",
       "sources_checked": [
+        "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/fund-fact-sheets/ffs-individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/document-hub/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/corporate/products-corporate/alexander-forbes-beneficiary-fund",
         "https://invest.alexforbes.com/bw/en/individual/alexander-forbes-individual-member-retirement-fund",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
-        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices",
-        "https://invest.alexforbes.com/za/en/one/fund"
+        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
       ],
       "verified_fields": [],
       "notes": [],
