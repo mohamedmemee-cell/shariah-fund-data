@@ -265,10 +265,20 @@ html[data-theme="dark"] select,html[data-theme="dark"] option{background:#182123
 .riskPillV31.medium{background:var(--amber-soft);color:var(--amber)}
 .riskPillV31.high{background:var(--coral-soft);color:var(--coral)}
 
+
+/* pending-comments-v32 */
+#startNewCalcV32{margin-left:10px}
+.portfolioAvailabilityV32{margin-top:14px;padding:14px;border:1px solid color-mix(in srgb,var(--warn) 45%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--warn) 8%,var(--card));line-height:1.45}
+.portfolioAvailabilityV32 strong{display:block;margin-bottom:4px}
+.portfolioAvailabilityV32 .actionsV32{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.portfolioAvailabilityV32 .actionsV32 button,.portfolioAvailabilityV32 .actionsV32 a{padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--text);text-decoration:none;font-weight:750;cursor:pointer}
+#riskExplanationV9 .mismatchV32{color:var(--warn);font-weight:750}
+@media(max-width:720px){#startNewCalcV32{margin-left:0;margin-top:8px}}
+
 </style>
 </head>
 <body><main>
-<div class="hero"><div><h1>Shariah Investment Calculator</h1><p>Build a Shariah-compliant investment plan in plain English. Choose how much risk feels comfortable, see where your monthly money goes, and explore what it could grow to over time.</p></div><div><div class="badge" id="feedBadge">Loading fund data…</div><div id="calcVersionV15" class="calcVersionV14">v31</div></div></div>
+<div class="hero"><div><h1>Shariah Investment Calculator</h1><p>Build a Shariah-compliant investment plan in plain English. Choose how much risk feels comfortable, see where your monthly money goes, and explore what it could grow to over time.</p></div><div><div class="badge" id="feedBadge">Loading fund data…</div><div id="calcVersionV15" class="calcVersionV14">v32</div></div></div>
 <nav class="siteNav" aria-label="Main navigation"><a class="active" href="./">Calculator</a><a href="./fund-explorer.html">Fund Explorer</a><a href="./discovery.html">Discovery Inbox</a><a href="./add-fund.html">Add Fund</a><span class="planTools"><label class="mini muted" for="themeMode">Theme</label><select id="themeMode" class="themeSelect" aria-label="Colour theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></span></nav><div class="planSoFar" id="planSoFar"><b>Your plan so far</b><span class="planSoFarText" id="planSoFarText">Build a portfolio below to see your plan summary.</span></div>
 <div class="beginner"><h3>Quick guide — no investment knowledge needed</h3><div class="beginnergrid"><div class="beginneritem"><b>1. Contribution</b><span>How much money you put in each month.</span></div><div class="beginneritem"><b>2. Risk</b><span>How much the value may move up and down. Higher risk can mean bigger gains, but also bigger losses.</span></div><div class="beginneritem"><b>3. Return</b><span>The growth you hope the investment earns. Historical returns are useful clues, not promises.</span></div><div class="beginneritem"><b>4. Fees (TER)</b><span>TER means Total Expense Ratio — the approximate yearly cost of running a fund, shown as a percentage. For example, a 1.00% TER is roughly R100 per year for every R10,000 invested. Lower fees help, but they are only one part of choosing a fund.</span></div></div></div>
 <div class="grid">
@@ -1060,4 +1070,176 @@ $('resetWeights').addEventListener('click',()=>{selectedPortfolio=null;selectedP
 </script>
 
 <!-- ui-bulk-research-v30 -->
+
+<script>
+/* pending-comments-v32 */
+(function(){
+ const byId=id=>document.getElementById(id);
+ const bands=['Low','Medium','High'];
+ const cloneMix=m=>({Low:Number(m?.Low||0),Medium:Number(m?.Medium||0),High:Number(m?.High||0)});
+ const mixText=m=>`${Number(m?.Low||0).toFixed(0)}% Low · ${Number(m?.Medium||0).toFixed(0)}% Medium · ${Number(m?.High||0).toFixed(0)}% High`;
+ const nearlySame=(a,b)=>bands.every(k=>Math.abs(Number(a?.[k]||0)-Number(b?.[k]||0))<=.6);
+
+ // Only ACTIVE funds may be used to construct a live portfolio.
+ try{
+   eligibleFunds=function(){
+     return feed.funds.filter(f=>f.bucket!=='Watchlist'&&planningReturn(f).value!=null&&['auto','fallback_manual','snapshot'].includes(f.update_status||'snapshot'));
+   };
+ }catch(e){}
+
+ // Preserve both requested and actual risk mix. This prevents a missing band from
+ // silently being displayed as if the requested mix had been achieved.
+ try{
+   constructPortfolio=function(requested){
+     const req=cloneMix(requested),rows=[],missing=[];
+     for(const band of bands){
+       const bw=(req[band]||0)/100;
+       if(!bw)continue;
+       const group=bandPortfolio(band);
+       if(!group.length){missing.push(band);continue}
+       for(const x of group)rows.push({fund:x.fund,band,weight:bw*x.within});
+     }
+     const rawTotal=rows.reduce((s,r)=>s+r.weight,0);
+     if(rawTotal>0)rows.forEach(r=>r.weight/=rawTotal);
+     const actual={Low:0,Medium:0,High:0};
+     rows.forEach(r=>actual[r.band]+=r.weight*100);
+     bands.forEach(k=>actual[k]=Number(actual[k].toFixed(6)));
+     const estimate=rows.length?rows.reduce((s,r)=>s+r.weight*planningReturn(r.fund).value,0):0;
+     const quality=rows.length?rows.reduce((s,r)=>s+r.weight*dataQuality(r.fund),0):0;
+     const terCoverage=rows.filter(r=>r.fund.ter!=null).reduce((s,r)=>s+r.weight,0);
+     const ter=terCoverage?rows.filter(r=>r.fund.ter!=null).reduce((s,r)=>s+r.weight*Number(r.fund.ter),0)/terCoverage:null;
+     return {mix:actual,requestedMix:req,missingBands:missing,rows,estimate,quality,ter,terCoverage,availabilityAdjusted:missing.length>0};
+   };
+ }catch(e){}
+
+ function requestedFor(id){
+   if(id==='buildAdvisable')return {Low:20,Medium:60,High:20};
+   return {Low:Number(byId('riskLow')?.value||0),Medium:Number(byId('riskMedium')?.value||0),High:Number(byId('riskHigh')?.value||0)};
+ }
+ function missingBands(mix){
+   return bands.filter(b=>Number(mix[b]||0)>0 && !bandPortfolio(b).length);
+ }
+ function showAvailability(id,mix,missing){
+   const result=byId('portfolioResult'); if(!result)return;
+   const names=missing.join(', ');
+   result.innerHTML=`<div class="portfolioAvailabilityV32"><strong>Your requested portfolio cannot currently be built.</strong>
+   <div>Requested: ${mixText(mix)}</div>
+   <div>There ${missing.length===1?'is':'are'} currently no eligible <b>${names}</b>-risk active Shariah investment${missing.length===1?'':'s'} available for this portfolio.</div>
+   <div class="actionsV32">
+     <button type="button" id="changeRiskV32">Change my risk mix</button>
+     <button type="button" id="closestRiskV32">Use closest available mix</button>
+     <a href="./discovery.html">Research/add missing risk funds</a>
+   </div></div>`;
+   byId('changeRiskV32')?.addEventListener('click',()=>{
+     byId('riskLow')?.focus();
+     byId('riskLow')?.scrollIntoView({behavior:'smooth',block:'center'});
+   });
+   byId('closestRiskV32')?.addEventListener('click',()=>{
+     window.__closestApprovalV32=true;
+     const btn=byId(id);
+     btn?.click();
+   });
+ }
+ document.addEventListener('click',e=>{
+   const btn=e.target.closest?.('#buildRisk,#buildAdvisable');
+   if(!btn)return;
+   const id=btn.id,mix=requestedFor(id);
+   if(id==='buildRisk'){
+     const total=mix.Low+mix.Medium+mix.High;
+     if(Math.abs(total-100)>.001){
+       e.preventDefault();e.stopImmediatePropagation();
+       const v=byId('riskValidation');if(v)v.innerHTML=`<span class="warn">Total: ${total.toFixed(0)}% — must equal 100% before a portfolio can be built.</span>`;
+       return;
+     }
+   }
+   const missing=missingBands(mix);
+   if(missing.length&&!window.__closestApprovalV32){
+     e.preventDefault();e.stopImmediatePropagation();
+     showAvailability(id,mix,missing);
+     return;
+   }
+   if(window.__closestApprovalV32){
+     window.__closestBuildingV32=true;
+     window.__closestApprovalV32=false;
+     setTimeout(()=>{window.__closestBuildingV32=false},0);
+   }
+ },true);
+
+ function correctRiskExplanation(){
+   const box=byId('riskExplanationV9');
+   let p=null;try{p=selectedPortfolio}catch(e){}
+   if(!box||!p?.mix)return;
+   let req=p.requestedMix?cloneMix(p.requestedMix):null;
+   let ttl='';try{ttl=String(selectedPortfolioTitle||'').toLowerCase()}catch(e){}
+   if(!req){
+     if(ttl.includes('advisable'))req={Low:20,Medium:60,High:20};
+     else if(ttl.includes('risk split'))req=requestedFor('buildRisk');
+     else req=cloneMix(p.mix);
+   }
+   const actual=cloneMix(p.mix),same=nearlySame(req,actual);
+   let why='';
+   if(ttl.includes('target')){
+     why='Target-return mode is allowed to choose a different risk mix because the user asked the calculator to search for the closest historical planning return.';
+   }else if(same){
+     why='The final portfolio matches the requested Portfolio Builder risk mix.';
+   }else{
+     const missing=(p.missingBands||[]).filter(Boolean);
+     if(missing.length){
+       why=`The requested mix could not be built because no eligible active ${missing.join(' / ')}-risk fund was available. The final mix should only be used after you explicitly chose “Use closest available mix”.`;
+     }else{
+       const diffs=bands.filter(k=>Math.abs(req[k]-actual[k])>.6).map(k=>`${k}: ${req[k].toFixed(0)}% → ${actual[k].toFixed(0)}%`);
+       why=`The final portfolio differs materially from the requested mix (${diffs.join('; ')}). Review the active-fund availability and portfolio constraints before relying on this allocation.`;
+     }
+   }
+   box.innerHTML=`<div class="riskExplainGridV9"><div class="riskExplainCardV9"><small>Portfolio Builder requested mix</small><b>${mixText(req)}</b></div><div class="riskExplainArrowV9" aria-hidden="true">→</div><div class="riskExplainCardV9"><small>Final portfolio risk mix</small><b>${mixText(actual)}</b></div></div><p class="riskExplainWhyV9 ${same?'':'mismatchV32'}"><strong>Why can these be different?</strong> ${why}</p>`;
+ }
+ ['buildRisk','buildTarget','buildAdvisable'].forEach(id=>byId(id)?.addEventListener('click',()=>setTimeout(correctRiskExplanation,180)));
+ new MutationObserver(()=>setTimeout(correctRiskExplanation,0)).observe(byId('planSummarySection')||document.body,{childList:true,subtree:true});
+ setTimeout(correctRiskExplanation,350);
+
+ // Robustly move Projection period above the fund-count limit. Older scripts can
+ // create/move the fund-limit box after load, so retry and observe the Step 2 area.
+ function moveProjectionV32(){
+   const inputs=document.querySelector('.inputs'),years=byId('years');
+   const fund=document.querySelector('.fundLimitBox,#goalFundLimitV4');
+   if(!inputs||!years||!fund)return;
+   const slider=years.closest('.sliderrow'); if(!slider)return;
+   let heading=slider.previousElementSibling;
+   if(!heading||!/Projection period/i.test(heading.textContent||'')){
+     heading=[...inputs.querySelectorAll('h2,h3')].find(x=>/Projection period/i.test(x.textContent||''));
+   }
+   if(!heading)return;
+   let wrap=byId('projectionPeriodV32');
+   if(!wrap){wrap=document.createElement('div');wrap.id='projectionPeriodV32'}
+   if(fund.previousElementSibling!==wrap)fund.parentNode.insertBefore(wrap,fund);
+   if(heading.parentNode!==wrap)wrap.appendChild(heading);
+   if(slider.parentNode!==wrap)wrap.appendChild(slider);
+ }
+ [0,80,250,700].forEach(ms=>setTimeout(moveProjectionV32,ms));
+ const inputsObs=document.querySelector('.inputs');
+ if(inputsObs)new MutationObserver(()=>moveProjectionV32()).observe(inputsObs,{childList:true,subtree:false});
+
+ // Clear/new calculation control.
+ function addStartNew(){
+   const bar=byId('planSoFar');if(!bar||byId('startNewCalcV32'))return;
+   const b=document.createElement('button');b.type='button';b.id='startNewCalcV32';b.className='btn';b.textContent='Start new calculation';
+   bar.appendChild(b);
+   b.addEventListener('click',e=>{
+     e.stopPropagation();
+     const name=String(byId('planName')?.value||'').trim();
+     const label=name?` “${name}”`:'';
+     if(!confirm(`Start a new calculation? This will clear the current plan${label} and return you to Step 1.`))return;
+     localStorage.removeItem('shariahCalcWeights');
+     localStorage.removeItem('shariahMaxFunds');
+     sessionStorage.removeItem('wizardCompletedV28');
+     sessionStorage.removeItem('portfolioMethodV28');
+     const clean=location.pathname;
+     location.replace(clean);
+   });
+ }
+ addStartNew();setTimeout(addStartNew,120);
+})();
+</script>
+
+<!-- pending-comments-v32 -->
 </body></html>
