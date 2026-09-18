@@ -2,6 +2,9 @@ name: Update and publish Shariah fund data
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Record manually verified fund information"]
+    types: [completed]
   push:
     branches:
       - main
