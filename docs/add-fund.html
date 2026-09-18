@@ -21,6 +21,10 @@ html[data-theme="dark"]{
 /* github-return-status-v21 */
 .returnStatusV21{margin-top:12px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:var(--soft);line-height:1.45}.returnStatusV21 strong{display:block;margin-bottom:3px}.returnStatusV21.ok{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.returnStatusV21.warn{border-color:color-mix(in srgb,var(--warn) 45%,var(--line));background:color-mix(in srgb,var(--warn) 8%,var(--card))}.returnStatusV21 a{font-weight:750}.returnStatusV21 .miniActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.returnStatusV21 .miniActions a,.returnStatusV21 .miniActions button{padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);text-decoration:none;font:inherit;font-weight:750;cursor:pointer}
 
+
+/* discovery-review-workspace-v34 */
+.discoverySourceV34{margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:11px;background:var(--soft)}.reviewWorkspaceV34{margin-top:16px;padding:16px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--soft) 45%,var(--card))}.reviewFieldsV34{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.reviewFieldsV34 label{display:block;color:var(--muted);font-size:12px;font-weight:750}.reviewFieldsV34 input,.reviewFieldsV34 select{width:100%;margin-top:5px;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--text)}.missingV34{color:var(--red);font-weight:750}.verifiedV34{color:var(--accent);font-weight:750}@media(max-width:720px){.reviewFieldsV34{grid-template-columns:1fr}}
+
 </style>
 <style id="siteThemeV2">html[data-theme="light"]{color-scheme:light;--bg:#f4f7f7;--card:#fff;--text:#172022;--muted:#667276;--line:#d8e1e2;--accent:#16715d;--soft:#e7f3ef}html[data-theme="dark"]{color-scheme:dark;--bg:#101718;--card:#182123;--text:#edf3f1;--muted:#9eacab;--line:#334044;--accent:#66d1b5;--soft:#203532}.themeControl{display:inline-flex;align-items:center;gap:6px;margin-left:auto}.themeControl label{font-size:12px;color:var(--muted)}.themeControl select{padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--text)}
 </style>
@@ -233,4 +237,105 @@ showTracked();
 </script>
 
 <!-- add-fund-status-sync-v33 -->
+
+<script>
+/* discovery-review-workspace-v34 */
+(function(){
+ const repo='mohamedmemee-cell/shariah-fund-data',byId=id=>document.getElementById(id);
+ const p=new URLSearchParams(location.search),disc=p.get('discovery');
+ const via=p.get('discovered_via')||'',durl=p.get('discovery_url')||'';
+ if(disc){
+   // Discovery is a lead, not the official source. Do not treat a third-party site
+   // as the fund manager or official page.
+   if(byId('manager'))byId('manager').value='';
+   if(byId('website'))byId('website').value='';
+   const box=byId('discoveryPrefill');
+   if(box){
+     box.classList.remove('hidden');
+     box.innerHTML='<b>From Discovery Inbox</b><br>Discovered via <b>'+(via||'web search')+'</b>. This source is a lead only; onboarding will identify the actual fund manager and official source.'+(durl?' <a href="'+durl+'" target="_blank" rel="noopener">Open discovery source</a>':'');
+   }
+ }
+ // V34 discovery-aware onboarding submit: discovery source is carried separately.
+ if(disc && byId('submit')){
+   const old=byId('submit'),btn=old.cloneNode(true);old.replaceWith(btn);
+   btn.addEventListener('click',()=>{
+     const name=(byId('name')?.value||'').trim();if(!name){alert('Please enter the fund name.');return}
+     const manager=(byId('manager')?.value||'').trim()||'Unknown';
+     const official=(byId('website')?.value||'').trim()||'Not supplied';
+     const factsheet=(byId('factsheet')?.value||'').trim()||'Not supplied';
+     const id=name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,100);
+     localStorage.setItem('candidateFundTracking',JSON.stringify({id,name,manager,website:official,factsheet,discovered_via:via,discovery_url:durl,createdAt:new Date().toISOString()}));
+     const body=['Candidate fund onboarding request','',
+       'Fund name: '+name,
+       'Fund manager: '+manager,
+       'Official fund page: '+official,
+       'Factsheet: '+factsheet,
+       'Discovered via: '+(via||'web search'),
+       'Discovery source: '+(durl||'Not supplied')
+     ].join('\n');
+     const u='https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Candidate fund: '+name)+'&body='+encodeURIComponent(body);
+     const status=byId('githubReturnAddV21');if(status){status.className='returnStatusV21';status.innerHTML='<strong>Confirm this fund in GitHub</strong><span>Click the green Create button once, then close that tab and return here.</span>'}
+     window.open(u,'_blank','noopener');
+   });
+ }
+ function val(x){return x==null?'':String(x)}
+ function createWorkspace(row){
+   let w=byId('candidateReviewV34');if(!w){w=document.createElement('div');w.id='candidateReviewV34';w.className='reviewWorkspaceV34';byId('statusCard')?.appendChild(w)}
+   const f=row.findings||{},perf=f.performance||{},st=row.stages||{};
+   const status=(k)=>st[k]==='complete'||st[k]==='ready_for_review'?'<span class="verifiedV34">Verified</span>':'<span class="missingV34">Needs review</span>';
+   w.innerHTML='<h3 style="margin-top:0">Review & verify candidate information</h3><p class="muted">Items marked “Needs review” are the pieces automation could not verify. You can correct or complete them below, then save one verification request.</p>'+
+   '<div class="reviewFieldsV34">'+
+   '<label>Fund manager '+status('official_sources')+'<input id="rvManagerV34" value="'+val(row.manager||'')+'"></label>'+
+   '<label>Official fund page '+status('official_sources')+'<input id="rvOfficialV34" value="'+val(row.source_url||'')+'"></label>'+
+   '<label>Factsheet<input id="rvFactsheetV34" value="'+val(row.factsheet_url||'')+'"></label>'+
+   '<label>Risk classification '+(f.risk_level?'<span class="verifiedV34">Verified</span>':'<span class="missingV34">Needs review</span>')+'<input id="rvRiskV34" value="'+val(f.risk_level||'')+'"></label>'+
+   '<label>TER % '+status('fees')+'<input id="rvTerV34" value="'+val(f.ter??'')+'"></label>'+
+   '<label>Minimum monthly (R) '+status('minimums')+'<input id="rvMinMV34" value="'+val(f.minimum_monthly??'')+'"></label>'+
+   '<label>Minimum lump sum (R)<input id="rvMinLV34" value="'+val(f.minimum_lump_sum??'')+'"></label>'+
+   '<label>TFSA eligible '+status('tfsa')+'<select id="rvTfsaV34"><option value="">Not verified</option><option value="Yes">Yes</option><option value="No">No</option></select></label>'+
+   '<label>1Y return %<input id="rv1V34" value="'+val(perf.oneYear??'')+'"></label>'+
+   '<label>3Y return %<input id="rv3V34" value="'+val(perf.threeYear??'')+'"></label>'+
+   '<label>5Y return %<input id="rv5V34" value="'+val(perf.fiveYear??'')+'"></label>'+
+   '<label>10Y return %<input id="rv10V34" value="'+val(perf.tenYear??'')+'"></label>'+
+   '<label>Shariah governance verified '+status('shariah')+'<select id="rvShariahV34"><option value="">Not verified</option><option value="Yes">Yes</option><option value="No">No</option></select></label>'+
+   '<label>Shariah source<input id="rvShariahSrcV34" value="'+val(row.shariah_source||'')+'"></label>'+
+   '</div><div class="actions"><button class="btn" id="saveReviewV34" type="button">Save verification</button></div>';
+   if(f.tfsa_eligible===true)byId('rvTfsaV34').value='Yes';if(f.tfsa_eligible===false)byId('rvTfsaV34').value='No';
+   if(f.shariah_language_found&&f.shariah_evidence)byId('rvShariahV34').value='Yes';
+   byId('saveReviewV34').onclick=()=>{
+     const g=id=>(byId(id)?.value||'').trim();
+     const body=['Candidate review','',
+       'Candidate id: '+row.id,
+       'Fund manager: '+g('rvManagerV34'),
+       'Official fund page: '+g('rvOfficialV34'),
+       'Factsheet: '+g('rvFactsheetV34'),
+       'Risk classification: '+g('rvRiskV34'),
+       'TER: '+g('rvTerV34'),
+       'Minimum monthly: '+g('rvMinMV34'),
+       'Minimum lump sum: '+g('rvMinLV34'),
+       'TFSA eligible: '+g('rvTfsaV34'),
+       '1Y return: '+g('rv1V34'),
+       '3Y return: '+g('rv3V34'),
+       '5Y return: '+g('rv5V34'),
+       '10Y return: '+g('rv10V34'),
+       'Shariah governance verified: '+g('rvShariahV34'),
+       'Shariah source: '+g('rvShariahSrcV34'),
+       'Shariah evidence: '+(f.shariah_evidence||''),
+       'Verification source: '+(g('rvOfficialV34')||g('rvShariahSrcV34')||'User supplied')
+     ].join('\n');
+     window.open('https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Review candidate data: '+row.name)+'&body='+encodeURIComponent(body),'_blank','noopener');
+   };
+ }
+ async function sync(){
+   let t=null;try{t=JSON.parse(localStorage.getItem('candidateFundTracking')||'null')}catch(e){}
+   if(!t?.id)return;
+   try{const r=await fetch('./candidates/'+encodeURIComponent(t.id)+'.json?ts='+Date.now(),{cache:'no-store'});if(r.ok)createWorkspace(await r.json())}catch(e){}
+ }
+ byId('refresh')?.addEventListener('click',()=>setTimeout(sync,80));
+ window.addEventListener('focus',()=>setTimeout(sync,200));
+ setTimeout(sync,350);
+})();
+</script>
+
+<!-- discovery-review-workspace-v34 -->
 </body></html>
