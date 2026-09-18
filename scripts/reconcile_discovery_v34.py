@@ -45,6 +45,8 @@ for r in rows:
         r["status"]="already_tracked"
         r["existing_fund_id"]=best.get("id")
         r["existing_fund_name"]=best.get("name")
+        if best.get("manager"):
+            r["manager"]=best.get("manager")
     key=norm(r.get("title"))
     d=durable.get(key)
     if d and d is not r and d.get("status") in ("rejected","not_now"):
