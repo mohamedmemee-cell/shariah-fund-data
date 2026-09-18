@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T08:21:27Z",
+  "generated_at": "2026-09-18T09:40:33Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -23,7 +23,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -44,7 +44,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "shariah_note": "South African Shariah equity exposure.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -65,7 +65,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90db7be660b7ffe317b91_Camissa%20Islamic%20Balanced%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -86,7 +86,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "27four-shariah-income",
@@ -107,7 +107,7 @@
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf",
       "shariah_note": "Shariah-compliant income allocation.",
       "update_status": "fallback_manual",
-      "updated": "2026-09-17",
+      "updated": "2026-09-18",
       "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf"
     },
     {
@@ -129,7 +129,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90e036aadbc0cefcb383c_Camissa%20Islamic%20High%20Yield%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -150,7 +150,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -171,7 +171,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T08:21:27Z"
+      "updated": "2026-09-18T09:40:33Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -192,7 +192,7 @@
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "shariah_note": "Shariah-compliant balanced allocation.",
       "update_status": "fallback_manual",
-      "updated": "2026-09-17",
+      "updated": "2026-09-18",
       "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf"
     },
     {
@@ -214,7 +214,7 @@
       "data_source_url": "https://www.oasiscrescent.com/",
       "shariah_note": "Islamic balanced investment option.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "stanlib-shariah-balanced-fof",
@@ -235,7 +235,7 @@
       "data_source_url": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
       "shariah_note": "Shariah-compliant multi-manager balanced fund.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-27four-shariah-balanced-prescient-fof",
@@ -256,7 +256,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-27four-shariah-multi-managed-balanced-fund",
@@ -277,7 +277,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-27four-shariah-wealth-builder-fund",
@@ -298,7 +298,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
@@ -312,14 +312,14 @@
       "fiveYear": 10.57,
       "tenYear": null,
       "sinceInception": null,
-      "ter": null,
+      "ter": 1.02,
       "data_as_of": "2026-07-31",
-      "risk_level": null,
-      "source_url": "https://invest.alexforbes.com/za/en/one/fund",
+      "risk_level": "Low",
+      "source_url": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
       "data_source_url": "https://invest.alexforbes.com/za/en/one/fund",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-alexander-forbes-investments-shariah-high-growth",
@@ -340,7 +340,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/one/fund",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-element-islamic-balanced",
@@ -361,7 +361,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-foord-shariah-balanced-fund",
@@ -382,7 +382,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-momentum-investments-shariah",
@@ -403,7 +403,7 @@
       "data_source_url": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-oasis-crescent-balanced-high-equity",
@@ -424,7 +424,7 @@
       "data_source_url": "https://www.oasiscrescent.com",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-oasis-crescent-balanced-progressive",
@@ -445,7 +445,7 @@
       "data_source_url": "https://www.oasiscrescent.com",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-oasis-crescent-balanced-stable",
@@ -466,7 +466,7 @@
       "data_source_url": "https://www.oasiscrescent.com",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-old-mutual-shariah-balanced",
@@ -487,7 +487,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-sentio-sci-hikma-shariah-balanced",
@@ -508,7 +508,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-smm-nur-balanced-portfolio",
@@ -529,7 +529,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-stanlib-multi-manager-shariah-balanced",
@@ -550,7 +550,7 @@
       "data_source_url": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-element-islamic-equity",
@@ -571,7 +571,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-mazi-shariah-equity-fund",
@@ -592,7 +592,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-mianzo-islamic-domestic-equity-27four-fund",
@@ -613,7 +613,7 @@
       "data_source_url": "https://www.mianzo.co.za/equity-funds/",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-old-mutual-shariah-equity",
@@ -634,7 +634,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-element-islamic-global-equity",
@@ -655,7 +655,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-old-mutual-global-islamic-equity",
@@ -676,7 +676,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-27four-shariah-active-equity",
@@ -685,19 +685,19 @@
       "category": "Domestic & Global Equity",
       "bucket": "Watchlist",
       "suggested_split": 0,
-      "oneYear": 20.52,
-      "threeYear": 14.53,
+      "oneYear": 18.31,
+      "threeYear": 12.53,
       "fiveYear": 11.26,
-      "tenYear": 9.64,
+      "tenYear": 9.34,
       "sinceInception": null,
       "ter": null,
       "data_as_of": "2026-07-31",
-      "risk_level": null,
+      "risk_level": "Aggressive",
       "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-camissa-islamic-equity-fund",
@@ -718,7 +718,7 @@
       "data_source_url": "https://camissa-am.com/funds/islamic-equity-fund",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-oasis-crescent-equity-fund",
@@ -739,7 +739,7 @@
       "data_source_url": "https://www.oasiscrescent.com",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-sentio-sci-hikma-shariah-general-equity",
@@ -760,7 +760,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-visio-bci-shariah-equity-fund",
@@ -781,7 +781,7 @@
       "data_source_url": "https://visiofund.co.za/who-we-are/",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-wealthvest-shariah-equity-27four-fund",
@@ -802,7 +802,7 @@
       "data_source_url": "https://wealthvest.co.za/factsheets/",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-oasis-crescent-income-fund",
@@ -823,7 +823,7 @@
       "data_source_url": "https://www.oasiscrescent.com",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-sentio-sci-hikma-shariah-income-fund",
@@ -844,7 +844,7 @@
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-17"
+      "updated": "2026-09-18"
     }
   ]
 }

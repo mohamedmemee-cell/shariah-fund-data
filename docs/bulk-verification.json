@@ -142,7 +142,7 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
@@ -150,7 +150,6 @@
         "shariah": false
       },
       "missing": [
-        "risk",
         "minimum",
         "account",
         "shariah"
@@ -501,18 +500,16 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
         "account": false,
-        "shariah": false
+        "shariah": true
       },
       "missing": [
-        "risk",
         "minimum",
-        "account",
-        "shariah"
+        "account"
       ]
     },
     {

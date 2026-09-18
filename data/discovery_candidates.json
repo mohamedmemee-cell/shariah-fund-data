@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T08:56:28Z",
+  "generated_at": "2026-09-18T09:47:10Z",
   "search_engine": "Bing RSS (no API key)",
   "scope": "Publicly discoverable South African Shariah/Islamic retail investment products",
   "disclaimer": "Discovery candidates are not verified or approved for the Portfolio Builder until reliable official evidence is reviewed.",
@@ -130,7 +130,8 @@
           "confidence": 35
         }
       ],
-      "discovered_via": "moneyweb.co.za"
+      "discovered_via": "moneyweb.co.za",
+      "canonical_fund_id": "alexforbes-27four-shariah-active-equity"
     },
     {
       "id": "5e9b70c21bf4e3a9",
@@ -159,7 +160,8 @@
           "confidence": 35
         }
       ],
-      "discovered_via": "moneyweb.co.za"
+      "discovered_via": "moneyweb.co.za",
+      "canonical_fund_id": "alexforbes-wealthvest-shariah-equity-27four-fund"
     }
   ]
 }

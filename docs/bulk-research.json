@@ -3,7 +3,7 @@
   "generated_at": "2026-09-18",
   "researched": 33,
   "official_source_found": 17,
-  "fields_verified": 24,
+  "fields_verified": 27,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -114,7 +114,7 @@
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
       "name": "Alexander Forbes Investments Shari’ah Medium Growth",
       "manager": "Alexander Forbes Investments",
-      "status": "official_source_found",
+      "status": "partially_verified",
       "sources_checked": [
         "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
@@ -125,9 +125,13 @@
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
       ],
-      "verified_fields": [],
+      "verified_fields": [
+        "ter",
+        "risk_level",
+        "inception_date"
+      ],
       "notes": [],
-      "official_source": "https://invest.alexforbes.com/za/en/one/fund"
+      "official_source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund"
     },
     {
       "id": "alexforbes-alexander-forbes-investments-shariah-high-growth",

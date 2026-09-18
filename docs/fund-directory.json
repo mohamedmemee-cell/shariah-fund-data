@@ -434,7 +434,37 @@
     "alexforbes-27four-shariah-multi-managed-balanced-fund": {},
     "alexforbes-27four-shariah-wealth-builder-fund": {},
     "alexforbes-alexander-forbes-investments-shariah-medium-growth": {
-      "website": "https://invest.alexforbes.com/za/en/one/fund"
+      "website": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
+      "verification": {
+        "ter": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
+          "verified_at": "2026-09-18",
+          "note": "Automatically extracted from official manager material.",
+          "value": 1.02
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
+          "verified_at": "2026-09-18",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Low"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
+          "verified_at": "2026-09-18",
+          "note": "Automatically extracted from official manager material.",
+          "value": "19 March 2015"
+        }
+      },
+      "inception_date": "19 March 2015"
     },
     "alexforbes-alexander-forbes-investments-shariah-high-growth": {
       "website": "https://invest.alexforbes.com/za/en/one/fund"

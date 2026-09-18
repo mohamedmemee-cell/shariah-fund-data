@@ -193,8 +193,8 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://invest.alexforbes.com/za/en/one/fund",
-      "risk_level": null,
+      "source_url": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
+      "risk_level": "Low",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
       "survey_as_of": "2026-07-31"

@@ -5,7 +5,7 @@
   "source_url": "https://www.oldmutualinvest.com/institutional/invest-with-excellence/global-islamic-equity-fund/",
   "factsheet_url": "",
   "issue_number": 1,
-  "status": "needs_review",
+  "status": "already_tracked",
   "created_at": "2026-09-16T00:13:00Z",
   "updated_at": "2026-09-16T00:16:29Z",
   "findings": {
@@ -37,6 +37,10 @@
   },
   "activation_ready": false,
   "notes": [
-    "Official fund page could not be read automatically: 403 Client Error: Forbidden for url: https://www.oldmutualinvest.com/institutional/invest-with-excellence/global-islamic-equity-fund/"
-  ]
+    "Official fund page could not be read automatically: 403 Client Error: Forbidden for url: https://www.oldmutualinvest.com/institutional/invest-with-excellence/global-islamic-equity-fund/",
+    "This candidate matches an existing Fund Explorer record. Verification is maintained on the tracked fund details page; do not duplicate verification in Add Fund."
+  ],
+  "existing_fund_id": "alexforbes-old-mutual-global-islamic-equity",
+  "existing_fund_name": "Old Mutual Global Islamic Equity",
+  "canonical_fund_id": "alexforbes-old-mutual-global-islamic-equity"
 }
