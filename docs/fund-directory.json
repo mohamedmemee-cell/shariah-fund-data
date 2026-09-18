@@ -431,7 +431,86 @@
       }
     },
     "alexforbes-27four-shariah-balanced-prescient-fof": {},
-    "alexforbes-27four-shariah-multi-managed-balanced-fund": {},
+    "alexforbes-27four-shariah-multi-managed-balanced-fund": {
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "500"
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "Non-TFSA"
+        },
+        "risk_level": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "Medium"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "2009-01-01"
+        },
+        "shariah_governance": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "verified"
+        },
+        "oneYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": 17.28
+        },
+        "threeYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": 12.92
+        },
+        "tenYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Multi-Managed%20Balanced%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Multi-Managed Balanced Fund is a moderate risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a medium-term investment horizon. The\nprimary objectives are moderate capital growth and income generation.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": 10.83
+        }
+      },
+      "minimum_investment": "500",
+      "account_suitability": "Non-TFSA",
+      "inception_date": "2009-01-01",
+      "shariah_manually_verified": true
+    },
     "alexforbes-27four-shariah-wealth-builder-fund": {
       "verification": {
         "minimum_investment": {
