@@ -549,7 +549,7 @@
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
           "verified_at": "2026-09-18",
-          "note": "",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
           "value": "Aggressive"
         },
         "inception_date": {
@@ -558,7 +558,7 @@
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
           "verified_at": "2026-09-18",
-          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
           "value": "2012-06-07"
         },
         "shariah_governance": {
@@ -567,7 +567,7 @@
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
           "verified_at": "2026-09-18",
-          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
           "value": "verified"
         },
         "oneYear": {
@@ -576,7 +576,7 @@
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
           "verified_at": "2026-09-18",
-          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
           "value": 18.31
         },
         "threeYear": {
@@ -585,7 +585,7 @@
           "verification_method": "Telephone",
           "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
           "verified_at": "2026-09-18",
-          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
           "value": 12.53
         },
         "tenYear": {
@@ -596,12 +596,41 @@
           "verified_at": "2026-09-18",
           "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
           "value": 9.34
+        },
+        "minimum_investment": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
+          "value": "500.00"
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
+          "value": "Non-TFSA"
+        },
+        "fiveYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in\nSA listed Shari'ah compliant shares. Suitable for investors with a long-term\ninvestment horizon. The primary objectives are capital growth and income\ngeneration through dividends. Volatile movements in the value of capital in\nthe short to medium-term are to be expected.",
+          "value": 9.34
         }
       },
       "inception_date": "2012-06-07",
       "shariah_manually_verified": true,
       "shariah_source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
-      "shariah_source_verified_at": "2026-09-18"
+      "shariah_source_verified_at": "2026-09-18",
+      "minimum_investment": "500.00",
+      "account_suitability": "Non-TFSA"
     },
     "alexforbes-camissa-islamic-equity-fund": {
       "website": "https://camissa-am.com/funds/islamic-equity-fund",
