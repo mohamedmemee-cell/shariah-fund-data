@@ -43,6 +43,8 @@ jobs:
         run: python scripts/beginner_help.py
       - name: Add TER to beginner quick guide
         run: python scripts/add_ter_quick_guide.py
+      - name: Compact beginner quick guide
+        run: python scripts/compact_quick_guide_v35.py
       - name: Link projection scenarios to portfolio builder
         run: python scripts/link_projection_scenarios.py
       - name: Link fund names to detail pages
@@ -161,6 +163,7 @@ jobs:
               git reset --hard origin/main
               python scripts/beginner_help.py
               python scripts/add_ter_quick_guide.py
+              python scripts/compact_quick_guide_v35.py
               python scripts/link_projection_scenarios.py
               python scripts/link_fund_details.py
               python scripts/apply_selected_portfolio.py
