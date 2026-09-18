@@ -135,6 +135,10 @@ jobs:
         run: python scripts/step1_name_reference_v29.py
       - name: Move projection slider and show bulk research status
         run: python scripts/ui_bulk_research_v30.py
+      - name: Show fund risk in Step 6 summary
+        run: python scripts/summary_fund_risk_v31.py
+      - name: Apply pending calculator and Fund Explorer fixes
+        run: python scripts/pending_comments_v32.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -197,6 +201,8 @@ jobs:
               python scripts/pending_release_v28.py
               python scripts/step1_name_reference_v29.py
               python scripts/ui_bulk_research_v30.py
+              python scripts/summary_fund_risk_v31.py
+              python scripts/pending_comments_v32.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
