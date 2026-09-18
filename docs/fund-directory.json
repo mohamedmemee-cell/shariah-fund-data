@@ -496,11 +496,21 @@
           "verified_at": "2026-09-18",
           "note": "The 27four Shari'ah Wealth Builder Fund is a moderately high risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a long-term investment horizon. The\nprimary objectives are moderate to aggressive capital growth and income\ngeneration.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
           "value": 11.05
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Wealth%20Builder%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Wealth Builder Fund is a moderately high risk multimanaged, multi-asset class portfolio providing asset class and fund manager\ndiversification by investing in a combination of Shari'ah compliant equity\nfunds, both locally and internationally, Islamic income and commodity\nproducts. Suitable for investors with a long-term investment horizon. The\nprimary objectives are moderate to aggressive capital growth and income\ngeneration.\nShariah Advisory Committee\nMufti Ahmed Suliman (Chairman)\nMufti Mohammed Ashraf\nMufti Zaid Haspatel",
+          "value": "Non-TFSA"
         }
       },
       "minimum_investment": "100",
       "inception_date": "2011-03-01",
-      "shariah_manually_verified": true
+      "shariah_manually_verified": true,
+      "account_suitability": "Non-TFSA"
     },
     "alexforbes-alexander-forbes-investments-shariah-medium-growth": {
       "website": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
