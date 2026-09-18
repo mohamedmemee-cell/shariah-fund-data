@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T20:54:53Z",
+  "generated_at": "2026-09-18T21:02:20Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -23,7 +23,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXWIS",
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -44,7 +44,7 @@
       "data_source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "shariah_note": "South African Shariah equity exposure.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -65,7 +65,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90db7be660b7ffe317b91_Camissa%20Islamic%20Balanced%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -86,7 +86,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "27four-shariah-income",
@@ -129,7 +129,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6aa90e036aadbc0cefcb383c_Camissa%20Islamic%20High%20Yield%20Fund_2608.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -150,7 +150,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -171,7 +171,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-09-18T20:54:53Z"
+      "updated": "2026-09-18T21:02:20Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -267,18 +267,17 @@
       "suggested_split": 0,
       "oneYear": 17.28,
       "threeYear": 12.92,
-      "fiveYear": 11.32,
+      "fiveYear": 10.83,
       "tenYear": 10.83,
       "sinceInception": null,
       "ter": null,
-      "data_as_of": "2026-07-31",
+      "data_as_of": "2026-09-18",
       "risk_level": "Medium",
       "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
-      "updated": "2026-09-18",
-      "account_suitability": "Non-TFSA"
+      "updated": "2026-09-18"
     },
     {
       "id": "alexforbes-27four-shariah-wealth-builder-fund",
@@ -796,7 +795,7 @@
       "fiveYear": null,
       "tenYear": null,
       "sinceInception": null,
-      "ter": null,
+      "ter": 1.41,
       "data_as_of": "2026-07-31",
       "risk_level": null,
       "source_url": "https://wealthvest.co.za/factsheets/",

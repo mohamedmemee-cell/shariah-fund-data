@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "generated_at": "2026-09-18",
-  "researched": 31,
-  "official_source_found": 15,
-  "fields_verified": 23,
+  "researched": 30,
+  "official_source_found": 17,
+  "fields_verified": 27,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -80,17 +80,6 @@
     {
       "id": "alexforbes-27four-shariah-balanced-prescient-fof",
       "name": "27four Shari'ah Balanced Prescient FoF",
-      "manager": "27four",
-      "status": "no_official_match",
-      "sources_checked": [],
-      "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
-    },
-    {
-      "id": "alexforbes-27four-shariah-multi-managed-balanced-fund",
-      "name": "27four Shari'ah Multi-Managed Balanced Fund",
       "manager": "27four",
       "status": "no_official_match",
       "sources_checked": [],
@@ -301,14 +290,19 @@
       "id": "alexforbes-mianzo-islamic-domestic-equity-27four-fund",
       "name": "Mianzo Islamic Domestic Equity 27Four Fund",
       "manager": "Mianzo Asset Management",
-      "status": "no_official_match",
+      "status": "partially_verified",
       "sources_checked": [
-        "https://www.mianzo.co.za/equity-funds/"
+        "https://www.mianzo.co.za/equity-funds/",
+        "https://www.mianzo.co.za/minimum-disclosure-document/",
+        "https://www.mianzo.co.za/fund-fact-sheet/",
+        "https://www.mianzo.co.za/fund-fact-sheet-2/",
+        "https://www.mianzo.co.za/absolute-return-fund/"
       ],
-      "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
+      "verified_fields": [
+        "minimum_investment"
+      ],
+      "notes": [],
+      "official_source": "https://www.mianzo.co.za/equity-funds/"
     },
     {
       "id": "alexforbes-old-mutual-shariah-equity",
@@ -418,14 +412,24 @@
       "id": "alexforbes-wealthvest-shariah-equity-27four-fund",
       "name": "Wealthvest Shariah Equity 27Four Fund",
       "manager": "Wealthvest Asset Management",
-      "status": "no_official_match",
+      "status": "partially_verified",
       "sources_checked": [
-        "https://wealthvest.co.za/factsheets/"
+        "https://wealthvest.co.za/factsheets/",
+        "https://wealthvest.co.za/south-african-based-equity-funds/",
+        "https://wealthvest.co.za/local-and-global-equity-funds/",
+        "https://wealthvest.co.za/global-investment-equity-funds/",
+        "https://wealthvest.co.za/shariah-funds/",
+        "https://wealthvest.co.za/private-clients-segregated-funds/"
       ],
-      "verified_fields": [],
+      "verified_fields": [
+        "ter",
+        "minimum_investment",
+        "inception_date"
+      ],
       "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
+        "Official source states Shariah compliance, but governance/board evidence still needs confirmation."
+      ],
+      "official_source": "https://wealthvest.co.za/factsheets/"
     },
     {
       "id": "alexforbes-oasis-crescent-income-fund",
