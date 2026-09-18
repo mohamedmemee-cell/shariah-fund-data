@@ -1,0 +1,48 @@
+name: Apply Discovery candidate decision
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+jobs:
+  apply:
+    if: startsWith(github.event.issue.title, 'Discovery decision:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply candidate decision
+        run: python scripts/discovery_decision_v34.py
+      - name: Reconcile Discovery identities
+        run: python scripts/reconcile_discovery_v34.py
+      - name: Keep Discovery UI current
+        run: python scripts/discovery_review_workspace_v34.py
+      - name: Commit decision
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery_candidates.json docs/discovery.json docs/discovery.html docs/add-fund.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Apply Discovery candidate decision"
+            git push origin HEAD:main
+          fi
+      - name: Close decision issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --reason completed
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4
