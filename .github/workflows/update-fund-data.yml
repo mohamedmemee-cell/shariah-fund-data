@@ -139,6 +139,8 @@ jobs:
         run: python scripts/summary_fund_risk_v31.py
       - name: Apply pending calculator and Fund Explorer fixes
         run: python scripts/pending_comments_v32.py
+      - name: Fix Add Fund candidate status sync
+        run: python scripts/add_fund_status_sync_v33.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -203,6 +205,7 @@ jobs:
               python scripts/ui_bulk_research_v30.py
               python scripts/summary_fund_risk_v31.py
               python scripts/pending_comments_v32.py
+              python scripts/add_fund_status_sync_v33.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
