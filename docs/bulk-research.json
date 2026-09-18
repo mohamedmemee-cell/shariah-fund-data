@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "researched": 33,
   "official_source_found": 17,
   "fields_verified": 24,
@@ -62,11 +62,10 @@
       "manager": "STANLIB",
       "status": "partially_verified",
       "sources_checked": [
-        "https://www.stanlib.com/",
+        "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-growth-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-global-balanced-fund",
-        "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
         "https://stanlib.com/our-funds/stanlib-enhanced-multi-style-equity-fund",
         "https://stanlib.com/our-funds/stanlib-property-income-fund",
         "https://stanlib.com/our-funds/stanlib-money-market-fund",
@@ -117,14 +116,14 @@
       "manager": "Alexander Forbes Investments",
       "status": "official_source_found",
       "sources_checked": [
+        "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/fund-fact-sheets/ffs-individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/document-hub/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/corporate/products-corporate/alexander-forbes-beneficiary-fund",
         "https://invest.alexforbes.com/bw/en/individual/alexander-forbes-individual-member-retirement-fund",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
-        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices",
-        "https://invest.alexforbes.com/za/en/one/fund"
+        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
       ],
       "verified_fields": [],
       "notes": [],
@@ -136,14 +135,14 @@
       "manager": "Alexander Forbes Investments",
       "status": "official_source_found",
       "sources_checked": [
+        "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/fund-fact-sheets/ffs-individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/document-hub/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/corporate/products-corporate/alexander-forbes-beneficiary-fund",
         "https://invest.alexforbes.com/bw/en/individual/alexander-forbes-individual-member-retirement-fund",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
-        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices",
-        "https://invest.alexforbes.com/za/en/one/fund"
+        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
       ],
       "verified_fields": [],
       "notes": [],
@@ -177,9 +176,9 @@
       "manager": "Momentum Investments",
       "status": "partially_verified",
       "sources_checked": [
+        "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
         "https://www.momentum.co.za/momentum/media-centre/investments-wins-hedge-fund-award-2020",
         "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds/request-a-call-back",
-        "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
         "https://www.momentum.co.za/momentum/corporate/employee-benefits/fundsatwork/investments-and-savings",
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/your-options-at-retirement",
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/why-you-should-nominate-a-beneficiary",
@@ -268,10 +267,10 @@
       "manager": "STANLIB Multi-Manager",
       "status": "partially_verified",
       "sources_checked": [
+        "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-growth-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-global-balanced-fund",
-        "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
         "https://stanlib.com/our-funds/stanlib-enhanced-multi-style-equity-fund",
         "https://stanlib.com/enhanced-multi-style-equity-fund",
         "https://stanlib.com/cms/insights-articles/why-an-enhanced-multi-style-fund-is-a-smart-choice-for-growth-orientated-investors",
@@ -373,11 +372,11 @@
       "manager": "Camissa",
       "status": "partially_verified",
       "sources_checked": [
+        "https://camissa-am.com/funds/islamic-equity-fund",
         "https://camissa-am.com/funds/sa-equity-fund",
         "https://camissa-am.com/funds/managed-equity-fund",
         "https://camissa-am.com/funds/islamic-global-equity-fund",
         "https://camissa-am.com/funds/islamic-global-equity-feeder-fund",
-        "https://camissa-am.com/funds/islamic-equity-fund",
         "https://camissa-am.com/funds/global-equity-fund",
         "https://camissa-am.com/funds/global-equity-feeder-fund",
         "https://camissa-am.com/funds/equity-alpha-fund"
@@ -420,12 +419,12 @@
       "manager": "Visio Fund Management",
       "status": "partially_verified",
       "sources_checked": [
+        "https://visiofund.co.za/who-we-are/",
         "https://visiofund.co.za/insights/the-benefits-of-including-equity-long-short-hedge-funds-in-an-asset-allocation-mix/",
         "https://visiofund.co.za/funds/visio-bci-sa-equity-unit-trust/",
         "https://visiofund.co.za/funds/visio-bci-global-equity-fund/",
         "https://visiofund.co.za/funds/capped-swix-segregated-institutional-equity-mandates/",
         "https://visiofund.co.za/funds/bci-shariah-equity-fund/",
-        "https://visiofund.co.za/who-we-are/",
         "https://visiofund.co.za/team/vulani-mampane/",
         "https://visiofund.co.za/team/vizikhungo-mpono/"
       ],
@@ -444,12 +443,12 @@
       "manager": "Wealthvest Asset Management",
       "status": "partially_verified",
       "sources_checked": [
+        "https://wealthvest.co.za/factsheets/",
         "https://wealthvest.co.za/south-african-based-equity-funds/",
         "https://wealthvest.co.za/local-and-global-equity-funds/",
         "https://wealthvest.co.za/global-investment-equity-funds/",
         "https://wealthvest.co.za/shariah-funds/",
-        "https://wealthvest.co.za/private-clients-segregated-funds/",
-        "https://wealthvest.co.za/factsheets/"
+        "https://wealthvest.co.za/private-clients-segregated-funds/"
       ],
       "verified_fields": [
         "ter",
