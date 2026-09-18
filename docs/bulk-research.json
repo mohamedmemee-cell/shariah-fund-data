@@ -3,7 +3,7 @@
   "generated_at": "2026-09-18",
   "researched": 32,
   "official_source_found": 17,
-  "fields_verified": 30,
+  "fields_verified": 27,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -137,24 +137,20 @@
       "id": "alexforbes-alexander-forbes-investments-shariah-high-growth",
       "name": "Alexander Forbes Investments Shari'ah High Growth",
       "manager": "Alexander Forbes Investments",
-      "status": "partially_verified",
+      "status": "official_source_found",
       "sources_checked": [
-        "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/fund-fact-sheets/ffs-individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/document-hub/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/corporate/products-corporate/alexander-forbes-beneficiary-fund",
         "https://invest.alexforbes.com/bw/en/individual/alexander-forbes-individual-member-retirement-fund",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
-        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
+        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices",
+        "https://invest.alexforbes.com/za/en/one/fund"
       ],
-      "verified_fields": [
-        "ter",
-        "risk_level",
-        "inception_date"
-      ],
+      "verified_fields": [],
       "notes": [],
-      "official_source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund"
+      "official_source": "https://invest.alexforbes.com/za/en/one/fund"
     },
     {
       "id": "alexforbes-element-islamic-balanced",
