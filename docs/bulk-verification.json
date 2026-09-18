@@ -122,18 +122,15 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
+        "minimum": true,
         "account": false,
-        "shariah": false
+        "shariah": true
       },
       "missing": [
-        "risk",
-        "minimum",
-        "account",
-        "shariah"
+        "account"
       ]
     },
     {
@@ -161,7 +158,7 @@
       "status": "watchlist",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
         "minimum": false,
@@ -169,7 +166,6 @@
         "shariah": false
       },
       "missing": [
-        "risk",
         "minimum",
         "account",
         "shariah"
@@ -495,21 +491,6 @@
       ]
     },
     {
-      "id": "alexforbes-27four-shariah-active-equity",
-      "name": "27four Shari'ah Active Equity",
-      "status": "activated",
-      "alexforbes_corroborated": true,
-      "checks": {
-        "risk": true,
-        "performance": true,
-        "source_and_date": true,
-        "minimum": true,
-        "account": true,
-        "shariah": true
-      },
-      "missing": []
-    },
-    {
       "id": "alexforbes-camissa-islamic-equity-fund",
       "name": "Camissa Islamic Equity Fund",
       "status": "watchlist",
@@ -646,6 +627,6 @@
       ]
     }
   ],
-  "activated": 1,
+  "activated": 0,
   "still_watchlist": 32
 }

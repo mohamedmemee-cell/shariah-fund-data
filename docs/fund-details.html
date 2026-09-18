@@ -288,4 +288,67 @@ setupActivation();
 </script>
 
 <!-- fund-details-state-sync-v36 -->
+
+<script id="verificationRequiredFieldsV37">
+/* verification-required-fields-v37 */
+(function(){
+ const byId=id=>document.getElementById(id);
+ const fundId=new URLSearchParams(location.search).get('id');
+ if(!fundId)return;
+
+ async function current(){
+   try{
+     const [fr,dr]=await Promise.all([
+       fetch('./shariah-funds.json?ts='+Date.now(),{cache:'no-store'}),
+       fetch('./fund-directory.json?ts='+Date.now(),{cache:'no-store'})
+     ]);
+     const feed=await fr.json(),dir=await dr.json();
+     return {f:(feed.funds||[]).find(x=>x.id===fundId)||{},d:(dir.funds||{})[fundId]||{}};
+   }catch(e){return {f:{},d:{}}}
+ }
+
+ async function validateRequired(){
+   const {f,d}=await current(),ver=d.verification||{};
+   const minimum=(byId('vMinimum')?.value||'').trim() || d.minimum_investment || ver.minimum_investment?.value || '';
+   const account=(byId('vAccount')?.value||'').trim() || d.account_suitability || ver.account_suitability?.value || '';
+   const risk=(byId('vRisk')?.value||'').trim() || f.risk_level || ver.risk_level?.value || '';
+   const shariahInput=(byId('vShariah')?.value||'').trim();
+   const shariahOK=shariahInput==='Yes' || (d.shariah_manually_verified===true && ver.shariah_governance?.status==='verified');
+   const source=(byId('vSource')?.value||'').trim() || (byId('vShariahSource')?.value||'').trim() || '';
+   const missing=[];
+   if(!minimum)missing.push('Minimum investment');
+   if(!['TFSA','Non-TFSA','Both'].includes(account))missing.push('Account suitability');
+   if(!risk)missing.push('Risk classification');
+   if(!shariahOK)missing.push('Shariah governance confirmation');
+   if(!source)missing.push('Verification source/contact');
+   if(missing.length){
+     alert('Please complete the required verification fields before continuing:\n\n• '+missing.join('\n• '));
+     return false;
+   }
+   return true;
+ }
+
+ const save=byId('saveVerification');
+ if(save){
+   save.addEventListener('click',async ev=>{
+     if(!(await validateRequired())){
+       ev.stopImmediatePropagation();
+       ev.preventDefault();
+       byId('manualConfirm')?.style.setProperty('display','none');
+     }
+   },true);
+ }
+ const cont=byId('manualContinue');
+ if(cont){
+   cont.addEventListener('click',async ev=>{
+     if(!(await validateRequired())){
+       ev.stopImmediatePropagation();
+       ev.preventDefault();
+     }
+   },true);
+ }
+})();
+</script>
+
+<!-- verification-required-fields-v37 -->
 </body></html>

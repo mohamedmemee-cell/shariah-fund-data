@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "generated_at": "2026-09-18",
-  "researched": 33,
+  "researched": 32,
   "official_source_found": 17,
-  "fields_verified": 27,
+  "fields_verified": 30,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -137,7 +137,7 @@
       "id": "alexforbes-alexander-forbes-investments-shariah-high-growth",
       "name": "Alexander Forbes Investments Shari'ah High Growth",
       "manager": "Alexander Forbes Investments",
-      "status": "official_source_found",
+      "status": "partially_verified",
       "sources_checked": [
         "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
@@ -148,9 +148,13 @@
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
       ],
-      "verified_fields": [],
+      "verified_fields": [
+        "ter",
+        "risk_level",
+        "inception_date"
+      ],
       "notes": [],
-      "official_source": "https://invest.alexforbes.com/za/en/one/fund"
+      "official_source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund"
     },
     {
       "id": "alexforbes-element-islamic-balanced",
@@ -352,17 +356,6 @@
       "id": "alexforbes-old-mutual-global-islamic-equity",
       "name": "Old Mutual Global Islamic Equity",
       "manager": "Old Mutual Investment Group",
-      "status": "no_official_match",
-      "sources_checked": [],
-      "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
-    },
-    {
-      "id": "alexforbes-27four-shariah-active-equity",
-      "name": "27four Shari'ah Active Equity",
-      "manager": "27four",
       "status": "no_official_match",
       "sources_checked": [],
       "verified_fields": [],
