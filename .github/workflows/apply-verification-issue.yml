@@ -1,8 +1,7 @@
 name: Apply verified fund information
 
 on:
-  issues:
-    types: [opened, edited]
+  workflow_dispatch:
 
 permissions:
   contents: write
