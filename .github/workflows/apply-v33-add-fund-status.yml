@@ -1,0 +1,56 @@
+name: Apply V33 Add Fund status fix
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/apply-v33-add-fund-status.yml"
+      - "scripts/add_fund_status_sync_v33.py"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: apply-v33-add-fund-status
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply V33 Add Fund status sync
+        run: python scripts/add_fund_status_sync_v33.py
+      - name: Sync visible app version
+        run: python scripts/pdf_name_reference_v16.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/add-fund.html docs/index.html docs/app-version.json
+          if git diff --cached --quiet; then
+            echo "No V33 changes to commit."
+          else
+            git commit -m "Fix Add Fund candidate status sync"
+            git push origin HEAD:main
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy GitHub Pages
+        uses: actions/deploy-pages@v4
