@@ -162,14 +162,15 @@
       "name": "27four Shari'ah Multi-Managed Balanced Fund",
       "manager": "27four",
       "category": "Balanced",
-      "bucket": "Watchlist",
+      "bucket": "Non-TFSA",
       "suggested_split": 0,
       "auto_type": "manual",
       "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "risk_level": "Medium",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
-      "survey_as_of": "2026-07-31"
+      "survey_as_of": "2026-07-31",
+      "account_suitability": "Non-TFSA"
     },
     {
       "id": "alexforbes-27four-shariah-wealth-builder-fund",

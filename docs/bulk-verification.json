@@ -99,22 +99,17 @@
     {
       "id": "alexforbes-27four-shariah-multi-managed-balanced-fund",
       "name": "27four Shari'ah Multi-Managed Balanced Fund",
-      "status": "watchlist",
+      "status": "activated",
       "alexforbes_corroborated": true,
       "checks": {
-        "risk": false,
+        "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
-        "account": false,
-        "shariah": false
+        "minimum": true,
+        "account": true,
+        "shariah": true
       },
-      "missing": [
-        "risk",
-        "minimum",
-        "account",
-        "shariah"
-      ]
+      "missing": []
     },
     {
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
@@ -610,6 +605,6 @@
       ]
     }
   ],
-  "activated": 0,
-  "still_watchlist": 31
+  "activated": 1,
+  "still_watchlist": 30
 }
