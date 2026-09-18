@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T08:13:13Z",
+  "generated_at": "2026-09-18T08:14:07Z",
   "search_engine": "Bing RSS (no API key)",
   "scope": "Publicly discoverable South African Shariah/Islamic retail investment products",
   "disclaimer": "Discovery candidates are not verified or approved for the Portfolio Builder until reliable official evidence is reviewed.",
@@ -79,7 +79,7 @@
     {
       "id": "cf044d26a67ef625",
       "title": "27four Shariah Active Equity Fund",
-      "manager": "Moneyweb",
+      "manager": "27four",
       "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/27FA1/",
       "domain": "moneyweb.co.za",
       "snippet": "South African unit trust listing for the 27four Shariah Active Equity Fund; Shariah-compliant equity investment product.",
@@ -135,7 +135,7 @@
     {
       "id": "5e9b70c21bf4e3a9",
       "title": "Wealthvest Shari'ah Equity 27four Fund",
-      "manager": "Moneyweb",
+      "manager": "Wealthvest Asset Management",
       "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/WSEFA/",
       "domain": "moneyweb.co.za",
       "snippet": "South African equity unit trust whose objective states that investments are Shari'ah compliant.",
