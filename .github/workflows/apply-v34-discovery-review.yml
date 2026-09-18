@@ -1,0 +1,59 @@
+name: Apply V34 Discovery and review workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/apply-v34-discovery-review.yml"
+      - "scripts/discovery_review_workspace_v34.py"
+      - "scripts/reconcile_discovery_v34.py"
+      - "scripts/repair_candidate_sources_v34.py"
+      - "scripts/discovery_decision_v34.py"
+      - "scripts/candidate_manual_review_v34.py"
+      - "scripts/research_candidate.py"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: apply-v34-discovery-review
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reconcile Discovery candidates
+        run: python scripts/reconcile_discovery_v34.py
+      - name: Repair third-party candidate source records
+        run: python scripts/repair_candidate_sources_v34.py
+      - name: Apply V34 UI
+        run: python scripts/discovery_review_workspace_v34.py
+      - name: Keep current status UI
+        run: python scripts/add_fund_status_sync_v33.py
+      - name: Sync visible app version
+        run: python scripts/pdf_name_reference_v16.py
+      - name: Commit generated V34 files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovery_candidates.json data/candidates docs/discovery.json docs/discovery.html docs/add-fund.html docs/candidates docs/index.html docs/app-version.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Apply V34 Discovery and candidate review workflow"
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4
