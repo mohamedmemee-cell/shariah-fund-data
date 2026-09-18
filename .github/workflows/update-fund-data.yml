@@ -149,6 +149,8 @@ jobs:
           python scripts/discovery_review_workspace_v34.py
       - name: Enforce canonical fund identity
         run: python scripts/canonical_fund_identity_v35.py
+      - name: Sync verified Fund Details state
+        run: python scripts/fund_details_state_sync_v36.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -218,6 +220,7 @@ jobs:
               python scripts/reconcile_discovery_v34.py
               python scripts/discovery_review_workspace_v34.py
               python scripts/canonical_fund_identity_v35.py
+              python scripts/fund_details_state_sync_v36.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
               git commit -m "Update Shariah fund data, performance and UI"
