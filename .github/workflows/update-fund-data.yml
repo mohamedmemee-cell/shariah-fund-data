@@ -131,8 +131,6 @@ jobs:
         run: python scripts/shared_theme_v20.py
       - name: Show GitHub return status for Search and Add Fund
         run: python scripts/github_return_status_v21.py
-      - name: Fix Portfolio Builder activation and GitHub return status
-        run: python scripts/activation_return_status_v22.py
       - name: Improve Fund Explorer width, numbering and counts
         run: python scripts/fund_explorer_layout_v25.py
       - name: Apply guided calculator flow and bulk Watchlist pass
@@ -155,6 +153,8 @@ jobs:
         run: python scripts/canonical_fund_identity_v35.py
       - name: Sync verified Fund Details state
         run: python scripts/fund_details_state_sync_v36.py
+      - name: Keep one Fund Details activation controller
+        run: python scripts/single_activation_controller_v38.py
       - name: Validate required verification fields in UI
         run: python scripts/verification_required_fields_v37.py
       - name: Commit updated data
@@ -215,7 +215,6 @@ jobs:
               python scripts/discovery_manual_search_ui_v19.py
               python scripts/shared_theme_v20.py
               python scripts/github_return_status_v21.py
-              python scripts/activation_return_status_v22.py
               python scripts/fund_explorer_layout_v25.py
               python scripts/pending_release_v28.py
               python scripts/step1_name_reference_v29.py
@@ -227,6 +226,7 @@ jobs:
               python scripts/discovery_review_workspace_v34.py
               python scripts/canonical_fund_identity_v35.py
               python scripts/fund_details_state_sync_v36.py
+              python scripts/single_activation_controller_v38.py
               python scripts/verification_required_fields_v37.py
               git add data docs sources/funds.json
               if git diff --cached --quiet; then break; fi
