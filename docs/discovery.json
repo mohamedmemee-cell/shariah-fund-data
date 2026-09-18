@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T08:28:27Z",
+  "generated_at": "2026-09-18T08:56:28Z",
   "search_engine": "Bing RSS (no API key)",
   "scope": "Publicly discoverable South African Shariah/Islamic retail investment products",
   "disclaimer": "Discovery candidates are not verified or approved for the Portfolio Builder until reliable official evidence is reviewed.",
@@ -77,6 +77,33 @@
       "discovered_via": "albaraka.co.za"
     },
     {
+      "id": "cc37224641e9c9b8",
+      "title": "Franklin Templeton Shariah Funds - South Africa",
+      "manager": "Franklintempleton",
+      "url": "https://www.franklintempleton.co.za/invest-with-us/legal-documents",
+      "domain": "franklintempleton.co.za",
+      "snippet": "South African legal documents page specifically lists Franklin Templeton Shariah Funds, including current prospectus and reports.",
+      "status": "needs_verification",
+      "confidence": 35,
+      "reasons": [
+        "explicit Shariah wording",
+        "South Africa signal",
+        "investment-product signal"
+      ],
+      "query": "bootstrap: initial South Africa Shariah web sweep",
+      "first_seen": "2026-09-17T12:01:36Z",
+      "last_seen": "2026-09-17T12:20:22Z",
+      "discovery_sources": [
+        {
+          "url": "https://www.franklintempleton.co.za/invest-with-us/legal-documents",
+          "domain": "franklintempleton.co.za",
+          "query": "bootstrap: initial South Africa Shariah web sweep",
+          "confidence": 35
+        }
+      ],
+      "discovered_via": "franklintempleton.co.za"
+    },
+    {
       "id": "cf044d26a67ef625",
       "title": "27four Shariah Active Equity Fund",
       "manager": "27four",
@@ -104,33 +131,6 @@
         }
       ],
       "discovered_via": "moneyweb.co.za"
-    },
-    {
-      "id": "cc37224641e9c9b8",
-      "title": "Franklin Templeton Shariah Funds - South Africa",
-      "manager": "Franklintempleton",
-      "url": "https://www.franklintempleton.co.za/invest-with-us/legal-documents",
-      "domain": "franklintempleton.co.za",
-      "snippet": "South African legal documents page specifically lists Franklin Templeton Shariah Funds, including current prospectus and reports.",
-      "status": "needs_verification",
-      "confidence": 35,
-      "reasons": [
-        "explicit Shariah wording",
-        "South Africa signal",
-        "investment-product signal"
-      ],
-      "query": "bootstrap: initial South Africa Shariah web sweep",
-      "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-17T12:20:22Z",
-      "discovery_sources": [
-        {
-          "url": "https://www.franklintempleton.co.za/invest-with-us/legal-documents",
-          "domain": "franklintempleton.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 35
-        }
-      ],
-      "discovered_via": "franklintempleton.co.za"
     },
     {
       "id": "5e9b70c21bf4e3a9",
