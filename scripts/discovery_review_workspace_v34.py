@@ -127,6 +127,29 @@ if MARK not in a:
      box.innerHTML='<b>From Discovery Inbox</b><br>Discovered via <b>'+(via||'web search')+'</b>. This source is a lead only; onboarding will identify the actual fund manager and official source.'+(durl?' <a href="'+durl+'" target="_blank" rel="noopener">Open discovery source</a>':'');
    }
  }
+ // V34 discovery-aware onboarding submit: discovery source is carried separately.
+ if(disc && byId('submit')){
+   const old=byId('submit'),btn=old.cloneNode(true);old.replaceWith(btn);
+   btn.addEventListener('click',()=>{
+     const name=(byId('name')?.value||'').trim();if(!name){alert('Please enter the fund name.');return}
+     const manager=(byId('manager')?.value||'').trim()||'Unknown';
+     const official=(byId('website')?.value||'').trim()||'Not supplied';
+     const factsheet=(byId('factsheet')?.value||'').trim()||'Not supplied';
+     const id=name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,100);
+     localStorage.setItem('candidateFundTracking',JSON.stringify({id,name,manager,website:official,factsheet,discovered_via:via,discovery_url:durl,createdAt:new Date().toISOString()}));
+     const body=['Candidate fund onboarding request','',
+       'Fund name: '+name,
+       'Fund manager: '+manager,
+       'Official fund page: '+official,
+       'Factsheet: '+factsheet,
+       'Discovered via: '+(via||'web search'),
+       'Discovery source: '+(durl||'Not supplied')
+     ].join('\n');
+     const u='https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Candidate fund: '+name)+'&body='+encodeURIComponent(body);
+     const status=byId('githubReturnAddV21');if(status){status.className='returnStatusV21';status.innerHTML='<strong>Confirm this fund in GitHub</strong><span>Click the green Create button once, then close that tab and return here.</span>'}
+     window.open(u,'_blank','noopener');
+   });
+ }
  function val(x){return x==null?'':String(x)}
  function createWorkspace(row){
    let w=byId('candidateReviewV34');if(!w){w=document.createElement('div');w.id='candidateReviewV34';w.className='reviewWorkspaceV34';byId('statusCard')?.appendChild(w)}
