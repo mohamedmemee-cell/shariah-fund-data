@@ -511,7 +511,68 @@
     "alexforbes-old-mutual-shariah-equity": {},
     "alexforbes-element-islamic-global-equity": {},
     "alexforbes-old-mutual-global-islamic-equity": {},
-    "alexforbes-27four-shariah-active-equity": {},
+    "alexforbes-27four-shariah-active-equity": {
+      "verification": {
+        "risk_level": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": "Aggressive"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": "2012-06-07"
+        },
+        "shariah_governance": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": "verified"
+        },
+        "oneYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": 18.31
+        },
+        "threeYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": 12.53
+        },
+        "tenYear": {
+          "status": "verified",
+          "method": "manual",
+          "verification_method": "Telephone",
+          "source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+          "verified_at": "2026-09-18",
+          "note": "The 27four Shari'ah Active Equity Fund is a high risk portfolio that invests in",
+          "value": 9.34
+        }
+      },
+      "inception_date": "2012-06-07",
+      "shariah_manually_verified": true,
+      "shariah_source": "https://www.27four.com/factsheets/27four%20Shariah%20Active%20Equity%20Fund.pdf",
+      "shariah_source_verified_at": "2026-09-18"
+    },
     "alexforbes-camissa-islamic-equity-fund": {
       "website": "https://camissa-am.com/funds/islamic-equity-fund",
       "minimum_investment": "500",
