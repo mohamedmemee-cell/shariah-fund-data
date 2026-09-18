@@ -497,20 +497,17 @@
     {
       "id": "alexforbes-27four-shariah-active-equity",
       "name": "27four Shari'ah Active Equity",
-      "status": "watchlist",
+      "status": "activated",
       "alexforbes_corroborated": true,
       "checks": {
         "risk": true,
         "performance": true,
         "source_and_date": true,
-        "minimum": false,
-        "account": false,
+        "minimum": true,
+        "account": true,
         "shariah": true
       },
-      "missing": [
-        "minimum",
-        "account"
-      ]
+      "missing": []
     },
     {
       "id": "alexforbes-camissa-islamic-equity-fund",
@@ -649,6 +646,6 @@
       ]
     }
   ],
-  "activated": 0,
-  "still_watchlist": 33
+  "activated": 1,
+  "still_watchlist": 32
 }

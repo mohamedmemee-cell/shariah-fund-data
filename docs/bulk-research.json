@@ -116,14 +116,14 @@
       "manager": "Alexander Forbes Investments",
       "status": "partially_verified",
       "sources_checked": [
-        "https://invest.alexforbes.com/za/en/one/fund",
         "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/fund-fact-sheets/ffs-individual/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/document-hub/modals/ffs-alexander-forbes-investments-global-fund",
         "https://invest.alexforbes.com/za/en/corporate/products-corporate/alexander-forbes-beneficiary-fund",
         "https://invest.alexforbes.com/bw/en/individual/alexander-forbes-individual-member-retirement-fund",
         "https://invest.alexforbes.com/za/en/surveys/industry-surveys/manager-watch-survey-of-retirement-fund-investment-managers",
-        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices"
+        "https://invest.alexforbes.com/za/en/surveys/industry-surveys/alexander-forbes-indices",
+        "https://invest.alexforbes.com/za/en/one/fund"
       ],
       "verified_fields": [
         "ter",
