@@ -1,6 +1,15 @@
 {
-  "generated_at": "2026-09-17T18:26:00Z",
+  "generated_at": "2026-09-18T07:54:18Z",
   "candidates": [
+    {
+      "id": "27four-shariah-active-equity-fund",
+      "name": "27four Shariah Active Equity Fund",
+      "manager": "Moneyweb",
+      "status": "needs_review",
+      "activation_ready": false,
+      "updated_at": "2026-09-18T07:54:18Z",
+      "issue_number": 17
+    },
     {
       "id": "al-baraka-superfund-retirement-fund",
       "name": "Al Baraka SuperFund Retirement Fund",

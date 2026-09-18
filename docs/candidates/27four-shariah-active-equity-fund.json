@@ -1,0 +1,42 @@
+{
+  "id": "27four-shariah-active-equity-fund",
+  "name": "27four Shariah Active Equity Fund",
+  "manager": "Moneyweb",
+  "source_url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/27FA1/",
+  "factsheet_url": "",
+  "issue_number": 17,
+  "status": "needs_review",
+  "created_at": "2026-09-18T07:54:18Z",
+  "updated_at": "2026-09-18T07:54:18Z",
+  "findings": {
+    "ter": null,
+    "minimum_monthly": null,
+    "minimum_lump_sum": null,
+    "tfsa_eligible": null,
+    "risk_level": null,
+    "shariah_evidence": null,
+    "shariah_language_found": false,
+    "performance": {
+      "oneYear": null,
+      "threeYear": null,
+      "fiveYear": null,
+      "tenYear": null,
+      "sinceInception": null
+    }
+  },
+  "stages": {
+    "candidate": "complete",
+    "official_sources": "needs_attention",
+    "performance_data": "needs_attention",
+    "fees": "needs_attention",
+    "minimums": "needs_attention",
+    "tfsa": "needs_attention",
+    "shariah": "needs_attention",
+    "automation": "needs_attention",
+    "validation": "needs_review"
+  },
+  "activation_ready": false,
+  "notes": [
+    "Official fund page could not be read automatically: 403 Client Error: Forbidden for url: https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/27FA1/"
+  ]
+}
