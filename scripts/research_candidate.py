@@ -10,6 +10,7 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 from pypdf import PdfReader
+import discover_sharia_investments as discovery
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "candidates"
@@ -20,6 +21,65 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; ShariahFundCandidateBot/1.0; +GitHub Actions)",
     "Accept": "text/html,application/pdf;q=0.9,*/*;q=0.8",
 }
+
+
+
+THIRD_PARTY_DISCOVERY_DOMAINS = {
+    "moneyweb.co.za","alexforbes.com","invest.alexforbes.com","fundsdata.co.za",
+}
+MANAGER_HINTS = {
+    "27four":"27four","camissa":"Camissa","satrix":"Satrix","old mutual":"Old Mutual",
+    "al baraka":"Al Baraka","oasis":"Oasis","stanlib":"STANLIB","sentio":"Sentio",
+    "element":"Element Investment Managers","mazi":"Mazi","foord":"Foord",
+    "wealthvest":"Wealthvest","prescient":"Prescient",
+}
+
+def host(url):
+    return (urlparse(url or "").hostname or "").lower().removeprefix("www.")
+
+def manager_from_name(name):
+    low=(name or "").lower()
+    for token,manager in MANAGER_HINTS.items():
+        if token in low:
+            return manager
+    return ""
+
+def resolve_official_source(candidate):
+    """Find an official manager/fund page when discovery supplied no official source
+    or supplied a third-party discovery page."""
+    current=(candidate.get("source_url") or "").strip()
+    current_host=host(current)
+    if current and current_host not in THIRD_PARTY_DISCOVERY_DOMAINS:
+        return current, candidate.get("manager") or manager_from_name(candidate.get("name"))
+    name=candidate.get("name") or ""
+    inferred=manager_from_name(name) or candidate.get("manager") or ""
+    queries=[f'"{name}" official fund', f'"{name}" factsheet']
+    if inferred and inferred.lower() not in ("unknown","moneyweb"):
+        queries.insert(0,f'"{name}" {inferred}')
+    best=None
+    name_words=[w for w in re.findall(r"[a-z0-9]+",name.lower()) if len(w)>3]
+    for q in queries:
+        try:
+            results=discovery.search_bing_rss(q)
+        except Exception:
+            continue
+        for item in results:
+            url=(item.get("url") or "").strip()
+            h=host(url)
+            if not url.startswith(("http://","https://")) or h in THIRD_PARTY_DISCOVERY_DOMAINS:
+                continue
+            title=(item.get("title") or "").lower()
+            score=sum(2 for w in name_words if w in title or w in url.lower())
+            if any(h==x or h.endswith("."+x) for x in discovery.OFFICIAL_HINTS):
+                score+=8
+            if inferred and inferred.lower().replace(" ","") in (title+" "+h).replace(" ",""):
+                score+=5
+            if best is None or score>best[0]:
+                best=(score,url,h)
+    if best and best[0]>=6:
+        manager=inferred or discovery.infer_manager(name,best[1])
+        return best[1],manager
+    return "", inferred
 
 
 def now_iso():
@@ -179,6 +239,8 @@ def parse_issue_candidate():
         "manager": value("Fund manager") or "Unknown",
         "source_url": value("Official fund page") if value("Official fund page") != "Not supplied" else "",
         "factsheet_url": value("Factsheet") if value("Factsheet") != "Not supplied" else "",
+        "discovery_url": value("Discovery source") if value("Discovery source") != "Not supplied" else "",
+        "discovered_via": value("Discovered via"),
         "issue_number": issue.get("number"),
         "status": "queued",
         "created_at": now_iso(),
@@ -191,6 +253,11 @@ def research(candidate):
     candidate["status"] = "researching"
     candidate["updated_at"] = now_iso()
     notes = []
+    official_source, resolved_manager = resolve_official_source(candidate)
+    if official_source:
+        candidate["source_url"] = official_source
+    if resolved_manager and resolved_manager.lower() not in ("unknown","moneyweb"):
+        candidate["manager"] = resolved_manager
     source_url = candidate.get("source_url") or ""
     factsheet_url = candidate.get("factsheet_url") or ""
     combined = ""
@@ -210,7 +277,7 @@ def research(candidate):
         except Exception as exc:
             notes.append(f"Official fund page could not be read automatically: {str(exc)[:180]}")
     else:
-        notes.append("No official fund page was supplied.")
+        notes.append("No official fund page could be resolved automatically. The discovery source remains a lead only.")
 
     if factsheet_url:
         try:
