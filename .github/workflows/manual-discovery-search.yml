@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   search:
-    if: startsWith(github.event.issue.title, 'Discovery search: ')
+    if: "${{ startsWith(github.event.issue.title, 'Discovery search: ') }}"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest main
