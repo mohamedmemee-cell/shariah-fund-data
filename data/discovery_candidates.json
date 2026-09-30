@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27T06:34:35Z",
+  "generated_at": "2026-09-30T05:41:06Z",
   "search_engine": "Bing RSS (no API key)",
   "scope": "Publicly discoverable South African Shariah/Islamic retail investment products",
   "disclaimer": "Discovery candidates are not verified or approved for the Portfolio Builder until reliable official evidence is reviewed.",
@@ -37,16 +37,7 @@
       ],
       "query": "bootstrap: initial South Africa Shariah web sweep",
       "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-23T05:38:35Z",
-      "discovery_sources": [
-        {
-          "url": "https://www.albaraka.co.za/products/superfund-retirement-fund",
-          "domain": "albaraka.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 80
-        }
-      ],
-      "discovered_via": "albaraka.co.za"
+      "last_seen": "2026-09-30T05:41:06Z"
     },
     {
       "id": "11adf67e47847ca9",
@@ -65,21 +56,12 @@
       ],
       "query": "bootstrap: initial South Africa Shariah web sweep",
       "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-23T05:38:35Z",
-      "discovery_sources": [
-        {
-          "url": "https://www.albaraka.co.za/products/other-shariah-compliant-unit-trust-funds",
-          "domain": "albaraka.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 80
-        }
-      ],
-      "discovered_via": "albaraka.co.za"
+      "last_seen": "2026-09-30T05:41:06Z"
     },
     {
       "id": "cf044d26a67ef625",
       "title": "27four Shariah Active Equity Fund",
-      "manager": "27four",
+      "manager": "Moneyweb",
       "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/27FA1/",
       "domain": "moneyweb.co.za",
       "snippet": "South African unit trust listing for the 27four Shariah Active Equity Fund; Shariah-compliant equity investment product.",
@@ -92,19 +74,7 @@
       ],
       "query": "bootstrap: initial South Africa Shariah web sweep",
       "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-23T05:38:35Z",
-      "existing_fund_id": "alexforbes-27four-shariah-active-equity",
-      "existing_fund_name": "27four Shari'ah Active Equity",
-      "discovery_sources": [
-        {
-          "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/27FA1/",
-          "domain": "moneyweb.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 35
-        }
-      ],
-      "discovered_via": "moneyweb.co.za",
-      "canonical_fund_id": "alexforbes-27four-shariah-active-equity"
+      "last_seen": "2026-09-30T05:41:06Z"
     },
     {
       "id": "cc37224641e9c9b8",
@@ -122,21 +92,12 @@
       ],
       "query": "bootstrap: initial South Africa Shariah web sweep",
       "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-23T05:38:35Z",
-      "discovery_sources": [
-        {
-          "url": "https://www.franklintempleton.co.za/invest-with-us/legal-documents",
-          "domain": "franklintempleton.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 35
-        }
-      ],
-      "discovered_via": "franklintempleton.co.za"
+      "last_seen": "2026-09-30T05:41:06Z"
     },
     {
       "id": "5e9b70c21bf4e3a9",
       "title": "Wealthvest Shari'ah Equity 27four Fund",
-      "manager": "Wealthvest Asset Management",
+      "manager": "Moneyweb",
       "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/WSEFA/",
       "domain": "moneyweb.co.za",
       "snippet": "South African equity unit trust whose objective states that investments are Shari'ah compliant.",
@@ -149,19 +110,7 @@
       ],
       "query": "bootstrap: initial South Africa Shariah web sweep",
       "first_seen": "2026-09-17T12:01:36Z",
-      "last_seen": "2026-09-23T05:38:35Z",
-      "existing_fund_id": "alexforbes-wealthvest-shariah-equity-27four-fund",
-      "existing_fund_name": "Wealthvest Shariah Equity 27Four Fund",
-      "discovery_sources": [
-        {
-          "url": "https://www.moneyweb.co.za/tools-and-data/click-a-unit-trust/WSEFA/",
-          "domain": "moneyweb.co.za",
-          "query": "bootstrap: initial South Africa Shariah web sweep",
-          "confidence": 35
-        }
-      ],
-      "discovered_via": "moneyweb.co.za",
-      "canonical_fund_id": "alexforbes-wealthvest-shariah-equity-27four-fund"
+      "last_seen": "2026-09-30T05:41:06Z"
     }
   ]
 }
