@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-27",
+  "generated_at": "2026-10-04",
   "researched": 30,
-  "official_source_found": 16,
-  "fields_verified": 26,
+  "official_source_found": 17,
+  "fields_verified": 27,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -290,14 +290,19 @@
       "id": "alexforbes-mianzo-islamic-domestic-equity-27four-fund",
       "name": "Mianzo Islamic Domestic Equity 27Four Fund",
       "manager": "Mianzo Asset Management",
-      "status": "no_official_match",
+      "status": "partially_verified",
       "sources_checked": [
-        "https://www.mianzo.co.za/equity-funds/"
+        "https://www.mianzo.co.za/equity-funds/",
+        "https://www.mianzo.co.za/minimum-disclosure-document/",
+        "https://www.mianzo.co.za/fund-fact-sheet/",
+        "https://www.mianzo.co.za/fund-fact-sheet-2/",
+        "https://www.mianzo.co.za/absolute-return-fund/"
       ],
-      "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
+      "verified_fields": [
+        "minimum_investment"
+      ],
+      "notes": [],
+      "official_source": "https://www.mianzo.co.za/equity-funds/"
     },
     {
       "id": "alexforbes-old-mutual-shariah-equity",
