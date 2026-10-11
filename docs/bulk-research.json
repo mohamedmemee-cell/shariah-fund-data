@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04",
+  "generated_at": "2026-10-11",
   "researched": 30,
   "official_source_found": 17,
-  "fields_verified": 27,
+  "fields_verified": 25,
   "funds": [
     {
       "id": "old-mutual-albaraka-income",
@@ -156,7 +156,7 @@
       "id": "alexforbes-momentum-investments-shariah",
       "name": "Momentum Investments Shari’ah",
       "manager": "Momentum Investments",
-      "status": "partially_verified",
+      "status": "official_source_found",
       "sources_checked": [
         "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
         "https://www.momentum.co.za/momentum/media-centre/investments-wins-hedge-fund-award-2020",
@@ -167,10 +167,7 @@
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/death-claims-process",
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025"
       ],
-      "verified_fields": [
-        "risk_level",
-        "inception_date"
-      ],
+      "verified_fields": [],
       "notes": [],
       "official_source": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds"
     },
