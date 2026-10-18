@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11",
+  "generated_at": "2026-10-18",
   "researched": 30,
   "official_source_found": 17,
   "fields_verified": 25,
@@ -50,7 +50,14 @@
       "status": "official_source_found",
       "sources_checked": [
         "https://www.oasiscrescent.com/",
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],
@@ -177,11 +184,19 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com",
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],
-      "official_source": "https://www.oasiscrescent.com"
+      "official_source": "https://www.oasiscrescent.com/product-page/textured-loop-earrings"
     },
     {
       "id": "alexforbes-oasis-crescent-balanced-progressive",
@@ -189,7 +204,15 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com",
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],
@@ -201,7 +224,15 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com",
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],
@@ -364,7 +395,15 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com",
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],
@@ -434,7 +473,15 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com"
+        "https://www.oasiscrescent.com",
+        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
+        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
+        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
+        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
+        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
+        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
+        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
+        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
       ],
       "verified_fields": [],
       "notes": [],

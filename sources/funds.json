@@ -265,7 +265,7 @@
       "bucket": "Watchlist",
       "suggested_split": 0,
       "auto_type": "manual",
-      "source_url": "https://www.oasiscrescent.com",
+      "source_url": "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
       "risk_level": null,
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "discovery_source": "Alexforbes Shari'ah Manager Watch Survey",
@@ -553,5 +553,5 @@
       "survey_as_of": "2026-07-31"
     }
   ],
-  "bulk_research_last_run": "2026-10-11"
+  "bulk_research_last_run": "2026-10-18"
 }
