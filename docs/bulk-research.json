@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18",
+  "generated_at": "2026-10-25",
   "researched": 30,
   "official_source_found": 17,
   "fields_verified": 25,
@@ -184,7 +184,6 @@
       "manager": "Oasis",
       "status": "official_source_found",
       "sources_checked": [
-        "https://www.oasiscrescent.com",
         "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
         "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
         "https://www.oasiscrescent.com/product-page/solid-wood-chair",

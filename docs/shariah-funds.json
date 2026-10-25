@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T10:58:38Z",
+  "generated_at": "2026-10-25T11:18:35Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -24,7 +24,7 @@
       "shariah_note": "Tracks the MSCI World Islamic Index via an underlying Islamic ETF.",
       "update_status": "fallback_manual",
       "updated": "2026-09-18",
-      "update_error": "Satrix performance header/value count mismatch"
+      "update_error": "Could not identify Satrix Fund (%) performance row"
     },
     {
       "id": "satrix-shariah-top-40-etf",
@@ -33,19 +33,20 @@
       "category": "South Africa Equity",
       "bucket": "TFSA",
       "suggested_split": 25,
-      "oneYear": 42.05,
-      "threeYear": 26.74,
-      "fiveYear": 15.0,
-      "tenYear": 11.77,
+      "oneYear": null,
+      "threeYear": null,
+      "fiveYear": null,
+      "tenYear": null,
       "sinceInception": null,
       "ter": 0.4,
-      "data_as_of": "2026-08-31",
+      "data_as_of": null,
       "risk_level": "Aggressive",
       "source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "data_source_url": "https://satrix.co.za/fund/mdd/STXSHA",
       "shariah_note": "South African Shariah equity exposure.",
-      "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "update_status": "fallback_manual",
+      "updated": "2026-09-18",
+      "update_error": "Could not identify Satrix Fund (%) performance row"
     },
     {
       "id": "camissa-islamic-balanced",
@@ -66,7 +67,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b92fecd1ba112063a21_Camissa%20Islamic%20Balanced%20Fund_2609.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "updated": "2026-10-25T11:18:35Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -87,7 +88,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "updated": "2026-10-25T11:18:35Z"
     },
     {
       "id": "27four-shariah-income",
@@ -130,7 +131,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b40eeffbd6fbb0b3b34_Camissa%20Islamic%20High%20Yield%20Fund_2609.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "updated": "2026-10-25T11:18:35Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -151,7 +152,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "updated": "2026-10-25T11:18:35Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -172,7 +173,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-18T10:58:38Z"
+      "updated": "2026-10-25T11:18:35Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -422,7 +423,7 @@
       "data_as_of": "2026-07-31",
       "risk_level": null,
       "source_url": "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
-      "data_source_url": "https://www.oasiscrescent.com",
+      "data_source_url": "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",
       "updated": "2026-09-18"
