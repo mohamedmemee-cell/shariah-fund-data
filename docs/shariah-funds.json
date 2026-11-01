@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T11:18:35Z",
+  "generated_at": "2026-11-01T13:14:28Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -67,7 +67,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b92fecd1ba112063a21_Camissa%20Islamic%20Balanced%20Fund_2609.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-10-25T11:18:35Z"
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -88,7 +88,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-25T11:18:35Z"
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "27four-shariah-income",
@@ -97,20 +97,19 @@
       "category": "Income",
       "bucket": "Non-TFSA",
       "suggested_split": 20,
-      "oneYear": 8.58,
-      "threeYear": 7.68,
-      "fiveYear": 7.21,
+      "oneYear": 8.17,
+      "threeYear": 8.02,
+      "fiveYear": 7.22,
       "tenYear": null,
       "sinceInception": null,
-      "ter": null,
+      "ter": 0.57,
       "data_as_of": "2026-05-31",
       "risk_level": "Low",
       "source_url": "https://27four.com/fund-centre/",
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf",
       "shariah_note": "Shariah-compliant income allocation.",
-      "update_status": "fallback_manual",
-      "updated": "2026-09-18",
-      "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf"
+      "update_status": "auto",
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "camissa-islamic-high-yield",
@@ -131,7 +130,7 @@
       "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b40eeffbd6fbb0b3b34_Camissa%20Islamic%20High%20Yield%20Fund_2609.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-10-25T11:18:35Z"
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -152,7 +151,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-25T11:18:35Z"
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -173,7 +172,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-10-25T11:18:35Z"
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -187,15 +186,14 @@
       "fiveYear": 9.11,
       "tenYear": null,
       "sinceInception": null,
-      "ter": null,
+      "ter": 0.92,
       "data_as_of": "2025-07-31",
       "risk_level": "Moderate-High",
       "source_url": "https://27four.com/fund-centre/",
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "shariah_note": "Shariah-compliant balanced allocation.",
-      "update_status": "fallback_manual",
-      "updated": "2026-09-18",
-      "update_error": "Expected PDF but received text/html from https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf"
+      "update_status": "auto",
+      "updated": "2026-11-01T13:14:28Z"
     },
     {
       "id": "oasis-crescent-balanced-progressive",
@@ -254,7 +252,7 @@
       "ter": null,
       "data_as_of": "2026-07-31",
       "risk_level": null,
-      "source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
+      "source_url": "https://27four.com/finweeks-fund-in-focus-27four-balanced-prescient-fund-of-funds/",
       "data_source_url": "https://invest.alexforbes.com/za/en/surveys/industry-surveys/shariah-manager-watch",
       "shariah_note": "Included in the Alexforbes Shari'ah Manager Watch Survey for July 2026. Keep on Watchlist until manager/fund-level verification is complete.",
       "update_status": "manual",

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25",
+  "generated_at": "2026-11-01",
   "researched": 30,
-  "official_source_found": 17,
+  "official_source_found": 18,
   "fields_verified": 25,
   "funds": [
     {
@@ -88,12 +88,14 @@
       "id": "alexforbes-27four-shariah-balanced-prescient-fof",
       "name": "27four Shari'ah Balanced Prescient FoF",
       "manager": "27four",
-      "status": "no_official_match",
-      "sources_checked": [],
+      "status": "official_source_found",
+      "sources_checked": [
+        "https://27four.com/finweeks-fund-in-focus-27four-balanced-prescient-fund-of-funds/",
+        "https://27four.com/behind-the-fund-27four-shariah-active-equity-prescient-fund/"
+      ],
       "verified_fields": [],
-      "notes": [
-        "No confident official manager page/factsheet match found automatically."
-      ]
+      "notes": [],
+      "official_source": "https://27four.com/finweeks-fund-in-focus-27four-balanced-prescient-fund-of-funds/"
     },
     {
       "id": "alexforbes-alexander-forbes-investments-shariah-medium-growth",
@@ -172,7 +174,8 @@
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/why-you-should-nominate-a-beneficiary",
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/two-pot-a-year-later",
         "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025/death-claims-process",
-        "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025"
+        "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2025",
+        "https://www.momentum.co.za/momentum/retirement-funds-trustee-newsletter-2024/two-pot-frequently-asked-questions"
       ],
       "verified_fields": [],
       "notes": [],
