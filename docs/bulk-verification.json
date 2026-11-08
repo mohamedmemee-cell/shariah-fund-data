@@ -163,15 +163,13 @@
         "risk": false,
         "performance": false,
         "source_and_date": true,
-        "minimum": false,
-        "account": false,
+        "minimum": true,
+        "account": true,
         "shariah": false
       },
       "missing": [
         "risk",
         "performance",
-        "minimum",
-        "account",
         "shariah"
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01",
+  "updated_at": "2026-11-08",
   "funds": {
     "satrix-msci-world-islamic-etf": {
       "website": "https://satrix.co.za/fund/mdd/STXWIS",
@@ -189,7 +189,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": 0.71
         },
@@ -198,7 +198,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "500"
         },
@@ -207,7 +207,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Low"
         },
@@ -216,7 +216,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-income-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "31/03/2020"
         }
@@ -247,7 +247,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": 1.76
         },
@@ -256,7 +256,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "500"
         },
@@ -265,7 +265,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Low"
         },
@@ -274,7 +274,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.albaraka.co.za/products/old-mutual-albaraka-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "01/06/1992"
         }
@@ -424,7 +424,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Conservative"
         }
@@ -610,7 +610,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": 1.02
         },
@@ -619,7 +619,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Low"
         },
@@ -628,7 +628,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://invest.alexforbes.com/za/en/individual/modals/ffs-alexander-forbes-investments-global-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "19 March 2015"
         }
@@ -669,7 +669,41 @@
       "inception_date": "19 March 2015"
     },
     "alexforbes-element-islamic-balanced": {},
-    "alexforbes-foord-shariah-balanced-fund": {},
+    "alexforbes-foord-shariah-balanced-fund": {
+      "website": "https://foord.co.za/investments/unit-trusts/foord-balanced-fund",
+      "minimum_investment": "50000",
+      "verification": {
+        "minimum_investment": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://foord.co.za/investments/unit-trusts/foord-balanced-fund",
+          "verified_at": "2026-11-08",
+          "note": "Automatically extracted from official manager material.",
+          "value": "50000"
+        },
+        "account_suitability": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://foord.co.za/investments/unit-trusts/foord-balanced-fund",
+          "verified_at": "2026-11-08",
+          "note": "Automatically extracted from official manager material.",
+          "value": "Both"
+        },
+        "inception_date": {
+          "status": "verified",
+          "method": "automatic",
+          "verification_method": "Official manager source",
+          "source": "https://foord.co.za/investments/unit-trusts/foord-balanced-fund",
+          "verified_at": "2026-11-08",
+          "note": "Automatically extracted from official manager material.",
+          "value": "1 September 2002"
+        }
+      },
+      "account_suitability": "Both",
+      "inception_date": "1 September 2002"
+    },
     "alexforbes-momentum-investments-shariah": {
       "website": "https://www.momentum.co.za/momentum/corporate/employee-benefits/investments-solutions-for-retirement-funds",
       "verification": {
@@ -714,7 +748,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://stanlib.com/our-funds/stanlib-global-balanced-feeder-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Conservative"
         }
@@ -731,7 +765,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://www.mianzo.co.za/equity-funds/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "50"
         }
@@ -840,7 +874,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://camissa-am.com/funds/islamic-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "500"
         },
@@ -849,7 +883,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://camissa-am.com/funds/islamic-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Low"
         },
@@ -858,7 +892,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://camissa-am.com/funds/islamic-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "13 July 2009"
         },
@@ -867,7 +901,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://camissa-am.com/funds/islamic-equity-fund",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": true
         }
@@ -888,7 +922,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://visiofund.co.za/who-we-are/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": 3.73
         },
@@ -897,7 +931,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://visiofund.co.za/who-we-are/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "Moderate"
         },
@@ -906,7 +940,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://visiofund.co.za/who-we-are/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "01 Apr 2004"
         },
@@ -915,7 +949,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://visiofund.co.za/who-we-are/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": true
         }
@@ -932,7 +966,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://wealthvest.co.za/factsheets/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": 1.27
         },
@@ -941,7 +975,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://wealthvest.co.za/factsheets/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "10000"
         },
@@ -950,7 +984,7 @@
           "method": "automatic",
           "verification_method": "Official manager source",
           "source": "https://wealthvest.co.za/factsheets/",
-          "verified_at": "2026-11-01",
+          "verified_at": "2026-11-08",
           "note": "Automatically extracted from official manager material.",
           "value": "03 March 2025"
         }
