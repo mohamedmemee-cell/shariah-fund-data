@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-18T08:14:07Z",
+  "generated_at": "2026-11-10T03:56:01Z",
   "candidates": [
     {
       "id": "27four-shariah-active-equity-fund",
       "name": "27four Shariah Active Equity Fund",
       "manager": "27four",
-      "status": "needs_review",
+      "status": "already_tracked",
       "activation_ready": false,
       "updated_at": "2026-09-18T08:13:14Z",
       "issue_number": 17
@@ -16,14 +16,14 @@
       "manager": "Al Baraka",
       "status": "needs_review",
       "activation_ready": false,
-      "updated_at": "2026-09-17T18:26:00Z",
-      "issue_number": 12
+      "updated_at": "2026-11-10T03:56:01Z",
+      "issue_number": 27
     },
     {
       "id": "old-mutual-global-islamic-equity-fund",
       "name": "Old Mutual Global Islamic Equity Fund",
       "manager": "Old Mutual",
-      "status": "needs_review",
+      "status": "already_tracked",
       "activation_ready": false,
       "updated_at": "2026-09-16T00:16:29Z",
       "issue_number": 1
