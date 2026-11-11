@@ -5,36 +5,13 @@
 /* manual-discovery-search-v19 */
 .manualSearchV19{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}.manualSearchV19 label{display:block;font-size:13px;font-weight:750;color:var(--muted);margin-bottom:6px}.manualSearchV19 input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;font-size:15px}.manualSearchV19 button{padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--accent);color:#fff;font-weight:800;cursor:pointer}.manualResultV19{margin-top:12px;padding:11px 13px;border-radius:10px;background:var(--soft);display:none}.manualResultV19.show{display:block}.manualResultV19.warn{background:color-mix(in srgb,var(--warn) 10%,var(--card));color:var(--warn)}@media(max-width:700px){.manualSearchV19{grid-template-columns:1fr}.manualSearchV19 button{width:100%}}
 
-
-/* shared-theme-v20 */
-html[data-theme="light"]{
-  color-scheme:light;
-  --bg:#f4f7f7;--card:#fff;--text:#172022;--muted:#667276;--line:#d8e1e2;
-  --accent:#16715d;--accent2:#0f5b4b;--soft:#e7f3ef;--warn:#a86200;
-  --brand:#0f766e;--brand-strong:#0b5f59;--brand-soft:#e8f6f3;
-}
-html[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#101718;--card:#182123;--text:#edf3f1;--muted:#9eacab;--line:#334044;
-  --accent:#66d1b5;--accent2:#92e4cf;--soft:#203532;--warn:#e2ad5e;
-  --brand:#64d6bd;--brand-strong:#8ee8d3;--brand-soft:#1f3c37;
-}
-
-
-/* github-return-status-v21 */
-.returnStatusV21{margin-top:12px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:var(--soft);line-height:1.45}.returnStatusV21 strong{display:block;margin-bottom:3px}.returnStatusV21.ok{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.returnStatusV21.warn{border-color:color-mix(in srgb,var(--warn) 45%,var(--line));background:color-mix(in srgb,var(--warn) 8%,var(--card))}.returnStatusV21 a{font-weight:750}.returnStatusV21 .miniActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.returnStatusV21 .miniActions a,.returnStatusV21 .miniActions button{padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);text-decoration:none;font:inherit;font-weight:750;cursor:pointer}
-
-
-/* discovery-review-workspace-v34 */
-.actionV34{display:inline-flex;align-items:center;justify-content:center;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-weight:750;font-size:12px;cursor:pointer;text-decoration:none}.actionV34.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.actionV34.warn{border-color:color-mix(in srgb,var(--warn) 45%,var(--line));color:var(--warn)}.reviewPanelV34{display:none;margin-top:8px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--soft);font-size:12px;line-height:1.45}.reviewPanelV34.show{display:block}.reviewGridV34{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.reviewGridV34 div{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--card)}.reviewGridV34 small{display:block;color:var(--muted);margin-bottom:3px}.decisionReasonV34{margin-top:8px;width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)}@media(max-width:720px){.reviewGridV34{grid-template-columns:1fr}}
-
 </style></head><body><main><nav class="nav"><a href="./">Calculator</a><a href="./fund-explorer.html">Fund Explorer</a><a class="active" href="./discovery.html">Discovery Inbox</a><a href="./add-fund.html">Add Fund</a></nav><section class="card"><h1 style="margin-top:0">Shariah Investment Discovery</h1><p class="muted">Automated web discovery for possible South African Shariah-compliant retail investments. <b>Discovery is not verification.</b> Nothing on this page enters the Portfolio Builder until its Shariah status and product details are verified from reliable official material.</p><div class="stats"><div class="stat"><small>Candidates</small><b id="count">—</b></div><div class="stat"><small>New / review</small><b id="review">—</b></div><div class="stat"><small>Already tracked</small><b id="tracked">—</b></div><div class="stat"><small>Last scan</small><b id="scan" style="font-size:14px">—</b></div></div></section><section class="card" id="manualSearchCardV19">
 <h2 style="margin-top:0">Search For</h2>
 <p class="muted">Enter specific words, a fund manager, product name, or a website. The system will run a focused web search and add any suitable findings to this Discovery Inbox. Discovery is still not Shariah verification.</p>
 <div class="manualSearchV19"><div><label for="manualSearchForV19">Words or website</label><input id="manualSearchForV19" placeholder="e.g. Sentio Shariah fund or https://example.co.za"></div><button id="manualSearchBtnV19" type="button">Search the web</button></div>
 <div id="manualSearchResultV19" class="manualResultV19" aria-live="polite"></div>
 </section>
-<section class="card"><div class="filters"><input id="q" placeholder="Search candidate or manager"><select id="status"><option value="">All statuses</option><option value="needs_verification">Needs verification</option><option value="already_tracked">Already tracked</option><option value="rejected">Rejected</option><option value="not_now">Not now</option></select><select id="confidence"><option value="0">Any confidence</option><option value="50">50+ confidence</option><option value="70">70+ confidence</option></select></div></section><section class="card table"><table><thead><tr><th>Candidate</th><th>Manager</th><th>Status</th><th>Confidence</th><th>Why found</th><th>Search source</th><th>Action</th></tr></thead><tbody id="rows"><tr><td colspan="7">Loading…</td></tr></tbody></table></section><section class="card"><h2 style="margin-top:0">How to use this inbox</h2><p class="muted">Open a candidate, verify the official fund page/factsheet and Shariah certificate or governance source, then add it through <b>Add Fund</b>. The existing verification workflow remains the gate before a product becomes Active.</p></section><script>
+<section class="card"><div class="filters"><input id="q" placeholder="Search candidate or manager"><select id="status"><option value="">All statuses</option><option value="needs_verification">Needs verification</option><option value="already_tracked">Already tracked</option><option value="rejected">Rejected</option></select><select id="confidence"><option value="0">Any confidence</option><option value="50">50+ confidence</option><option value="70">70+ confidence</option></select></div></section><section class="card table"><table><thead><tr><th>Candidate</th><th>Manager</th><th>Status</th><th>Confidence</th><th>Why found</th><th>Search source</th><th>Action</th></tr></thead><tbody id="rows"><tr><td colspan="7">Loading…</td></tr></tbody></table></section><section class="card"><h2 style="margin-top:0">How to use this inbox</h2><p class="muted">Open a candidate, verify the official fund page/factsheet and Shariah certificate or governance source, then add it through <b>Add Fund</b>. The existing verification workflow remains the gate before a product becomes Active.</p></section><script>
 const $=id=>document.getElementById(id);let data={candidates:[]};function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}function render(){const q=$('q').value.toLowerCase(),st=$('status').value,min=+$('confidence').value;let a=data.candidates.filter(x=>(!q||(x.title+' '+x.manager+' '+x.domain).toLowerCase().includes(q))&&(!st||x.status===st)&&Number(x.confidence||0)>=min);a.sort((x,y)=>Number(y.confidence||0)-Number(x.confidence||0));$('rows').innerHTML=a.length?a.map(x=>`<tr><td><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><b>${esc(x.title)}</b></a><br><small class="muted">${esc(x.domain)}</small></td><td>${esc(x.manager)}</td><td><span class="pill">${esc((x.status||'').replaceAll('_',' '))}</span></td><td class="score">${Number(x.confidence||0)}%</td><td>${esc((x.reasons||[]).join(' · '))}</td><td><small>${esc(x.query||'')}</small></td><td><div class="actionsV18"><a class="actionV18" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Review source</a>${x.status==='needs_verification'?`<a class="actionV18 primary" href="./add-fund.html?discovery=${encodeURIComponent(x.id||'')}&name=${encodeURIComponent(x.title||'')}&manager=${encodeURIComponent(x.manager||'')}&website=${encodeURIComponent(x.url||'')}">Add this fund</a>`:''}</div></td></tr>`).join(''):'<tr><td colspan="7">No candidates match these filters.</td></tr>';const all=data.candidates;$('count').textContent=all.length;$('review').textContent=all.filter(x=>x.status==='needs_verification').length;$('tracked').textContent=all.filter(x=>x.status==='already_tracked').length;$('scan').textContent=data.generated_at||'—'}async function load(){try{data=await (await fetch('./discovery.json?ts='+Date.now(),{cache:'no-store'})).json();render()}catch(e){$('rows').innerHTML='<tr><td colspan="7" class="warn">Discovery data is not available yet. Run the Discovery workflow in GitHub Actions.</td></tr>'}}['q','status','confidence'].forEach(id=>$(id).addEventListener('input',render));load();
 </script></main>
 <script>
@@ -70,131 +47,4 @@ const $=id=>document.getElementById(id);let data={candidates:[]};function esc(s)
 })();
 </script>
 
-
-<script>
-/* shared-theme-v20 */
-(function(){
-  const key='shariahTheme';
-  const saved=localStorage.getItem(key)||'system';
-  if(saved==='light'||saved==='dark') document.documentElement.dataset.theme=saved;
-  else document.documentElement.removeAttribute('data-theme');
-
-  // Theme is selected once for the whole application from the Calculator page.
-  // Remove page-specific selectors from secondary pages so there is only one setting.
-  document.querySelectorAll('#themeMode,.themeSelect').forEach(el=>{
-    const parent=el.closest('label,.planTools,.themeControl,.theme-control');
-    if(parent && /theme/i.test(parent.textContent||'')) parent.remove();
-    else el.remove();
-  });
-})();
-</script>
-
-
-<script>
-/* github-return-status-v21-discovery */
-(function(){
- const repo='mohamedmemee-cell/shariah-fund-data', api='https://api.github.com/repos/'+repo;
- const input=document.getElementById('manualSearchForV19'), oldBtn=document.getElementById('manualSearchBtnV19'), box=document.getElementById('manualSearchResultV19');
- if(!input||!oldBtn||!box)return;
- const btn=oldBtn.cloneNode(true);oldBtn.replaceWith(btn);
- function token(){return 'ms-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8)}
- function state(){try{return JSON.parse(localStorage.getItem('manualDiscoveryStateV21')||'null')}catch(e){return null}}
- function save(v){localStorage.setItem('manualDiscoveryStateV21',JSON.stringify(v));localStorage.setItem('manualDiscoveryTokenV19',v.token||'');localStorage.setItem('manualDiscoveryQueryV19',v.query||'')}
- function show(title,text,kind='',issueUrl=''){
-   box.className='manualResultV19 show';box.innerHTML=`<div class="returnStatusV21 ${kind}"><strong>${title}</strong><span>${text}</span>${issueUrl?`<div class="miniActions"><a href="${issueUrl}" target="_blank" rel="noopener">Open GitHub request</a></div>`:''}</div>`;
- }
- async function issueFor(tok){
-   try{const r=await fetch(api+'/issues?state=all&per_page=100&ts='+Date.now(),{cache:'no-store'});if(!r.ok)return null;const rows=await r.json();return rows.find(x=>x.title==='Discovery search: '+tok)||null}catch(e){return null}
- }
- async function resultFor(tok){try{const r=await fetch('./manual-search-results/'+encodeURIComponent(tok)+'.json?ts='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}
- async function check(){const s=state();if(!s?.token)return;const result=await resultFor(s.token);if(result){const n=Number(result.count||0);show('Search complete',result.message||`${n} possible investment${n===1?'':'s'} found.`,n?'ok':'');if(n){setTimeout(()=>location.reload(),900)}return}const issue=await issueFor(s.token);if(!issue){show('Waiting for GitHub confirmation',`Search for “${s.query}” has not been submitted yet. Complete the green Create button in GitHub, then return here.`);return}const issueUrl=issue.html_url||('https://github.com/'+repo+'/issues/'+issue.number);if(issue.state==='open'){show('Request received — searching',`GitHub issue #${issue.number} was accepted. The focused search for “${s.query}” is running now.`,'ok',issueUrl);return}show('Search request finished, but no result was published','GitHub completed the request, but the result file is missing. Use Try again below rather than submitting duplicate requests.','warn',issueUrl)}
- btn.addEventListener('click',()=>{const q=(input.value||'').trim();if(!q){show('Enter something to search for','Type a fund name, manager or website first.','warn');return}const tok=token(),body=`Manual discovery search request\n\nSearch token: ${tok}\nSearch for: ${q}\n\nThis request only discovers possible investment products. Any result must still pass the normal Shariah and product verification process before activation.`;save({token:tok,query:q,startedAt:new Date().toISOString()});show('Confirm this search in GitHub',`A GitHub page is opening for “${q}”. Click the green Create button once, then close that tab and return here.`);window.open('https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Discovery search: '+tok)+'&body='+encodeURIComponent(body),'_blank','noopener');setTimeout(check,1200)});
- window.addEventListener('focus',()=>setTimeout(check,250));document.addEventListener('visibilitychange',()=>{if(!document.hidden)setTimeout(check,250)});if(state()?.token)setTimeout(check,200);
-})();
-</script>
-
-<!-- github-return-status-v21 -->
-
-<script>
-/* discovery-review-workspace-v34 */
-(function(){
- const repo='mohamedmemee-cell/shariah-fund-data';
- const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- function decisionUrl(x,action,reason=''){
-   const body=['Discovery candidate decision','',
-     'Candidate id: '+(x.id||''),
-     'Candidate name: '+(x.title||''),
-     'Action: '+action,
-     'Reason: '+reason,
-     'Existing fund id: '+(x.existing_fund_id||'')
-   ].join('\n');
-   return 'https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Discovery decision: '+(x.id||''))+'&body='+encodeURIComponent(body);
- }
- function addFundUrl(x){
-   const via=(x.discovered_via||x.domain||'').trim();
-   return './add-fund.html?discovery='+encodeURIComponent(x.id||'')+
-     '&name='+encodeURIComponent(x.title||'')+
-     '&discovered_via='+encodeURIComponent(via)+
-     '&discovery_url='+encodeURIComponent(x.url||'');
- }
- function rowActions(x){
-   const st=x.status||'needs_verification';
-   if(st==='rejected'||st==='not_now'){
-     return '<button class="actionV34" data-act="review" data-id="'+esc(x.id)+'">Review</button>'+
-       '<a class="actionV34 primary" href="'+decisionUrl(x,'restore')+'">Restore candidate</a>';
-   }
-   if(st==='already_tracked'){
-     const link=x.existing_fund_id?'./fund-details.html?id='+encodeURIComponent(x.existing_fund_id):'./fund-explorer.html';
-     return '<a class="actionV34" href="'+link+'">View tracked fund</a>'+
-       '<button class="actionV34" data-act="review" data-id="'+esc(x.id)+'">Review</button>';
-   }
-   return '<button class="actionV34" data-act="review" data-id="'+esc(x.id)+'">Review</button>'+
-     '<a class="actionV34 primary" href="'+addFundUrl(x)+'">Add this fund</a>'+
-     '<button class="actionV34" data-act="tracked" data-id="'+esc(x.id)+'">Already tracked</button>'+
-     '<button class="actionV34" data-act="later" data-id="'+esc(x.id)+'">Not now</button>'+
-     '<button class="actionV34 warn" data-act="reject" data-id="'+esc(x.id)+'">Reject</button>';
- }
- function reviewHtml(x){
-   const srcs=(x.discovery_sources||[{url:x.url,domain:x.domain,query:x.query,confidence:x.confidence}]).filter(Boolean);
-   return '<div class="reviewPanelV34" id="review-'+esc(x.id)+'"><div class="reviewGridV34">'+
-     '<div><small>Discovered via</small><b>'+esc(x.discovered_via||x.domain||'—')+'</b></div>'+
-     '<div><small>Probable manager</small><b>'+esc(x.manager||'Unverified')+'</b></div>'+
-     '<div><small>Discovery confidence</small><b>'+Number(x.confidence||0)+'%</b></div>'+
-     '<div><small>Status</small><b>'+esc((x.status||'').replaceAll('_',' '))+'</b></div>'+
-     '</div><div style="margin-top:8px"><small class="muted">Discovery sources</small>'+
-     srcs.map(z=>'<div><a href="'+esc(z.url||'#')+'" target="_blank" rel="noopener">'+esc(z.domain||z.url||'source')+'</a> · '+Number(z.confidence||0)+'% · '+esc(z.query||'')+'</div>').join('')+
-     '</div><p class="muted">Discovery sources are leads only. Add Fund will research the actual manager and official fund/factsheet source before activation.</p></div>';
- }
- const oldRender=window.render;
- window.render=function(){
-   const q=document.getElementById('q').value.toLowerCase(),st=document.getElementById('status').value,min=+document.getElementById('confidence').value;
-   let a=data.candidates.filter(x=>(!q||(String(x.title)+' '+String(x.manager)+' '+String(x.domain)).toLowerCase().includes(q))&&(!st||x.status===st)&&Number(x.confidence||0)>=min);
-   a.sort((x,y)=>Number(y.confidence||0)-Number(x.confidence||0));
-   document.getElementById('rows').innerHTML=a.length?a.map(x=>'<tr><td><b>'+esc(x.title)+'</b><br><small class="muted">'+esc(x.domain||'')+'</small>'+reviewHtml(x)+'</td><td>'+esc(x.manager||'Unverified')+'</td><td><span class="pill">'+esc((x.status||'').replaceAll('_',' '))+'</span></td><td class="score">'+Number(x.confidence||0)+'%</td><td>'+esc((x.reasons||[]).join(' · '))+'</td><td><small>'+esc(x.query||'')+'</small></td><td><div class="actionsV18">'+rowActions(x)+'</div></td></tr>').join(''):'<tr><td colspan="7">No candidates match these filters.</td></tr>';
-   const all=data.candidates;document.getElementById('count').textContent=all.length;document.getElementById('review').textContent=all.filter(x=>x.status==='needs_verification').length;document.getElementById('tracked').textContent=all.filter(x=>x.status==='already_tracked').length;document.getElementById('scan').textContent=data.generated_at||'—';
- };
- document.addEventListener('click',e=>{
-   const b=e.target.closest('[data-act]');if(!b)return;
-   const x=data.candidates.find(z=>String(z.id)===String(b.dataset.id));if(!x)return;
-   const act=b.dataset.act;
-   if(act==='review'){document.getElementById('review-'+x.id)?.classList.toggle('show');return}
-   if(act==='tracked'){
-     const id=prompt('Optional: enter the existing Fund Explorer id, or leave blank.');
-     window.open(decisionUrl({...x,existing_fund_id:id||''},'already_tracked'),'_blank','noopener');return;
-   }
-   if(act==='later'){
-     const reason=prompt('Optional note for “Not now”:')||'Deferred by user';
-     window.open(decisionUrl(x,'not_now',reason),'_blank','noopener');return;
-   }
-   if(act==='reject'){
-     const reason=prompt('Why reject this candidate? Examples: Not Shariah compliant, Duplicate, Not an investment fund, Not relevant, Outside scope, Other.');
-     if(reason===null)return;
-     window.open(decisionUrl(x,'reject',reason||'Other'),'_blank','noopener');return;
-   }
- });
- setTimeout(()=>{if(typeof render==='function')render()},350);
-})();
-</script>
-
-<!-- discovery-review-workspace-v34 -->
 </body></html>
