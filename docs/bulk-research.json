@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08",
+  "generated_at": "2026-11-15",
   "researched": 30,
-  "official_source_found": 19,
+  "official_source_found": 16,
   "fields_verified": 28,
   "funds": [
     {
@@ -73,10 +73,10 @@
         "https://stanlib.com/our-funds/stanlib-multi-asset-growth-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-global-balanced-fund",
+        "https://stanlib.com/our-funds/stanlib-global-balanced-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-enhanced-multi-style-equity-fund",
         "https://stanlib.com/our-funds/stanlib-property-income-fund",
-        "https://stanlib.com/our-funds/stanlib-money-market-fund",
-        "https://stanlib.com/our-funds/stanlib-income-fund"
+        "https://stanlib.com/our-funds/stanlib-money-market-fund"
       ],
       "verified_fields": [
         "risk_level"
@@ -158,12 +158,7 @@
       "sources_checked": [
         "https://foord.co.za/investments/unit-trusts/foord-balanced-fund",
         "https://foord.co.za/insights/videos/what-are-respective-mandates-foord-flexible-and-foord-balanced-funds",
-        "https://foord.co.za/insights-and-commentary/foord-balanced-fund-placed-1st-over-5-years",
-        "https://foord.co.za/videos/foord-asia-ex-japan-fund-a-matrix-of-exciting-investment-opportunities",
-        "https://foord.co.za/videos-and-podcasts/foord-international-fund-a%20fund%20for%20all%20seasons",
-        "https://foord.co.za/the-foord-asia-ex-japan-fund-explained",
-        "https://foord.co.za/newsletter-foreword/foreword-issue-60-4th-quarter-2021/foord-equity-funds-new-portfolio-manager",
-        "https://foord.co.za/investments/unit-trusts/foord-international-feeder-fund"
+        "https://foord.co.za/insights-and-commentary/foord-balanced-fund-placed-1st-over-5-years"
       ],
       "verified_fields": [
         "minimum_investment",
@@ -236,21 +231,14 @@
       "id": "alexforbes-oasis-crescent-balanced-stable",
       "name": "Oasis Crescent Balanced Stable",
       "manager": "Oasis",
-      "status": "official_source_found",
+      "status": "no_official_match",
       "sources_checked": [
-        "https://www.oasiscrescent.com",
-        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
-        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
-        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
-        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
-        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
-        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
-        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
-        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
+        "https://www.oasiscrescent.com"
       ],
       "verified_fields": [],
-      "notes": [],
-      "official_source": "https://www.oasiscrescent.com"
+      "notes": [
+        "No confident official manager page/factsheet match found automatically."
+      ]
     },
     {
       "id": "alexforbes-old-mutual-shariah-balanced",
@@ -295,8 +283,8 @@
         "https://stanlib.com/our-funds/stanlib-multi-asset-growth-fund",
         "https://stanlib.com/our-funds/stanlib-multi-asset-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-global-balanced-fund",
+        "https://stanlib.com/our-funds/stanlib-global-balanced-cautious-fund",
         "https://stanlib.com/our-funds/stanlib-enhanced-multi-style-equity-fund",
-        "https://stanlib.com/enhanced-multi-style-equity-fund",
         "https://stanlib.com/cms/insights-articles/why-an-enhanced-multi-style-fund-is-a-smart-choice-for-growth-orientated-investors",
         "https://stanlib.com/cms/insights-articles/stanlib-enhanced-multi-style-equity-fund-sticks-to-fundamentals-amid-sa-equity-turbulence-in-q2"
       ],
@@ -407,21 +395,14 @@
       "id": "alexforbes-oasis-crescent-equity-fund",
       "name": "Oasis Crescent Equity Fund",
       "manager": "Oasis",
-      "status": "official_source_found",
+      "status": "no_official_match",
       "sources_checked": [
-        "https://www.oasiscrescent.com",
-        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
-        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
-        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
-        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
-        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
-        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
-        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
-        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
+        "https://www.oasiscrescent.com"
       ],
       "verified_fields": [],
-      "notes": [],
-      "official_source": "https://www.oasiscrescent.com"
+      "notes": [
+        "No confident official manager page/factsheet match found automatically."
+      ]
     },
     {
       "id": "alexforbes-sentio-sci-hikma-shariah-general-equity",
@@ -485,21 +466,14 @@
       "id": "alexforbes-oasis-crescent-income-fund",
       "name": "Oasis Crescent Income Fund",
       "manager": "Oasis",
-      "status": "official_source_found",
+      "status": "no_official_match",
       "sources_checked": [
-        "https://www.oasiscrescent.com",
-        "https://www.oasiscrescent.com/product-page/textured-loop-earrings",
-        "https://www.oasiscrescent.com/product-page/stainless-steel-water-bottle",
-        "https://www.oasiscrescent.com/product-page/solid-wood-chair",
-        "https://www.oasiscrescent.com/product-page/round-eyeglasses",
-        "https://www.oasiscrescent.com/product-page/minimalist-tote-bag",
-        "https://www.oasiscrescent.com/product-page/knitted-golf-sweater",
-        "https://www.oasiscrescent.com/product-page/hydrating-eye-serum",
-        "https://www.oasiscrescent.com/product-page/foaming-facial-cleanser"
+        "https://www.oasiscrescent.com"
       ],
       "verified_fields": [],
-      "notes": [],
-      "official_source": "https://www.oasiscrescent.com"
+      "notes": [
+        "No confident official manager page/factsheet match found automatically."
+      ]
     },
     {
       "id": "alexforbes-sentio-sci-hikma-shariah-income-fund",
