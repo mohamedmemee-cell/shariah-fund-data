@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-15T13:52:02Z",
+  "generated_at": "2026-11-22T14:28:56Z",
   "currency": "ZAR",
   "disclaimer": "Public fund information for research/planning. Past performance is not a guarantee of future returns. Verify figures against official fund documents before investing.",
   "funds": [
@@ -55,19 +55,19 @@
       "category": "Balanced",
       "bucket": "Non-TFSA",
       "suggested_split": 45,
-      "oneYear": 15.9,
-      "threeYear": 13.3,
-      "fiveYear": 9.6,
-      "tenYear": 9.4,
+      "oneYear": 14.5,
+      "threeYear": 15.4,
+      "fiveYear": 9.0,
+      "tenYear": 9.8,
       "sinceInception": null,
       "ter": 1.49,
-      "data_as_of": "2026-09-30",
+      "data_as_of": "2026-10-31",
       "risk_level": "Medium High",
       "source_url": "https://www.camissa-am.com/funds/islamic-balanced-fund",
-      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b92fecd1ba112063a21_Camissa%20Islamic%20Balanced%20Fund_2609.pdf",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6afaca25f5be4799c41a37f6_Camissa%20Islamic%20Balanced%20Fund_2610.pdf",
       "shariah_note": "Shariah-compliant multi-asset fund.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "old-mutual-albaraka-balanced",
@@ -88,7 +88,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaBalancedFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "27four-shariah-income",
@@ -109,7 +109,7 @@
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Income%20Fund.pdf",
       "shariah_note": "Shariah-compliant income allocation.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "camissa-islamic-high-yield",
@@ -124,13 +124,13 @@
       "tenYear": null,
       "sinceInception": null,
       "ter": 0.58,
-      "data_as_of": "2026-09-30",
+      "data_as_of": "2026-10-31",
       "risk_level": "Low",
       "source_url": "https://www.camissa-am.com/funds/islamic-high-yield-fund",
-      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6ad08b40eeffbd6fbb0b3b34_Camissa%20Islamic%20High%20Yield%20Fund_2609.pdf",
+      "data_source_url": "https://cdn.prod.website-files.com/698c6b32d34c028d89b0efbc/6afac9b8306258971172b46e_Camissa%20Islamic%20High%20Yield%20Fund_2610.pdf",
       "shariah_note": "Shariah-compliant high-yield/income fund.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "old-mutual-albaraka-income",
@@ -151,7 +151,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaIncomeFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "old-mutual-albaraka-equity",
@@ -172,7 +172,7 @@
       "data_source_url": "https://cdn.albaraka.co.za/omasf/OMAlbarakaEquityFundJuly2026.pdf",
       "shariah_note": "AAOIFI standards as interpreted by the fund Shariah Supervisory Board.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "27four-shariah-balanced",
@@ -193,7 +193,7 @@
       "data_source_url": "https://www.27four.com/factsheets/27four%20Shariah%20Balanced%20Fund%20of%20Funds.pdf",
       "shariah_note": "Shariah-compliant balanced allocation.",
       "update_status": "auto",
-      "updated": "2026-11-15T13:52:02Z"
+      "updated": "2026-11-22T14:28:56Z"
     },
     {
       "id": "oasis-crescent-balanced-progressive",
